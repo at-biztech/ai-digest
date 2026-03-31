@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-03-31",
     "2026-03-29"
   ],
   "digests": {
@@ -52,6 +53,119 @@
           "useCase": "Template for government-facing AI chatbot projects. Note the pattern: narrow domain (legal procedures), high-trust requirement, always-on availability. Replicable for immigration, tax guidance, or municipal services bots.",
           "sourceUrl": "https://www.newindianexpress.com/nation/2026/Mar/29/vice-president-radhakrishnan-launches-ai-chatbot-nyaya-setu-to-expand-access-to-justice",
           "sourceName": "newindianexpress.com"
+        }
+      ]
+    },
+    "2026-03-31": {
+      "date": "March 31, 2026",
+      "dateKey": "2026-03-31",
+      "totalScanned": 10,
+      "relevant": 6,
+      "critical": 2,
+      "watch": 4,
+      "low": 4,
+      "summary": "Quiet day. Key updates include API enhancements for AI agents, clearer regulatory timelines, and new enterprise model access.",
+      "footerNote": "Today's news primarily features product and API updates, with fewer major one-off launches, indicating a focus on incremental improvements and operationalization.",
+      "items": [
+        {
+          "score": 9,
+          "tag": "CRITICAL",
+          "category": "Regulation",
+          "headline": "EU AI Act Compliance Deadlines Confirmed",
+          "description": "The European Commission confirmed that the EU AI Act is now in force, with full applicability by August 2, 2026, and some rules already active. This means AI developers and deployers must now actively plan for compliance.",
+          "useCase": "When designing a new AI-powered system for deployment in the EU, an architect must immediately incorporate compliance checks, risk assessments, and documentation processes to meet the phased deadlines, ensuring the system is legally deployable.",
+          "sourceUrl": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "sourceName": "digital-strategy.ec.europa"
+        },
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Tools",
+          "headline": "OpenAI API Adds Efficient Tool Search for Agents",
+          "description": "OpenAI's API now includes \"tool search\" in its Responses API, allowing models to access large tool libraries only when needed. This reduces token usage and improves efficiency for complex AI agents.",
+          "useCase": "An automation builder can now design an AI agent that accesses hundreds of internal company tools (e.g., CRM, ERP, HR systems) without incurring high token costs for listing all tools upfront, making broader enterprise automation more practical and cost-effective.",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog/",
+          "sourceName": "developers.openai"
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Models",
+          "headline": "OpenAI GPT-5.3 Instant Model Improved for Better Conversations",
+          "description": "OpenAI updated its GPT-5.3 Instant model to provide more accurate answers, better web search integration, and fewer conversational dead ends. This makes long interactions with the model smoother and more natural.",
+          "useCase": "An automation builder can integrate this improved model into a customer support chatbot to handle complex, multi-turn inquiries more effectively, reducing the need for human intervention and improving user satisfaction with AI-driven assistance.",
+          "sourceUrl": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "sourceName": "help.openai"
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Board Launches AI Agents for Finance on Microsoft Marketplace",
+          "description": "Board's FP&A (Financial Planning & Analysis) and Controller Agents are now globally available on Microsoft Marketplace. These agents help finance teams automate planning within Microsoft cloud workflows.",
+          "useCase": "A digital ecosystem architect can integrate these pre-built finance agents into a company's existing Microsoft Dynamics or Power Platform environment, automating budget forecasting and financial reporting without needing to develop custom AI models from scratch.",
+          "sourceUrl": "https://news.microsoft.com/source/emea/2026/01/board-collaborates-with-microsoft-to-bring-agentic-ai-into-the-core-of-enterprise-planning/",
+          "sourceName": "news.microsoft"
+        },
+        {
+          "score": 6,
+          "tag": "WATCH",
+          "category": "Models",
+          "headline": "GPT-5.3 Instant Now Available for Enterprise and Education Admins",
+          "description": "OpenAI's GPT-5.3 Instant model is now an Early Model Access option for administrators in ChatGPT Enterprise and Edu accounts. This allows organizations to enable the newer model for their users in a controlled way.",
+          "useCase": "An IT administrator for a large enterprise can enable early access to GPT-5.3 Instant for specific teams, allowing them to test and integrate the improved model into their internal knowledge management or content generation workflows before a wider rollout.",
+          "sourceUrl": "https://help.openai.com/zh-hant-hk/articles/10128477-chatgpt-enterprise-edu-release-notes",
+          "sourceName": "help.openai"
+        },
+        {
+          "score": 6,
+          "tag": "WATCH",
+          "category": "Hardware",
+          "headline": "Nvidia to Supply 1 Million Chips to Amazon by 2027",
+          "description": "Reuters reported that Nvidia will sell one million AI chips to Amazon by the end of 2027 as part of a cloud deal. This indicates strong demand for AI hardware and future compute capacity for AWS.",
+          "useCase": "A digital ecosystem architect planning a multi-year AI strategy for a company heavily reliant on AWS can factor this into their future resource allocation, knowing that AWS is securing significant GPU capacity for upcoming AI workloads.",
+          "sourceUrl": "https://www.reuters.com/business/retail-consumer/nvidia-sell-1-million-chips-amazon-by-end-2027-cloud-deal-2026-03-19/",
+          "sourceName": "reuters"
+        },
+        {
+          "score": 5,
+          "tag": "LOW",
+          "category": "Research",
+          "headline": "Paper Describes Automated AI Research Pipeline",
+          "description": "A Nature paper introduced \"The AI Scientist,\" a system designed to automate the entire AI research process, from generating hypotheses to drafting scientific papers. This shows progress in automating scientific discovery.",
+          "useCase": "This is less relevant for building immediate business automations. For it to matter, the \"AI Scientist\" pipeline would need to be productized into a widely available tool that can be adapted for specific industry research or R&D tasks, rather than just academic exploration.",
+          "sourceUrl": "https://www.nature.com/articles/s41586-026-10265-5",
+          "sourceName": "nature"
+        },
+        {
+          "score": 5,
+          "tag": "LOW",
+          "category": "Tools",
+          "headline": "OpenClaw Open-Source AI Assistant Project Shows Active Development",
+          "description": "The OpenClaw GitHub organization shows continued active development for its open-source AI assistant ecosystem. This suggests ongoing momentum for autonomous task execution projects.",
+          "useCase": "While interesting for those tracking open-source agent frameworks, this is not a new capability or a major shift. For it to be highly relevant, OpenClaw would need to announce a stable release, a significant new feature, or a major adoption milestone that directly impacts how builders integrate open-source agents into production systems.",
+          "sourceUrl": "https://github.com/openclaw",
+          "sourceName": "github"
+        },
+        {
+          "score": 4,
+          "tag": "LOW",
+          "category": "Funding",
+          "headline": "Google Opens AI Startup Accelerator Applications in India",
+          "description": "Google has opened applications for its 2026 AI-first startups accelerator program in India. The program supports early-stage companies focusing on agentic, multimodal, physical, or sovereign AI.",
+          "useCase": "This is less relevant for established teams building AI automations. It primarily benefits early-stage founders seeking support. For it to matter to an ecosystem architect, Google would need to announce that successful startups from this program are making their cutting-edge AI solutions available for integration, or that the program itself is a pipeline for new, broadly usable AI tools.",
+          "sourceUrl": "https://blog.google/intl/en-in/inviting-ai-first-startups-to-apply-for-google-for-startups-accelerator-india/",
+          "sourceName": "blog.google"
+        },
+        {
+          "score": 3,
+          "tag": "LOW",
+          "category": "Education",
+          "headline": "Google Launches AI Upskilling Initiative in the UK",
+          "description": "Google launched \"AI Works for Britain,\" an initiative to help UK workers improve their AI skills beyond basic prompting. The program aims to promote practical AI adoption across the workforce.",
+          "useCase": "This is not directly relevant to building AI automations or integrating AI tools. It focuses on user education. For it to matter, this initiative would need to specifically train a workforce on how to *build* or *manage* AI-powered automated systems, rather than just use them, or lead to a significant increase in the availability of skilled AI builders.",
+          "sourceUrl": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/googles-ai-works-for-britain-aims-to-help-stuck-brits-unlock-progression/",
+          "sourceName": "blog.google"
         }
       ]
     }
