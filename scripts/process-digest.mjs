@@ -91,7 +91,9 @@ Then score and format ALL of them.\n\n` + SCORING_INSTRUCTIONS
 }
 
 function buildContentPrompt(content) {
-  return `You will receive raw AI industry news content. Score and format ALL items.\n\n` + SCORING_INSTRUCTIONS + '\n\nHere is today\'s raw news content:\n\n' + content
+  return `The following is a summary of today's AI news from a research assistant. Use it as a starting point. For each item, search the web to find the full story, source URL, and additional details before scoring and formatting. Also search for any major AI news from the last 24 hours that might be missing from this summary.
+
+Then score and format ALL of them.\n\n` + SCORING_INSTRUCTIONS + '\n\nHere is the summary:\n\n' + content
 }
 
 const MODEL = 'gemini-2.5-flash'
@@ -105,9 +107,7 @@ async function callGemini(attempt = 1) {
     generationConfig: { temperature: 0.2 }
   }
 
-  if (searchMode) {
-    body.tools = [{ google_search: {} }]
-  }
+  body.tools = [{ google_search: {} }]
 
   const res = await fetch(API_URL, {
     method: 'POST',
