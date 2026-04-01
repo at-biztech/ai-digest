@@ -198,8 +198,8 @@
           "headline": "NVIDIA Invests $2 Billion in Marvell Technology, Deepening AI Infrastructure Partnership",
           "description": "NVIDIA has made a $2 billion strategic investment in Marvell Technology, forming a partnership to integrate Marvell's data center connectivity solutions into NVIDIA's AI factory and AI-RAN ecosystem through NVLink Fusion. This collaboration focuses on custom XPUs (specialized processors), scale-up networking, and silicon photonics (using light for data transfer) to enhance AI infrastructure.",
           "useCase": "For architects designing large-scale AI data centers or specialized AI hardware, this partnership signals future directions in high-speed, energy-efficient interconnects and custom processing units, potentially influencing hardware choices and system designs for demanding AI workloads.",
-          "sourceUrl": "",
-          "sourceName": "24/7 Wall St."
+          "sourceUrl": "https://247wallst.com/investing/2026/03/31/nvidia-up-on-marvell-deal-3-reasons-the-2-billion-investment-has-the-ai-world-talking/",
+          "sourceName": "247wallst.com"
         },
         {
           "score": 8,
@@ -208,8 +208,8 @@
           "headline": "Google Launches Veo 3.1 Lite, a Cost-Efficient Video Generation AI Model",
           "description": "Google has released Veo 3.1 Lite Preview, a new video generation model designed for cost-efficiency and rapid iteration. It offers the same speed as Veo 3.1 Fast but at less than half the cost, supporting text-to-video and image-to-video generation in various aspect ratios and resolutions.",
           "useCase": "Automation builders can integrate Veo 3.1 Lite into workflows for generating high volumes of marketing videos, social media content, or personalized video messages at a significantly lower cost, enabling more dynamic and scalable video creation.",
-          "sourceUrl": "",
-          "sourceName": "Google Blog"
+          "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/",
+          "sourceName": "blog.google"
         },
         {
           "score": 8,
@@ -218,8 +218,8 @@
           "headline": "Google Releases Gemini 3.1 Flash Live for Real-time Audio-to-Audio AI Applications",
           "description": "Google has launched gemini-3.1-flash-live-preview, an audio-to-audio (A2A) model specifically designed for real-time dialogue and voice-first AI applications. This model aims to make conversational AI more natural and reliable.",
           "useCase": "Developers can use this model to build highly responsive voice assistants, real-time translation services, or interactive voice response (IVR) systems that offer more natural and fluid conversations, improving customer experience in automated support or sales.",
-          "sourceUrl": "",
-          "sourceName": "Gemini API - Google AI for Developers"
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/",
+          "sourceName": "blog.google"
         },
         {
           "score": 8,
@@ -238,8 +238,8 @@
           "headline": "Kandou AI Raises $225 Million to Address AI Data Movement Bottlenecks",
           "description": "Semiconductor innovator Kandou AI secured $225 million in funding to tackle the critical issue of slow and inefficient data movement within AI infrastructure. The company focuses on developing faster, energy-efficient connectivity solutions, particularly its proprietary SerDes (Serializer/Deserializer) technology, to improve AI system performance and scalability.",
           "useCase": "For those building high-performance AI infrastructure, this funding and technology development from Kandou AI could lead to new chip designs and interconnect standards that alleviate data bottlenecks, allowing for more efficient and powerful AI model training and inference.",
-          "sourceUrl": "",
-          "sourceName": "The AI World"
+          "sourceUrl": "https://theaiworld.com/kandou-ai-raises-225m-to-solve-ai-bottlenecks/",
+          "sourceName": "theaiworld.com"
         },
         {
           "score": 7,
@@ -248,8 +248,8 @@
           "headline": "Alchemer Launches AI Auto-Responder for Automated Customer Review Engagement",
           "description": "Alchemer has introduced an AI Auto-Responder feature within its Reputation Management product, enabling businesses to automatically generate and publish personalized, on-brand responses to customer reviews across various platforms at scale. This aims to accelerate response times and maintain brand consistency while reducing manual effort.",
           "useCase": "Businesses can integrate this tool into their customer feedback loops to automate responses to online reviews, ensuring timely engagement and consistent brand messaging without requiring constant manual oversight, freeing up teams for more complex customer service issues.",
-          "sourceUrl": "",
-          "sourceName": "Alchemer"
+          "sourceUrl": "https://www.businesswire.com/news/home/20260331100001/en/Alchemer-Launches-AI-Auto-Responder-to-Transform-Customer-Review-Engagement-with-On-Brand-Automation-at-Scale",
+          "sourceName": "businesswire.com"
         },
         {
           "score": 7,
@@ -268,8 +268,8 @@
           "headline": "Oracle Unveils AI Data Platform for US Federal Government Agencies",
           "description": "Oracle has launched its AI Data Platform specifically for US federal agencies, designed to securely connect generative AI models with agency data, applications, and workflows. This platform aims to unify critical information, reduce silos, and enable faster, informed decision-making for civilian and defense agencies.",
           "useCase": "Government contractors and agencies can leverage this platform to build secure, AI-powered applications that process sensitive federal data, enabling automated analysis of intelligence reports, streamlined bureaucratic processes, or AI-assisted decision-making in defense operations, all within a compliant environment.",
-          "sourceUrl": "",
-          "sourceName": "BigDATAwire - HPCwire"
+          "sourceUrl": "https://www.hpcwire.com/off-the-wire/oracle-unveils-ai-data-platform-for-us-federal-government/",
+          "sourceName": "hpcwire.com"
         },
         {
           "score": 7,
@@ -288,8 +288,8 @@
           "headline": "OpenAI's GPT-5.4 Emerges as a \"Digital Collaborator\" for Navigating Software Environments",
           "description": "OpenAI's GPT-5.4 is highlighted as a dominant force, designed as a \"digital collaborator\" capable of interacting autonomously with real software environments like development tools, research databases, and financial spreadsheets. It features dramatically larger context windows for processing vast amounts of information.",
           "useCase": "This advancement enables the creation of highly autonomous AI agents that can perform complex, multi-step tasks across various business applications. For example, an agent could be instructed to \"research market trends, analyze financial reports, and draft a strategic recommendation,\" executing these steps across different software tools without constant human intervention.",
-          "sourceUrl": "",
-          "sourceName": "devFlokers"
+          "sourceUrl": "https://devflokers.com/ai-breakthroughs-march-2026-open-source-and-model-news/",
+          "sourceName": "devflokers.com"
         },
         {
           "score": 7,
@@ -298,8 +298,8 @@
           "headline": "Zhipu AI Launches GLM-5.1, a Powerful Coding-Optimized AI Model",
           "description": "Zhipu AI (operating as Z.ai) has released GLM-5.1, a 744 billion parameter Mixture-of-Experts (MoE) model that excels in coding tasks. It achieves 94.6% of the performance of Anthropic's Claude Opus 4.6 on coding benchmarks, leveraging 40 billion active parameters per token for high-speed inference and deep reasoning.",
           "useCase": "Developers and automation builders can integrate GLM-5.1 into their development pipelines for advanced code generation, debugging, and refactoring. This could significantly accelerate software development cycles and improve code quality within automated system builds.",
-          "sourceUrl": "",
-          "sourceName": "devFlokers"
+          "sourceUrl": "https://devflokers.com/ai-breakthroughs-march-2026-open-source-and-model-news/",
+          "sourceName": "devflokers.com"
         },
         {
           "score": 6,
@@ -308,8 +308,8 @@
           "headline": "Miami Dade College and Amazon Launch AI Program for Nonprofit Leaders",
           "description": "Miami Dade College and Amazon are partnering to launch \"AI for Social Good,\" a four-week training program. This initiative aims to equip nonprofit leaders with practical AI skills to drive social impact, focusing on applications for daily challenges like donor engagement, program evaluation, and operational efficiency.",
           "useCase": "Nonprofit organizations can send their leaders to this program to learn how to implement AI tools for automating administrative tasks, analyzing donor data for more effective fundraising, or optimizing resource allocation, directly improving their operational efficiency and impact.",
-          "sourceUrl": "",
-          "sourceName": "Miami Dade College"
+          "sourceUrl": "https://www.mdc.edu/main/news/articles/2026/03/mdc-amazon-ai-program-nonprofit-leaders.aspx",
+          "sourceName": "mdc.edu"
         },
         {
           "score": 6,
@@ -318,8 +318,8 @@
           "headline": "Blaize and Nokia Advance Collaboration on Hybrid AI Infrastructure for Edge and Data Centers",
           "description": "Blaize and Nokia are deepening their collaboration to validate hybrid AI infrastructure across Asia-Pacific. This involves a pre-integrated reference architecture developed at Nokia's Network Innovation Lab, targeting edge and data center deployments with an emphasis on reducing latency, improving power efficiency, and scalability.",
           "useCase": "Companies planning to deploy AI at the edge (e.g., for smart factories, autonomous vehicles) or in hybrid cloud environments can look to this collaboration for validated architectures and best practices, potentially accelerating their own AI infrastructure development and deployment.",
-          "sourceUrl": "",
-          "sourceName": "Blaize"
+          "sourceUrl": "https://www.blaize.com/news-events/blaize-and-nokia-advance-collaboration-with-joint-ai-solution-showcase-at-gitex-asia",
+          "sourceName": "blaize.com"
         },
         {
           "score": 6,
@@ -328,8 +328,8 @@
           "headline": "Argonne National Lab Partners with Aclara to Advance AI-Enabled Rare Earth Separation",
           "description": "Argonne National Laboratory is collaborating with Aclara Resources to develop an AI-enabled digital twin for heavy rare earth separation. This partnership aims to strengthen U.S. critical materials supply chains and accelerate domestic production by applying advanced computing, process modeling, and AI to scale up separation technologies.",
           "useCase": "While highly specialized, this demonstrates how AI and digital twins can optimize complex industrial processes. Automation builders in manufacturing or resource extraction could apply similar AI-driven simulation and optimization techniques to improve efficiency, reduce waste, and enhance supply chain resilience.",
-          "sourceUrl": "",
-          "sourceName": "AIwire - HPCwire"
+          "sourceUrl": "https://www.hpcwire.com/off-the-wire/argonne-advances-ai-enabled-rare-earth-separation-with-aclara-partnership/",
+          "sourceName": "hpcwire.com"
         },
         {
           "score": 6,
@@ -338,8 +338,8 @@
           "headline": "Advanced Machine Intelligence Raises $1.03 Billion Seed Round for AI Models from Sensor Data",
           "description": "Paris-based Advanced Machine Intelligence secured a massive $1.03 billion in a seed funding round. The startup is focused on developing AI models that can learn abstract representations from real-world sensor data and use these to make predictions.",
           "useCase": "This significant investment in a startup focused on \"physical AI\" (AI interacting with the real world via sensors) suggests future advancements in areas like robotics, autonomous systems, and smart infrastructure. Builders could anticipate more robust and capable AI models for processing real-time environmental data.",
-          "sourceUrl": "",
-          "sourceName": "Crunchbase News"
+          "sourceUrl": "https://news.crunchbase.com/ai-robotics/largest-ai-seed-rounds-2026/",
+          "sourceName": "news.crunchbase.com"
         },
         {
           "score": 6,
@@ -348,8 +348,8 @@
           "headline": "Google Releases Gemini-Embedding-2-Preview, a Multimodal Embedding Model",
           "description": "Google has launched gemini-embedding-2-preview, its first multimodal embedding model. This model can process text, image, video, audio, and PDF inputs, mapping all these different types of data into a single, unified embedding space.",
           "useCase": "This model is crucial for building AI systems that need to understand and relate information across different modalities. For example, an automation could analyze a customer support ticket (text), an attached screenshot (image), and a linked video (video) to provide a comprehensive understanding of an issue, enabling more intelligent routing or automated resolution.",
-          "sourceUrl": "",
-          "sourceName": "Gemini API - Google AI for Developers"
+          "sourceUrl": "https://ai.google.dev/docs/embeddings",
+          "sourceName": "ai.google.dev"
         },
         {
           "score": 6,
@@ -358,8 +358,8 @@
           "headline": "Google Researchers Introduce TurboQuant to Ease AI Memory Bottlenecks",
           "description": "Researchers at Google have developed TurboQuant, a new compression method aimed at reducing the memory footprint of the key-value (KV) cache during large language model (LLM) inference. This innovation addresses a significant memory-intensive component of LLM operations, which is a current constraint in AI and HPC infrastructure.",
           "useCase": "This research could lead to more efficient deployment of large AI models, especially on devices with limited memory or in cost-sensitive cloud environments. Automation builders might see reduced inference costs and faster response times for LLM-powered applications as this technology is integrated into future hardware and software.",
-          "sourceUrl": "",
-          "sourceName": "AIwire - HPCwire"
+          "sourceUrl": "https://www.hpcwire.com/ai/2026/03/31/did-google-just-ease-the-ai-memory-bottleneck/",
+          "sourceName": "hpcwire.com"
         },
         {
           "score": 6,
@@ -368,8 +368,8 @@
           "headline": "SAP and ANYbotics Partner to Drive Industrial Adoption of Physical AI",
           "description": "SAP and ANYbotics are collaborating to accelerate the industrial adoption of \"physical AI,\" which involves AI systems interacting with the physical world, often through robotics. This partnership aims to integrate AI into industrial operations.",
           "useCase": "For manufacturers and industrial automation specialists, this partnership signals a push towards more intelligent robotics and AI-driven physical processes. Builders could anticipate new tools and frameworks for integrating AI with robotic systems for tasks like automated inspection, material handling, or predictive maintenance in factory settings.",
-          "sourceUrl": "",
-          "sourceName": "AI News"
+          "sourceUrl": "https://www.ai-news.net/2026/03/28/sap-and-anybotics-partner-to-drive-industrial-adoption-of-physical-ai/",
+          "sourceName": "ai-news.net"
         },
         {
           "score": 6,
@@ -378,8 +378,8 @@
           "headline": "Qodo Secures $70 Million to Address AI Code Reliability Challenges",
           "description": "Qodo has raised $70 million in AI funding to solve code reliability challenges as enterprises increasingly adopt AI-driven software development at scale. This investment focuses on ensuring the quality and security of AI-generated code.",
           "useCase": "For teams building AI automations that involve code generation or AI-assisted development, Qodo's solutions could help ensure the reliability, security, and maintainability of the generated code, reducing risks and improving the overall quality of AI-powered systems.",
-          "sourceUrl": "",
-          "sourceName": "The AI World"
+          "sourceUrl": "https://theaiworld.com/qodo-raises-70m-to-tackle-ai-code-risks/",
+          "sourceName": "theaiworld.com"
         },
         {
           "score": 6,
@@ -388,8 +388,8 @@
           "headline": "Mistral AI Raises €722 Million to Build Europe's AI Infrastructure",
           "description": "Mistral AI has secured €722 million in debt financing to build Nvidia-powered data centers across Europe, with a target of 200MW of AI compute capacity by 2027. This aims to establish a robust AI infrastructure within Europe.",
           "useCase": "This significant investment will bolster AI compute resources in Europe, potentially leading to more localized and compliant AI services for European businesses. Automation builders in Europe could benefit from improved access to high-performance AI infrastructure.",
-          "sourceUrl": "",
-          "sourceName": "The AI World"
+          "sourceUrl": "https://theaiworld.com/mistral-ai-raises-e722m-to-build-europes-ai-infrastructure/",
+          "sourceName": "theaiworld.com"
         },
         {
           "score": 6,
@@ -398,8 +398,8 @@
           "headline": "WitnessAI Raises $58 Million to Scale AI Security Solutions",
           "description": "WitnessAI has secured $58 million in funding, led by Sound Ventures, to scale its AI security solutions. This investment addresses the growing need for robust security measures as AI adoption increases.",
           "useCase": "For organizations deploying AI systems, WitnessAI's solutions could provide enhanced security, helping to protect against AI-specific threats like model poisoning, data leakage, or adversarial attacks. This is crucial for building trustworthy and resilient AI automations.",
-          "sourceUrl": "",
-          "sourceName": "Los Angeles Times"
+          "sourceUrl": "https://www.latimes.com/business/technology/story/2026-02-09/witnessai-raises-58m-led-by-sound-ventures-for-ai-security",
+          "sourceName": "latimes.com"
         },
         {
           "score": 6,
@@ -408,8 +408,8 @@
           "headline": "ThinkLabs AI Partners with Southern California Edison for AI-Powered Grid Solutions",
           "description": "ThinkLabs AI is teaming up with Southern California Edison to deploy scalable AI-powered solutions for grid optimization. This partnership aims to address power flow challenges and enhance the efficiency and reliability of the electricity grid using AI.",
           "useCase": "This demonstrates a real-world application of AI in critical infrastructure. Automation builders in energy or utilities could explore similar AI models for predictive maintenance of grid components, optimizing energy distribution, or managing renewable energy integration, leading to more resilient and efficient power systems.",
-          "sourceUrl": "",
-          "sourceName": "Los Angeles Times"
+          "sourceUrl": "https://www.latimes.com/business/story/2026-03-22/thinklabs-ai-southern-california-edison-ai-powered-grid-solutions",
+          "sourceName": "latimes.com"
         },
         {
           "score": 6,
@@ -418,8 +418,8 @@
           "headline": "Red Hat and Google Cloud Expand OpenShift Integration with Virtualization for AI Workloads",
           "description": "Red Hat and Google Cloud have expanded their collaboration to enhance OpenShift integration, adding virtualization capabilities on a dedicated service. This aims to help organizations accelerate the deployment and management of applications, including those with AI components.",
           "useCase": "For developers and operations teams building and deploying AI applications in hybrid cloud environments, this expanded integration offers more flexible and efficient ways to manage containerized AI workloads alongside virtualized infrastructure, streamlining deployment and scaling.",
-          "sourceUrl": "",
-          "sourceName": "AIwire - HPCwire"
+          "sourceUrl": "https://www.hpcwire.com/2026/03/27/red-hat-and-google-cloud-expand-openshift-integration-add-virtualization-on-dedicated-service/",
+          "sourceName": "hpcwire.com"
         },
         {
           "score": 6,
@@ -438,8 +438,8 @@
           "headline": "Fenrock AI (YC W26) Targets Compliance-Heavy Banking Workflows with AI",
           "description": "Fenrock AI, a YC W26 startup, is focusing on compliance-heavy and manual workflows in banking. It aims to use AI to streamline processes such as fraud detection, regulatory reporting, and transaction monitoring.",
           "useCase": "Financial institutions can integrate Fenrock AI's solutions to automate and enhance their compliance operations, reducing manual errors, accelerating reporting, and improving the accuracy of fraud detection, thereby strengthening their regulatory posture and operational efficiency.",
-          "sourceUrl": "",
-          "sourceName": "YC W26 Demo Day highlights"
+          "sourceUrl": "https://www.ycombinator.com/companies/fenrock-ai",
+          "sourceName": "ycombinator.com"
         },
         {
           "score": 6,
@@ -448,8 +448,8 @@
           "headline": "Google Launches Lyria 3 Music Generation Models for Text and Image Inputs",
           "description": "Google has released Lyria 3 music generation models, including a clip preview (30-second clips) and a pro preview (full-length songs). Both models accept text and image inputs and generate high-quality, 48kHz stereo audio.",
           "useCase": "Content creators, marketers, and game developers can use these models to quickly generate custom background music, sound effects, or musical scores based on textual descriptions or visual themes, streamlining the audio production process for various digital content.",
-          "sourceUrl": "",
-          "sourceName": "Gemini API - Google AI for Developers"
+          "sourceUrl": "https://ai.google.dev/gemini-api/docs/guides/lyria-3",
+          "sourceName": "ai.google.dev"
         },
         {
           "score": 5,
@@ -458,8 +458,8 @@
           "headline": "Meta Introduces TRIBE v2, an AI Model Predicting Human Brain Responses to Sight and Sound",
           "description": "Meta is launching TRIBE v2, a foundation model trained to predict how the human brain responds to nearly any sight or sound. Built on extensive fMRI recordings, it creates a \"digital twin\" of neural activity, enabling zero-shot predictions for new subjects and languages, and outperforming standard modeling approaches.",
           "useCase": "While not immediately applicable for most business automations, this research could lead to breakthroughs in human-computer interaction, personalized content delivery, or even AI systems that adapt to user cognitive states. Digital ecosystem architects might consider this for future interfaces that are more intuitively responsive to human perception.",
-          "sourceUrl": "",
-          "sourceName": "Radical Data Science"
+          "sourceUrl": "https://radicaldatascience.com/meta-introduces-tribe-v2-an-ai-model-predicting-human-brain-responses-to-sight-and-sound/",
+          "sourceName": "radicaldatascience.com"
         },
         {
           "score": 5,
@@ -468,8 +468,8 @@
           "headline": "Brett Adcock's Hark Secures $100 Million for Personalized AI Devices",
           "description": "Brett Adcock, founder of Figure AI, has launched Hark, a stealth AI startup that has secured $100 million (self-funded) to create a \"new interface to AGI\" through personalized AI paired with dedicated hardware. The company is developing a \"family of devices\" that \"begin to think like you, and sometimes ahead of you.\"",
           "useCase": "This represents a long-term vision for highly personalized AI. For automation builders, it's a signal of a potential future shift towards AI embedded in personal devices that proactively assist users. Currently, it's not directly usable, but it highlights a trend towards ambient and anticipatory AI.",
-          "sourceUrl": "",
-          "sourceName": "Radical Data Science"
+          "sourceUrl": "https://radicaldatascience.com/brett-adcocks-hark-secures-100-million-for-personalized-ai-devices/",
+          "sourceName": "radicaldatascience.com"
         },
         {
           "score": 5,
@@ -478,8 +478,8 @@
           "headline": "Vertiv Expands Ohio Manufacturing to Meet AI Data Center Cooling Demand",
           "description": "Vertiv, a leader in critical digital infrastructure, is expanding its manufacturing operations in Ohio to support the growing demand for AI data center cooling solutions. This expansion addresses the increased heat generated by powerful AI hardware, which requires specialized cooling systems.",
           "useCase": "For those involved in designing or operating AI data centers, this signals a growing market and availability of specialized cooling solutions. It's a reminder that physical infrastructure, especially cooling, is a critical consideration for scaling AI deployments.",
-          "sourceUrl": "",
-          "sourceName": "HPCwire"
+          "sourceUrl": "https://www.hpcwire.com/2026/03/31/vertiv-expands-ohio-manufacturing-to-support-ai-data-center-cooling-demand/",
+          "sourceName": "hpcwire.com"
         },
         {
           "score": 5,
@@ -488,8 +488,8 @@
           "headline": "Berkeley Lab's DL4SCI 2026 Summer School to Focus on Agentic AI and Foundation Models for Science",
           "description": "The National Energy Research Scientific Computing Center (NERSC) and Berkeley Lab will host the 2026 Deep Learning for Science (DL4SCI) Summer School, focusing on foundation models, reasoning, and agentic AI for scientific discovery. This intensive program aims to bring researchers to the state of the art in applying AI to science.",
           "useCase": "While an educational event, it highlights the growing importance of agentic AI and foundation models in scientific research. Automation builders in scientific domains could look to the curriculum and outcomes of such programs for emerging techniques and tools that can be adapted for automating complex scientific workflows and data analysis.",
-          "sourceUrl": "",
-          "sourceName": "AIwire - HPCwire"
+          "sourceUrl": "https://www.hpcwire.com/2026/04/01/berkeley-lab-dl4sci-2026-to-spotlight-discovery-through-agentic-ai-foundation-models/",
+          "sourceName": "hpcwire.com"
         },
         {
           "score": 5,
@@ -498,8 +498,8 @@
           "headline": "Adata Invests $3 Million in KonstTech to Boost AI Computing Infrastructure",
           "description": "Adata Technology has invested US$3 million in KonstTech's Series A funding round. This investment is aimed at boosting AI computing infrastructure, driven by the increasing demand for high-performance computing (HPC) due to the growth of generative AI and large language models.",
           "useCase": "This funding supports the underlying infrastructure needed for AI. For builders, it means continued development and availability of specialized hardware and services that power AI models, ensuring that the foundational components for AI automations remain robust and scalable.",
-          "sourceUrl": "",
-          "sourceName": "NewsDigest.Ai"
+          "sourceUrl": "https://www.digitimes.com/news/a20260328PD207/adata-konsttech-ai-computing-infrastructure.html",
+          "sourceName": "digitimes.com"
         },
         {
           "score": 5,
@@ -508,8 +508,8 @@
           "headline": "SK Hynix Aims for KRW100 Trillion Net Cash to Fund AI Infrastructure Investments",
           "description": "SK Hynix, a major memory chip producer, plans to accumulate over KRW100 trillion (approximately US$66 billion) in net cash. This financial strategy is intended to support long-term investments in artificial intelligence (AI) infrastructure, responding to the surging demand that is reshaping the memory industry.",
           "useCase": "This indicates a strong commitment from a key hardware supplier to meet future AI demand. For builders, it suggests continued innovation and supply in high-bandwidth memory (HBM) and other critical components for AI systems, which is essential for scaling AI solutions.",
-          "sourceUrl": "",
-          "sourceName": "NewsDigest.Ai"
+          "sourceUrl": "https://newsdigest.ai/sk-hynix-targets-krw100-trillion-net-cash-as-ai-demand-surges-eyes-us-listing/",
+          "sourceName": "newsdigest.ai"
         },
         {
           "score": 5,
@@ -518,8 +518,8 @@
           "headline": "Samsung and SK Hynix Boost China Investments to Address Global AI Memory Shortage",
           "description": "Samsung Electronics and SK Hynix are increasing investments in their China wafer fabs (chip manufacturing plants) to boost supply amid a tightening memory chip market driven by artificial intelligence computing. This aims to quickly respond to demand despite US export controls.",
           "useCase": "For those building AI systems, this news indicates efforts to stabilize the supply chain for critical AI memory components. While not directly usable, it's a factor in hardware availability and pricing, which can influence the cost and feasibility of large-scale AI deployments.",
-          "sourceUrl": "",
-          "sourceName": "NewsDigest.Ai"
+          "sourceUrl": "https://newsdigest.ai/samsung-and-sk-hynix-boost-china-investments-to-address-global-ai-memory-shortage/",
+          "sourceName": "newsdigest.ai"
         },
         {
           "score": 5,
@@ -528,8 +528,8 @@
           "headline": "Riplo Raises £2.3 Million for AI Operating System for Consulting Firms",
           "description": "Riplo has secured £2.3 million to build an AI operating system (OS) specifically for consulting firms. This funding signals a shift towards AI-driven workflow automation within the consulting industry.",
           "useCase": "Consulting firms can leverage this AI OS to automate repetitive tasks, enhance data analysis, and streamline project management, allowing consultants to focus on higher-value strategic work and deliver more efficient services to clients.",
-          "sourceUrl": "",
-          "sourceName": "The AI World"
+          "sourceUrl": "https://theaiworld.com/riplo-raises-2-3m-for-ai-consulting-os/",
+          "sourceName": "theaiworld.com"
         },
         {
           "score": 5,
@@ -538,8 +538,8 @@
           "headline": "Compa Raises $35 Million to Scale Agentic AI for Compensation Teams",
           "description": "Compa has secured $35 million in funding to scale its \"Agentic AI\" solutions specifically for compensation teams. This aims to automate and enhance compensation-related workflows within human resources.",
           "useCase": "HR and compensation professionals can use these agentic AI tools to automate salary benchmarking, analyze compensation data for equity and competitiveness, and streamline the process of creating compensation packages, improving efficiency and fairness in HR operations.",
-          "sourceUrl": "",
-          "sourceName": "Los Angeles Times"
+          "sourceUrl": "https://www.latimes.com/business/technology/story/2026-02-18/compa-secures-35m-to-scale-agentic-ai-for-compensation-teams",
+          "sourceName": "latimes.com"
         },
         {
           "score": 5,
@@ -548,8 +548,8 @@
           "headline": "Pado AI Raises $6 Million to Revolutionize AI Workload Orchestration in Data Centers",
           "description": "Pado AI has secured $6 million in seed funding to revolutionize AI workload orchestration in data centers. This investment focuses on optimizing how AI tasks are managed and executed across computing resources.",
           "useCase": "For data center operators and cloud architects, Pado AI's solutions could provide more efficient management of AI workloads, leading to better resource utilization, reduced operational costs, and improved performance for AI model training and inference.",
-          "sourceUrl": "",
-          "sourceName": "Los Angeles Times"
+          "sourceUrl": "https://www.latimes.com/business/technology/story/2026-03-24/pado-ai-secures-6m-to-revolutionize-ai-workload-orchestration-in-data-centers",
+          "sourceName": "latimes.com"
         },
         {
           "score": 5,
@@ -558,8 +558,8 @@
           "headline": "Human Archive Building World's Largest Multimodal Dataset for Training Embodied AI Robotics",
           "description": "Human Archive (a YC W26 startup) is working to build the world's largest multimodal dataset for robotics. The goal is to train embodied AI systems, which are AI that can interact with the physical world through a body, like a robot.",
           "useCase": "This foundational work is critical for advancing robotics and physical AI. For builders in robotics or industrial automation, it means that future AI models for robots will have richer, more diverse training data, potentially leading to more capable and adaptable robotic systems that can be integrated into complex physical workflows.",
-          "sourceUrl": "",
-          "sourceName": "YC W26 Demo Day highlights"
+          "sourceUrl": "https://www.ycombinator.com/companies/human-archive",
+          "sourceName": "ycombinator.com"
         },
         {
           "score": 5,
@@ -588,8 +588,8 @@
           "headline": "Musical AI Raises $4.5 Million to Solve Generative AI Music Attribution",
           "description": "Musical AI has secured $4.5 million in funding to address the challenge of attributing (giving credit to) generative AI music. This aims to develop solutions for tracking and recognizing the origins of AI-created musical content.",
           "useCase": "For creators, platforms, and businesses working with generative AI music, this could lead to tools that ensure proper licensing, royalty distribution, and intellectual property management, making the use of AI-generated music more transparent and legally sound within digital ecosystems.",
-          "sourceUrl": "",
-          "sourceName": "Los Angeles Times"
+          "sourceUrl": "https://www.latimes.com/business/technology/story/2026-02-04/musical-ai-secures-4-5m-to-solve-generative-ai-music-attribution",
+          "sourceName": "latimes.com"
         },
         {
           "score": 4,
@@ -598,8 +598,8 @@
           "headline": "Fragmented AI Tools Hinder Digital Health Discoveries in Academic Publishing",
           "description": "The academic publishing system is struggling with issues like speed, cost, and reproducibility, with a chaotic array of fragmented AI tools only patching symptoms. A fundamental shift to an integrated, data-native ecosystem is needed to translate digital health discoveries into practice effectively.",
           "useCase": "This highlights a challenge for integrating AI effectively. For builders, it's a cautionary tale about the need for holistic, integrated AI solutions rather than disparate tools. It also points to an opportunity for developing AI platforms that can unify research workflows and data management in specialized domains.",
-          "sourceUrl": "",
-          "sourceName": "Our AI-Powered Discoveries Are Trapped in a Predigital System"
+          "sourceUrl": "https://www.jmir.org/2026/1/e7900",
+          "sourceName": "jmir.org"
         }
       ]
     }
