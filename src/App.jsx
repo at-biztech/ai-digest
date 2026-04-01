@@ -104,7 +104,7 @@ export default function App() {
   const fetchData = () => {
     setLoading(true)
     setError(null)
-    fetch('/digests.json')
+    fetch(import.meta.env.BASE_URL + 'digests.json')
       .then(r => { if (!r.ok) throw new Error('Failed to load'); return r.json() })
       .then(data => {
         setDigests(data.digests || {})
