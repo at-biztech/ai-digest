@@ -12,6 +12,11 @@ on:
         required: false
         type: string
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   process:
     runs-on: ubuntu-latest
@@ -97,3 +102,17 @@ jobs:
             git commit -m "digest: ${DATE}"
             git push
           fi
+
+      - name: Build site
+        if: env.SKIP_RUN != 'true'
+        run: npm run build
+
+      - name: Upload pages artifact
+        if: env.SKIP_RUN != 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        if: env.SKIP_RUN != 'true'
+        uses: actions/deploy-pages@v4
