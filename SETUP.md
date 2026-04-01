@@ -20,15 +20,12 @@
 3. In your GitHub repo, go to **Settings > Secrets and variables > Actions**
 4. Add a new secret: `GEMINI_API_KEY` with your key
 
-## C. Connect Netlify
+## C. Enable GitHub Pages
 
-1. Go to https://app.netlify.com
-2. Click **"Add new site"** > **"Import an existing project"**
-3. Connect your GitHub repo
-4. Set:
-   - **Build command:** `npm run build`
-   - **Publish directory:** `dist`
-5. Deploy. Note your URL (something.netlify.app)
+1. In your GitHub repo, go to **Settings > Pages**
+2. Under **Source**, select **GitHub Actions**
+3. That's it. The `deploy.yml` workflow handles building and deploying on every push
+4. Your site will be at `https://YOUR_USERNAME.github.io/ai-digest/`
 
 ## D. How the pipeline runs
 
