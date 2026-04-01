@@ -40,8 +40,8 @@ Scoring priority (in this order):
 - description: 1 to 2 sentences explaining what happened in the simplest possible words. No jargon. If you must use a technical term, explain it in parentheses. Write like you are explaining to a smart person who is not a native English speaker.
 - useCase: One specific, concrete scenario of how this could be applied in building AI automations, connecting systems, or designing digital workflows. For lower-scored items, explain why it is less relevant or what would need to change for it to matter. Never generic.
 - category: One of: Models, Tools, Regulation, Funding, Hardware, Healthcare, Infrastructure, Research, or whatever fits best.
-- sourceUrl: The URL from the source content if available, otherwise empty string.
-- sourceName: The domain name of the source.
+- sourceUrl: The actual, direct URL of the original article or announcement. NEVER use vertexaisearch.cloud.google.com or grounding-api-redirect URLs. Use the real website URL (e.g. https://techcrunch.com/2026/..., https://reuters.com/...). If you cannot determine the real URL, use an empty string.
+- sourceName: The domain name of the source (e.g. techcrunch.com, reuters.com).
 
 4. Also provide:
 - totalScanned: Total number of distinct news items in the input
@@ -172,7 +172,7 @@ function validate(digest) {
     if (!item.headline) item.headline = 'Untitled'
     if (!item.description) item.description = ''
     if (!item.useCase) item.useCase = ''
-    if (!item.sourceUrl) item.sourceUrl = ''
+    if (!item.sourceUrl || item.sourceUrl.includes('grounding-api-redirect') || item.sourceUrl.includes('vertexaisearch.cloud.google.com')) item.sourceUrl = ''
     if (!item.sourceName) item.sourceName = ''
   }
 
