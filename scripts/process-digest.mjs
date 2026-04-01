@@ -91,9 +91,14 @@ Then score and format ALL of them.\n\n` + SCORING_INSTRUCTIONS
 }
 
 function buildContentPrompt(content) {
-  return `The following is a summary of today's AI news from a research assistant. Use it as a starting point. For each item, search the web to find the full story, source URL, and additional details before scoring and formatting. Also search for any major AI news from the last 24 hours that might be missing from this summary.
+  return `The following is a summary of today's AI news from a research assistant. This is your primary source of truth.
 
-Then score and format ALL of them.\n\n` + SCORING_INSTRUCTIONS + '\n\nHere is the summary:\n\n' + content
+Your tasks:
+1. Process EVERY item from this summary. Do not skip any. For each item, search the web to find the real source URL and additional details.
+2. After processing all items from the summary, search the web for any other major AI news from the last 24 hours that is NOT already covered. Only add additional items if they would score 7 or higher. Do not pad the list with low-relevance additions.
+3. Score and format ALL items (from the summary + any high-scoring additions).
+
+Then format the output.\n\n` + SCORING_INSTRUCTIONS + '\n\nHere is the summary:\n\n' + content
 }
 
 const PRIMARY_MODEL = 'gemini-2.5-pro'

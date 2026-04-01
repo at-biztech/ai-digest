@@ -607,14 +607,24 @@
     "2026-03-30": {
       "date": "March 30, 2026",
       "dateKey": "2026-03-30",
-      "totalScanned": 3,
-      "relevant": 2,
-      "critical": 0,
-      "watch": 2,
+      "totalScanned": 5,
+      "relevant": 4,
+      "critical": 1,
+      "watch": 3,
       "low": 1,
-      "summary": "Quiet day. European AI infrastructure investment and Google agent tooling dominate.",
+      "summary": "Quiet day. California sets new AI regulation bar, Mistral invests big in European GPU infrastructure, and Google expands agent tooling to Java.",
       "footerNote": "Only three items in the source material. Light news cycle with no major model releases or regulatory shifts.",
       "items": [
+        {
+          "score": 9,
+          "tag": "CRITICAL",
+          "category": "Regulation",
+          "headline": "California Governor signs executive order to strengthen AI protections and responsible use",
+          "description": "Governor Newsom issued an executive order requiring AI companies doing business with California to demonstrate responsible policies for preventing misuse, protecting privacy, and avoiding harmful bias. The state must develop AI policies within four months, including watermarking standards for AI-generated content.",
+          "useCase": "Any AI system deployed for California state contracts or serving California users will need compliance with these new standards. Architects should build in content watermarking, bias auditing, and privacy controls now if targeting the California market.",
+          "sourceUrl": "https://www.theguardian.com/us-news/2026/mar/30/california-ai-regulations-trump-newsom",
+          "sourceName": "theguardian.com"
+        },
         {
           "score": 7,
           "tag": "WATCH",
@@ -634,6 +644,16 @@
           "useCase": "Java-heavy enterprise teams can now build production multi-agent systems with first-class tool use, human approval flows, and cross-agent collaboration without custom infrastructure. Evaluate this for any client running Java backends who wants to add AI agent capabilities.",
           "sourceUrl": "https://developers.googleblog.com/announcing-adk-for-java-100-building-the-future-of-ai-agents-in-java/",
           "sourceName": "developers.googleblog.com"
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Major financial institutions launch AI-powered meeting and adviser tools",
+          "description": "Jump-Accio launched an AI Associate agent for financial advisers that integrates real-time insights from meetings and documents. Merrill Wealth Management and Bank of America launched an AI-Powered Meeting Journey tool for client meeting preparation, summarization, and follow-up.",
+          "useCase": "Blueprint for AI agent integration in professional services. The pattern of AI attending meetings, extracting action items, and feeding CRM systems is replicable across consulting, legal, and account management workflows.",
+          "sourceUrl": "https://www.planadviser.com/ai-product-service-launches-3-30-2026/",
+          "sourceName": "planadviser.com"
         },
         {
           "score": 4,
