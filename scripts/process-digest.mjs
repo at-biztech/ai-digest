@@ -305,9 +305,29 @@ async function validate(digest) {
 }
 
 async function main() {
-  const text = await callGemini()
+  let parsed
 
-  const parsed = parseResponse(text)
+  // Check if RAW_CONTENT is already pre-formatted JSON (from Perplexity Computer)
+  if (rawContent) {
+    try {
+      const trimmed = rawContent.trim()
+      if (trimmed.startsWith('{')) {
+        parsed = JSON.parse(trimmed)
+        if (parsed.items && Array.isArray(parsed.items)) {
+          console.log('Pre-formatted JSON detected, skipping Gemini')
+        } else {
+          parsed = null
+        }
+      }
+    } catch {}
+  }
+
+  // If not pre-formatted, use Gemini
+  if (!parsed) {
+    const text = await callGemini()
+    parsed = parseResponse(text)
+  }
+
   const digest = await validate(parsed)
 
   const outPath = join(__dirname, 'output.json')
