@@ -183,7 +183,7 @@ section:first-of-type { margin-top: .5rem; }
   animation: fadeUp .3s ease both;
 }
 .item:last-child { border-bottom: none; }
-.item:hover { background: var(--surface); margin: 0 -.75rem; padding-left: .75rem; padding-right: .75rem; border-radius: 8px; }
+.item:hover { background: var(--surface); border-radius: 8px; }
 
 /* Stagger items */
 .item:nth-child(1) { animation-delay: 0s; }
