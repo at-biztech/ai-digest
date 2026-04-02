@@ -60,8 +60,7 @@ function Item({ item, dateKey, onSave }) {
           <Star dateKey={dateKey} item={item} onToggle={onSave} />
         </div>
         <h3 className="item-hl">{item.headline}</h3>
-        <p className="item-desc">{item.description}</p>
-        {isCrit && actionText && <div className="item-action"><b>Action:</b> {actionText}</div>}
+        <p className="item-desc">{item.description}{isCrit && actionText ? ` ${actionText}` : ''}</p>
         {isWatch && !open && pitchText && <div className="item-pitch">{pitchText}</div>}
       </div>
       {open && (
