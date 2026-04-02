@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-02T20:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-02. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://docs.anthropic.com/en/release-notes/overview returned 403 on 2026-04-02. Use WebSearch as fallback.",
@@ -19,6 +19,7 @@
   "improvements": [
     "First run: 2026-04-02. Baseline established.",
     "2026-04-02: All 6 primary WebFetch sources returned 403. Compensated with 10 WebSearch queries. Consider adding alternative direct URLs (e.g., GitHub release pages, RSS feeds) for future runs.",
-    "2026-04-02: Digest produced 12 items (1 CRITICAL, 4 WATCH, 7 LOW). Distribution looks healthy."
+    "2026-04-02: Digest produced 12 items (1 CRITICAL, 4 WATCH, 7 LOW). Distribution looks healthy.",
+    "2026-04-02 evening: Ran evening catch-up at 8pm Almaty / 3pm UTC. Searched 3 queries for US afternoon breaking news. No new CRITICAL items found. Existing digest already covered all major stories. No changes made to digests.json."
   ]
 }
