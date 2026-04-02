@@ -56,5 +56,14 @@
     "logistics",
     "real estate"
   ],
-  "readerNotes": "Scores items about automation tools and API changes highest. Prefers actionable news over market analysis. Forwards WATCH items to clients regularly. Values source reliability."
+  "commonWorkflows": [
+    "Document processing pipelines (invoices, contracts, medical records) using LLM APIs + Make/n8n",
+    "Multi agent systems where specialized agents handle different parts of a business process",
+    "CRM integrations connecting AI analysis to Salesforce, HubSpot, or Airtable",
+    "Customer service automation with voice AI or chatbots connected to knowledge bases",
+    "Data extraction and classification workflows triggered by email, webhook, or scheduled",
+    "Client reporting dashboards that pull from multiple AI processed data sources",
+    "Compliance monitoring systems that flag regulatory changes for specific industries"
+  ],
+  "insightRules": "When writing useCase, action, or clientPitch: reference a specific workflow pattern from commonWorkflows above. Name a real tool. Describe a concrete first step. Never say 'could be useful' or 'worth exploring.' Instead say 'test this on your invoice pipeline' or 'swap the GPT call in your document classifier for this.' The reader builds systems. Insights must be about systems, not general awareness."
 }
