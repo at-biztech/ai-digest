@@ -21,8 +21,6 @@
     "vector databases",
     "AI regulation EU",
     "AI regulation US",
-    "healthcare AI",
-    "fintech AI",
     "computer use agents",
     "voice AI",
     "document processing"
@@ -48,22 +46,6 @@
     "Notion",
     "Slack"
   ],
-  "clientVerticals": [
-    "healthcare",
-    "fintech",
-    "retail",
-    "insurance",
-    "logistics",
-    "real estate"
-  ],
-  "commonWorkflows": [
-    "Document processing pipelines (invoices, contracts, medical records) using LLM APIs + Make/n8n",
-    "Multi agent systems where specialized agents handle different parts of a business process",
-    "CRM integrations connecting AI analysis to Salesforce, HubSpot, or Airtable",
-    "Customer service automation with voice AI or chatbots connected to knowledge bases",
-    "Data extraction and classification workflows triggered by email, webhook, or scheduled",
-    "Client reporting dashboards that pull from multiple AI processed data sources",
-    "Compliance monitoring systems that flag regulatory changes for specific industries"
-  ],
-  "insightRules": "When writing useCase, action, or clientPitch: reference a specific workflow pattern from commonWorkflows above. Name a real tool. Describe a concrete first step. Never say 'could be useful' or 'worth exploring.' Instead say 'test this on your invoice pipeline' or 'swap the GPT call in your document classifier for this.' The reader builds systems. Insights must be about systems, not general awareness."
+  "readerProfile": "Builds digital, optimised, unified ecosystems that include automations and AI, speeding all production processes of any company. Works across industries. Thinks in systems, integrations, and workflows. Every company is different but the approach is the same: connect everything, automate everything, make it intelligent.",
+  "insightRules": "Write insights for someone who thinks in systems. The question is always: how does this fit into a unified ecosystem? Does it replace a component? Add a new capability? Break an integration? Change a cost equation? Open a new market? The reader does not need to be told what automation is. They need to know what changed in the landscape of tools, APIs, and capabilities they build with."
 }
