@@ -285,6 +285,11 @@ section:first-of-type { margin-top: .5rem; }
   color: var(--text3);
 }
 
+.item-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .15rem .5rem;
+}
 .item-src {
   font-size: .7rem;
   color: var(--accent);

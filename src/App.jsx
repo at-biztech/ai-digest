@@ -1,11 +1,29 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
 
-// Hide low quality source names, show domain only
 function cleanSource(name) {
   if (!name) return 'Source'
   const low = ['blog', 'ceo', 'digest', 'tracker', 'content', 'insider']
   if (low.some(l => name.toLowerCase().includes(l))) return 'Source'
   return name
+}
+
+// Normalize sources: support both old format (sourceUrl/sourceName) and new format (sources array)
+function getSources(item) {
+  if (item.sources?.length) return item.sources
+  if (item.sourceUrl) return [{ url: item.sourceUrl, name: item.sourceName || '' }]
+  return []
+}
+
+function Sources({ item }) {
+  const srcs = getSources(item)
+  if (srcs.length === 0) return null
+  return (
+    <div className="item-sources">
+      {srcs.filter(s => s.url).map((s, i) => (
+        <a key={i} className="item-src" href={s.url} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}>{cleanSource(s.name)}</a>
+      ))}
+    </div>
+  )
 }
 
 function getSaved() { try { return JSON.parse(localStorage.getItem('digest-saved') || '[]') } catch { return [] } }
@@ -57,10 +75,10 @@ function Item({ item, dateKey, onSave }) {
           {lowText && <div className="item-low-note">{lowText}</div>}
           {item.tools?.length > 0 && <div className="item-tools">{item.tools.map((t, i) => <span key={i} className="item-tool">{t}</span>)}</div>}
           {item.confidence && <span className="item-conf">{item.confidence} confidence</span>}
-          {item.sourceUrl && <a className="item-src" href={item.sourceUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}>{cleanSource(item.sourceName)}</a>}
+          <Sources item={item} />
         </div>
       )}
-      {!open && item.sourceUrl && <a className="item-src" href={item.sourceUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}>{cleanSource(item.sourceName)}</a>}
+      {!open && <Sources item={item} />}
     </div>
   )
 }
