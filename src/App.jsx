@@ -45,7 +45,7 @@ function Item({ item, dateKey, onSave, autoOpen, onAutoOpened }) {
         <div className="item-top">
           <div className="item-content">
             <h3 className="item-hl">{item.headline}</h3>
-            {!open && <p className="item-sub">{item.description?.split('.')[0]}.</p>}
+            {!open && <p className="item-sub">{item.description}</p>}
           </div>
           <Star dateKey={dateKey} item={item} onToggle={onSave} />
         </div>
