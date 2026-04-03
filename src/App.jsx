@@ -176,6 +176,7 @@ export default function App() {
       </div>
 
       <div className="page">
+        <div className="topline">Daily AI news that affects how we build. Updated every morning.</div>
         <nav className="toolbar">
           <button className="icon" onClick={() => setSidebar(true)}>
             <svg width="18" height="18" viewBox="0 0 20 20"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
