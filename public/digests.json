@@ -710,99 +710,132 @@
     "2026-04-03": {
       "dateKey": "2026-04-03",
       "date": "April 3, 2026",
-      "summary": "Two Anthropic API deadlines demand immediate attention: Claude Haiku 3 retires April 20 and the 1M context beta for Sonnet 4.5/4 ends April 30, both requiring migration to newer models this week.",
-      "footerNote": "Quiet day for new launches. The action items are migration tasks: swap out deprecated model IDs and beta headers before they stop working. Both deadlines fall within the month.",
-      "totalScanned": 3,
-      "relevant": 3,
-      "critical": 1,
-      "watch": 2,
-      "low": 0,
+      "summary": "Google splits Gemini inference into Flex and Priority tiers, cutting batch costs 50% and adding guaranteed low latency at a premium, giving builders a new lever to optimize agentic workflow spend.",
       "items": [
         {
           "score": 8,
           "tag": "CRITICAL",
-          "category": "Models",
-          "headline": "Claude Haiku 3 retires April 20, all requests to claude-3-haiku-20240307 will fail",
-          "description": "Anthropic is retiring claude-3-haiku-20240307 on April 20, 2026. After that date, all API requests to this model ID return errors. The recommended replacement is claude-haiku-4-5-20251001.",
-          "action": "Search your codebases and automation configs for claude-3-haiku-20240307. Replace with claude-haiku-4-5-20251001. Test thoroughly since Haiku 4.5 has different output characteristics and pricing.",
-          "clientPitch": "Any client system still calling Claude Haiku 3 will break in 17 days. This is a mandatory migration with a hard cutoff.",
-          "useCase": "This affects every integration, automation, and agent pipeline that hardcodes the Haiku 3 model ID. Haiku 4.5 is faster and more capable but has different token pricing, so cost projections for affected workflows need updating.",
+          "category": "Infrastructure",
+          "headline": "Google Gemini API launches Flex and Priority inference tiers",
+          "description": "Google announced two new inference options for the Gemini API on April 3. Flex inference costs 50% of standard pricing but does not guarantee latency, targeting a 1 to 15 minute window. Unlike the existing Batch API, Flex uses the same synchronous endpoints, so no file management or polling is needed. Priority inference guarantees ultra low latency at 75% to 100% above standard rates. Priority is available to Tier 2 and Tier 3 paid projects across the GenerateContent API and the new Interactions API.",
+          "action": "Audit your Gemini API calls. Move background processing, evaluations, and non user facing agentic chains to Flex. Keep customer facing calls on Priority. The synchronous interface means existing code works with minimal changes.",
+          "clientPitch": "",
+          "useCase": "For multi step agentic workflows where each call depends on the previous output, Flex is transformative. A 10 step chain that costs $1.00 today drops to $0.50 with no architectural changes, just a parameter switch. Priority gives production chatbots an SLA they never had on Gemini before.",
           "tools": [
-            "Claude API",
-            "Anthropic SDK"
+            "Gemini API"
           ],
-          "timeline": "April 20, 2026",
+          "timeline": "Available now",
           "confidence": "verified",
           "sourceTier": 1,
+          "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/",
+          "sourceName": "Google Blog",
           "sources": [
             {
-              "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
-              "name": "Anthropic Model Deprecations"
+              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/",
+              "name": "Google Blog"
+            },
+            {
+              "url": "https://seekingalpha.com/news/4572373-google-introduces-new-pricing-tiers-for-gemini-based-on-inference-usage",
+              "name": "Seeking Alpha"
             }
+          ]
+        },
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Infrastructure",
+          "headline": "Axios npm package compromised with RAT affecting 100M+ weekly downloads",
+          "description": "On March 30, an attacker used stolen maintainer credentials to publish two malicious versions of axios (1.14.1 and 0.30.4) to npm. A postinstall script downloaded an obfuscated dropper that fetched a platform specific Remote Access Trojan for macOS, Windows, and Linux. The malicious versions were live from 00:21 to 03:29 UTC on March 31. Axios has over 100 million weekly npm downloads and is a dependency in most Node.js AI toolchains. Anyone who ran npm install during the 3 hour window may be affected. The coincidental timing with the Claude Code source code leak (same day) amplified confusion, but the two events are unrelated.",
+          "action": "Check your lockfiles for axios 1.14.1 or 0.30.4 immediately. If present, rotate all credentials on the affected machine, scan for RAT indicators listed in the SANS and Palo Alto advisories, and pin axios to a known safe version.",
+          "clientPitch": "",
+          "useCase": "Axios is embedded in nearly every Node.js integration stack. If you build automations that install npm packages in CI/CD or on client infrastructure, this is a direct supply chain risk. Lockfile auditing and version pinning should be standard practice for every deployment pipeline.",
+          "tools": [
+            "npm",
+            "Node.js"
           ],
-          "sourceUrl": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
-          "sourceName": "Anthropic Model Deprecations"
+          "timeline": "Malicious versions removed. Remediation ongoing.",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://www.malwarebytes.com/blog/news/2026/03/axios-supply-chain-attack-chops-away-at-npm-trust",
+          "sourceName": "Malwarebytes",
+          "sources": [
+            {
+              "url": "https://www.malwarebytes.com/blog/news/2026/03/axios-supply-chain-attack-chops-away-at-npm-trust",
+              "name": "Malwarebytes"
+            },
+            {
+              "url": "https://unit42.paloaltonetworks.com/axios-supply-chain-attack/",
+              "name": "Palo Alto Unit 42"
+            },
+            {
+              "url": "https://www.sans.org/blog/axios-npm-supply-chain-compromise-malicious-packages-remote-access-trojan",
+              "name": "SANS Institute"
+            }
+          ]
         },
         {
           "score": 7,
           "tag": "WATCH",
           "category": "Infrastructure",
-          "headline": "Anthropic retires 1M context beta for Sonnet 4.5 and Sonnet 4 on April 30",
-          "description": "The context-1m-2025-08-07 beta header stops working for Claude Sonnet 4.5 and Sonnet 4 on April 30. Requests exceeding 200k tokens on these models will return errors. Sonnet 4.6 and Opus 4.6 support 1M context natively at standard pricing with no beta header.",
-          "action": "Find all API calls using the context-1m-2025-08-07 beta header with Sonnet 4.5 or Sonnet 4. Migrate to Sonnet 4.6 or Opus 4.6 and remove the beta header. Test with production sized payloads.",
-          "clientPitch": "If any client system processes large documents through Claude with the 1M beta header on older Sonnet models, it breaks April 30. The fix is straightforward: upgrade the model ID and drop the header.",
-          "useCase": "This affects RAG pipelines, document processing workflows, and any system that passes large context windows to Claude Sonnet 4.5 or 4. The migration path is clean since Sonnet 4.6 includes 1M context at standard pricing, potentially reducing costs for these workloads.",
+          "headline": "Gemini API enforces monthly spend caps per billing tier from April 1",
+          "description": "Google now enforces hard monthly spend caps on all Gemini API billing accounts. Tier 1 accounts are capped at $250 per month, Tier 2 at $2,000, and Tier 3 ranges from $20,000 to $100,000+. New users must use prepaid billing. The tier qualification thresholds have been restructured with lower entry points. Once a cap is hit, API calls are rejected until the next billing cycle or a tier upgrade.",
+          "action": "",
+          "clientPitch": "Google now enforces hard budget caps on Gemini API usage, which means predictable costs but also a risk of service interruption if limits are hit mid production.",
+          "useCase": "If you run Gemini calls inside Make.com or n8n workflows that scale with client volume, a $250 Tier 1 cap can halt production without warning. Calculate your monthly token burn and upgrade tiers proactively. The new Flex inference tier helps stretch the budget further within these caps.",
           "tools": [
-            "Claude API",
-            "Anthropic SDK"
+            "Gemini API"
           ],
-          "timeline": "April 30, 2026",
+          "timeline": "In effect since April 1, 2026",
           "confidence": "verified",
           "sourceTier": 1,
+          "sourceUrl": "https://discuss.ai.google.dev/t/why-billing-update-gemini-api-usage-tier-updates-and-billing-caps-starting-apr-2026/134392",
+          "sourceName": "Google AI Developers Forum",
           "sources": [
             {
-              "url": "https://docs.anthropic.com/en/release-notes/overview",
-              "name": "Anthropic Release Notes"
+              "url": "https://discuss.ai.google.dev/t/why-billing-update-gemini-api-usage-tier-updates-and-billing-caps-starting-apr-2026/134392",
+              "name": "Google AI Developers Forum"
             },
             {
-              "url": "https://www.anthropic.com/news/claude-sonnet-4-6",
-              "name": "Anthropic Sonnet 4.6 Announcement"
+              "url": "https://blog.laozhang.ai/en/posts/google-gemini-billing-tier-policy-changes",
+              "name": "LaoZhang AI Blog"
             }
-          ],
-          "sourceUrl": "https://docs.anthropic.com/en/release-notes/overview",
-          "sourceName": "Anthropic Release Notes"
+          ]
         },
         {
           "score": 6,
           "tag": "WATCH",
-          "category": "Tools",
-          "headline": "Anthropic API web search and code execution tools reach GA with free bundled execution",
-          "description": "Anthropic promoted web search, web fetch, code execution, and programmatic tool calling to general availability, removing beta header requirements. Code execution is now free when used alongside web search or web fetch, enabling search result filtering before context injection.",
-          "action": "Remove beta headers from any web search or code execution tool calls in your Claude API integrations. Test the free code execution with web search for search heavy agent workflows to reduce token costs.",
-          "clientPitch": "Claude API tools for web search and code execution are now production stable with no beta flags. Free code execution with search means cheaper, smarter agent pipelines that filter results before they consume context tokens.",
-          "useCase": "Agent workflows that search the web and process results can now run code to filter and transform search output before it enters the context window. This reduces token costs on search heavy pipelines and removes the beta dependency that made these tools risky for production deployments.",
+          "category": "Models",
+          "headline": "Alibaba releases Qwen 3.6 Plus Preview with 1M context on OpenRouter",
+          "description": "Alibaba launched Qwen 3.6 Plus as a free preview on OpenRouter on March 30. The model supports a 1 million token context window, up to 65,536 output tokens, always on chain of thought reasoning, and native function calling. It beats Claude 4.5 Opus on Terminal Bench 2.0 (61.6 vs 59.3) and leads on OmniDocBench v1.5 (91.2). The model uses a hybrid architecture and is available via API.",
+          "action": "",
+          "clientPitch": "A new open weight model from Alibaba matches or exceeds top commercial models on coding and document understanding benchmarks, available for free during preview.",
+          "useCase": "A free 1M context model with native tool use is immediately useful for document heavy agentic workflows where cost is a constraint. The function calling support means it slots into existing orchestration frameworks without adapter layers. Worth benchmarking against your current Gemini or Claude calls for long context tasks.",
           "tools": [
-            "Claude API",
-            "Anthropic SDK",
-            "MCP"
+            "OpenRouter",
+            "Qwen API"
           ],
-          "timeline": "Available now",
+          "timeline": "Free preview, available now",
           "confidence": "verified",
-          "sourceTier": 1,
+          "sourceTier": 2,
+          "sourceUrl": "https://www.buildfastwithai.com/blogs/qwen-3-6-plus-preview-review",
+          "sourceName": "Build Fast with AI",
           "sources": [
             {
-              "url": "https://docs.anthropic.com/en/release-notes/api",
-              "name": "Anthropic API Release Notes"
+              "url": "https://www.buildfastwithai.com/blogs/qwen-3-6-plus-preview-review",
+              "name": "Build Fast with AI"
             },
             {
-              "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool",
-              "name": "Anthropic Code Execution Docs"
+              "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+              "name": "Hugging Face"
             }
-          ],
-          "sourceUrl": "https://docs.anthropic.com/en/release-notes/api",
-          "sourceName": "Anthropic API Release Notes"
+          ]
         }
-      ]
+      ],
+      "totalScanned": 4,
+      "relevant": 4,
+      "critical": 2,
+      "watch": 2,
+      "low": 0
     }
   }
 }
