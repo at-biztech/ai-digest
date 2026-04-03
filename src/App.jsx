@@ -29,8 +29,8 @@ function Star({ dateKey, item, onToggle }) {
   return <button className={`star ${on ? 'on' : ''}`} onClick={e => { e.stopPropagation(); toggleSave(dateKey, item); set(!on); onToggle?.() }}>{on ? '\u2605' : '\u2606'}</button>
 }
 
-function Item({ item, dateKey, onSave }) {
-  const [open, setOpen] = useState(false)
+function Item({ item, dateKey, onSave, autoOpen }) {
+  const [open, setOpen] = useState(autoOpen || false)
   const isCrit = item.score >= 8
   const insight = item.useCase || item.action || item.clientPitch || ''
   const srcs = getSources(item)
@@ -67,19 +67,19 @@ function Item({ item, dateKey, onSave }) {
   )
 }
 
-function WeeklySummary({ digests, dates, currentDate }) {
+function WeeklySummary({ digests, dates, currentDate, onNavigate }) {
   const idx = dates.indexOf(currentDate)
   const wd = dates.slice(idx, Math.min(idx + 7, dates.length))
   if (wd.length < 2) return null
-  const wi = wd.flatMap(d => digests[d]?.items || [])
-  if (wi.length === 0) return null
+  const wi = []
+  for (const d of wd) { (digests[d]?.items || []).forEach(item => { wi.push({ ...item, dateKey: d }) }) }
   const topItems = wi.filter(i => i.score >= 7 && !i.headline?.toLowerCase().includes('consciousness') && !i.sourceUrl?.includes('aprilfoolsday')).sort((a, b) => b.score - a.score).slice(0, 7)
   if (topItems.length === 0) return null
 
   return (
     <div className="weekly">
       <div className="wk-label">Last {wd.length} days</div>
-      {topItems.map((item, i) => <div key={i} className="wk-item">{item.headline}</div>)}
+      {topItems.map((item, i) => <div key={i} className="wk-item wk-link" onClick={() => onNavigate(item.dateKey, item.headline)}>{item.headline}</div>)}
     </div>
   )
 }
@@ -115,6 +115,7 @@ export default function App() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [view, setView] = useState('read')
+  const [autoExpand, setAutoExpand] = useState(null)
   const [, refresh] = useState(0)
 
   useEffect(() => { document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light'); localStorage.setItem('digest-dark', dark) }, [dark])
@@ -215,18 +216,18 @@ export default function App() {
             {crit.length > 0 && (
               <section>
                 <div className="section-line line-crit"><span>Critical</span></div>
-                {crit.map((item, i) => <Item key={`c${i}`} item={item} dateKey={cur} onSave={() => refresh(n => n + 1)} />)}
+                {crit.map((item, i) => <Item key={`c${i}`} item={item} dateKey={cur} onSave={() => refresh(n => n + 1)} autoOpen={autoExpand === item.headline} />)}
               </section>
             )}
 
             {notable.length > 0 && (
               <section>
                 <div className="section-line line-note"><span>Notable</span></div>
-                {notable.map((item, i) => <Item key={`n${i}`} item={item} dateKey={cur} onSave={() => refresh(n => n + 1)} />)}
+                {notable.map((item, i) => <Item key={`n${i}`} item={item} dateKey={cur} onSave={() => refresh(n => n + 1)} autoOpen={autoExpand === item.headline} />)}
               </section>
             )}
 
-            <WeeklySummary digests={digests} dates={dates} currentDate={cur} />
+            <WeeklySummary digests={digests} dates={dates} currentDate={cur} onNavigate={(dateKey, headline) => { setCur(dateKey); setAutoExpand(headline) }} />
 
             <footer>
               <p className="ft-meta">{dates.length} digests in archive</p>
