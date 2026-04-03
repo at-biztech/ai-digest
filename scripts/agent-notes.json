@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-03T12:00+06:00",
+  "lastUpdated": "2026-04-03T22:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://docs.anthropic.com/en/release-notes/overview returned 403 on 2026-04-03. Use WebSearch as fallback.",
@@ -28,6 +28,9 @@
     "2026-04-02 evening: Ran evening catch-up at 8pm Almaty / 3pm UTC. No new CRITICAL items found.",
     "2026-04-03: Quiet news day. Focused on approaching Anthropic API deadlines (Haiku 3 retirement April 20, 1M context beta April 30) and Anthropic tools GA. 3 items total. Quality over quantity approach.",
     "2026-04-03: Discovered platform.claude.com/docs deprecations page is fetchable via WebFetch. Added to sourceNotes for future runs.",
-    "2026-04-03: Releasebot.io and llm-stats.com also now return 403. Fewer fetchable sources than April 2."
+    "2026-04-03: Releasebot.io and llm-stats.com also now return 403. Fewer fetchable sources than April 2.",
+    "2026-04-03 evening: Second run. Google Gemini Flex/Priority tiers, axios supply chain attack, Gemini billing caps, and Qwen 3.6 Plus Preview. 4 items (2 CRITICAL, 2 WATCH). Replaced morning digest for the same dateKey.",
+    "2026-04-03: Google blog posts (blog.google) also return 403 via WebFetch. Confirmed via search results instead.",
+    "2026-04-03: Axios supply chain attack (March 30) is a critical security item. Even though 4 days old, included because it directly affects npm-based AI toolchains and was not in previous digests."
   ]
 }
