@@ -73,21 +73,21 @@ function WeeklySummary({ digests, dates, currentDate }) {
   if (wd.length < 2) return null
   const wi = wd.flatMap(d => digests[d]?.items || [])
   if (wi.length === 0) return null
-  const cc = wi.filter(i => i.score >= 8).length
-  const cats = {}; wi.forEach(i => { if (i.category) cats[i.category] = (cats[i.category] || 0) + 1 })
-  const topC = Object.entries(cats).sort((a, b) => b[1] - a[1]).slice(0, 3)
-  const tf = {}; wi.flatMap(i => i.tools || []).forEach(t => { tf[t] = (tf[t] || 0) + 1 })
-  const topT = Object.entries(tf).sort((a, b) => b[1] - a[1]).slice(0, 4)
+
+  // Get the top headlines from the week for context
+  const topItems = wi.filter(i => i.score >= 7).sort((a, b) => b.score - a.score).slice(0, 5)
+  const summaries = wd.map(d => digests[d]?.summary).filter(Boolean)
 
   return (
     <div className="weekly">
       <div className="wk-label">Last {wd.length} days</div>
-      <div className="wk-body">
-        {cc > 0 && <span>{cc} critical</span>}
-        <span>{wi.length} items total</span>
-      </div>
-      {topC.length > 0 && <div className="wk-detail">Focus: {topC.map(([c, n]) => `${c} (${n})`).join(', ')}</div>}
-      {topT.length > 0 && <div className="wk-detail">Mentioned: {topT.map(([t, n]) => `${t} (${n}x)`).join(', ')}</div>}
+      {summaries.length > 0 && <div className="wk-summaries">{summaries.map((s, i) => <p key={i} className="wk-sum">{s}</p>)}</div>}
+      {topItems.length > 0 && (
+        <div className="wk-top">
+          <div className="wk-top-label">Top stories</div>
+          {topItems.map((item, i) => <div key={i} className="wk-item">{item.headline}</div>)}
+        </div>
+      )}
     </div>
   )
 }
