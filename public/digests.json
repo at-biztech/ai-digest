@@ -200,13 +200,7 @@
     "2026-04-01": {
       "dateKey": "2026-04-01",
       "date": "April 01, 2026",
-      "totalScanned": 12,
-      "relevant": 8,
-      "critical": 3,
-      "watch": 5,
-      "low": 4,
-      "summary": "The Claude Code source leak dominated the news cycle, exposing Anthropic's internal architecture and triggering a supply chain attack, while DeepSeek V3.2 and Codex CLI updates reshaped the competitive landscape for automation builders. Review any workflows that depend on Claude Code npm packages for integrity, and evaluate DeepSeek V3.2 as a cost effective reasoning layer in production pipelines.",
-      "footerNote": "The Claude Code leak is the first major supply chain incident in the AI tooling layer. Any team running npm based AI agent toolchains should audit dependency integrity now, not after a breach. Meanwhile, the open weight model cost curve continues to compress, making API pricing leverage a real factor in multi provider architectures.",
+      "summary": "Anthropic's Claude Code source leak exposes 500,000 lines of agent internals and unreleased feature flags, Apple confirms Gemini-powered Siri with on-screen awareness shipping in iOS 26.4, and a class action lawsuit alleges Perplexity routed user chats to Meta and Google without consent.",
       "items": [
         {
           "score": 10,
@@ -237,18 +231,17 @@
         {
           "score": 9,
           "tag": "CRITICAL",
-          "category": "Security",
-          "headline": "Claude Code source leaked via npm packaging error, exposing 512K lines and 44 feature flags",
-          "description": "Anthropic accidentally published a 59.8MB source map file in Claude Code v2.1.88 to the npm registry, exposing 512,000 lines of TypeScript across 1,906 files. The leak revealed the KAIROS daemon mode for always on background agents, a three layer memory architecture built around MEMORY.md, and dozens of unshipped feature flags. A known Bun runtime bug caused source maps to ship in production builds. Anthropic confirmed no customer data was exposed.",
-          "useCase": "Audit any internal toolchains built on top of Claude Code. Review whether exposed architectural patterns (KAIROS, memory layers) change how you design agent orchestration in client ecosystems.",
-          "action": "Pin Claude Code to a verified version, audit npm lock files, and review dependency integrity across any CI/CD pipeline that pulls from npm.",
-          "clientPitch": "If you build on Claude Code or similar AI CLI tools, this is a wake up call for supply chain hygiene. We can audit your AI toolchain dependencies and set up integrity checks.",
+          "category": "Infrastructure",
+          "headline": "Anthropic Claude Code source leak exposes full agent architecture and unreleased features",
+          "description": "A misconfigured debug file in a routine npm update exposed the entire Claude Code source code: nearly 2,000 files and 500,000 lines covering LLM API call handling, tool-call loops, thinking mode, retry logic, token counting, and permission models. The archive also contained dozens of feature flags for capabilities that are fully built but unshipped. Anthropic confirmed the leak was a packaging error, not a breach, and stated no customer data was exposed. The codebase was mirrored across GitHub within hours.",
+          "useCase": "If you build agent frameworks or tool-calling pipelines, the leaked architecture offers a reference implementation for streaming responses, tool orchestration, and permission gating. Review the publicly available analysis to benchmark your own agent design.",
+          "action": "If you build agent frameworks or tool-calling pipelines, the leaked architecture offers a reference implementation for streaming responses, tool orchestration, and permission gating. Review the publicly available analysis to benchmark your own agent design.",
+          "clientPitch": "",
           "tools": [
             "Claude Code",
-            "npm",
-            "Bun"
+            "npm"
           ],
-          "timeline": "Immediate",
+          "timeline": "Already public",
           "confidence": "verified",
           "sourceTier": 1,
           "sources": [
@@ -257,12 +250,8 @@
               "name": "VentureBeat"
             },
             {
-              "url": "https://www.theregister.com/2026/03/31/anthropic_claude_code_source_code/",
-              "name": "The Register"
-            },
-            {
-              "url": "https://www.axios.com/2026/03/31/anthropic-leaked-source-code-ai",
-              "name": "Axios"
+              "url": "https://www.bloomberg.com/news/articles/2026-04-01/anthropic-accidentally-releases-source-code-for-claude-ai-agent",
+              "name": "Bloomberg"
             }
           ],
           "sourceUrl": "https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know",
@@ -271,275 +260,183 @@
         {
           "score": 8,
           "tag": "CRITICAL",
-          "category": "Security",
-          "headline": "Supply chain attack exploits Claude Code leak window with trojanized npm packages",
-          "description": "Attackers exploited the Claude Code npm leak by publishing trojanized packages during a three hour window on March 31 between 00:21 and 03:29 UTC. Users who installed or updated Claude Code during that period may have pulled a compromised version of the Axios HTTP client containing a remote access trojan. Typosquatting attacks targeting internal Anthropic package names followed within hours, attempting dependency confusion against downstream users.",
-          "useCase": "Any client running automated npm installs in CI/CD should check whether Claude Code was pulled during the affected window. This pattern will repeat across AI tooling.",
-          "action": "Check npm install logs for March 31 00:21 to 03:29 UTC. Scan for unexpected Axios versions. Enable npm provenance checks and lockfile auditing in all pipelines.",
-          "clientPitch": "Supply chain attacks on AI developer tools are a new vector. We can implement provenance verification and dependency lockdown across your automation infrastructure.",
+          "category": "Multimodal",
+          "headline": "Apple confirms Gemini-powered Siri with on-screen awareness in iOS 26.4",
+          "description": "Apple is paying Google roughly $1 billion per year to rebuild Siri on a custom Gemini model running on Apple's Private Cloud Compute. iOS 26.4, expected in early April, introduces on-screen context awareness: Siri can read what is displayed on screen and act on it, such as booking a restaurant from Safari or adding a flight from an email to the calendar. User data stays on Apple's infrastructure, isolated from Google. Requires iPhone 15 Pro or later.",
+          "useCase": "If you build iOS apps, Siri's on-screen awareness means your visible content becomes actionable context. Ensure key information (addresses, dates, booking details) is rendered as accessible text rather than baked into images so Siri can parse and act on it.",
+          "action": "If you build iOS apps, Siri's on-screen awareness means your visible content becomes actionable context. Ensure key information is rendered as accessible text rather than baked into images so Siri can parse and act on it.",
+          "clientPitch": "",
           "tools": [
-            "npm",
-            "Claude Code",
-            "CI/CD pipelines"
+            "Siri",
+            "Gemini",
+            "Apple Private Cloud Compute",
+            "iOS 26.4"
           ],
-          "timeline": "Immediate",
+          "timeline": "iOS 26.4, early April 2026",
           "confidence": "verified",
           "sourceTier": 1,
           "sources": [
             {
-              "url": "https://thehackernews.com/2026/04/claude-code-tleaked-via-npm-packaging.html",
-              "name": "The Hacker News"
+              "url": "https://aiwire.ai/articles/apple-siri-gemini-ai-upgrade-2026",
+              "name": "AIWire"
             },
             {
-              "url": "https://gizmodo.com/source-code-for-anthropics-claude-code-leaks-at-the-exact-wrong-time-2000740379",
-              "name": "Gizmodo"
+              "url": "https://9to5mac.com/2026/03/20/apples-gemini-powered-siri-upgrade-could-still-arrive-this-month/",
+              "name": "9to5Mac"
             }
           ],
-          "sourceUrl": "https://thehackernews.com/2026/04/claude-code-tleaked-via-npm-packaging.html",
-          "sourceName": "The Hacker News"
+          "sourceUrl": "https://aiwire.ai/articles/apple-siri-gemini-ai-upgrade-2026",
+          "sourceName": "AIWire"
         },
         {
-          "score": 7,
-          "tag": "WATCH",
-          "category": "Automation",
-          "headline": "Zapier operationalizes AI fluency framework with four tier rubric required for all new hires",
-          "description": "Zapier now requires every new hire to demonstrate AI fluency before joining, using a four level rubric: Unacceptable, Capable, Adoptive, and Transformative. The framework provides concrete benchmarks across functions including marketing, legal, and operations. 97% of Zapier employees use AI daily. The company also launched free hands on AI Agents workshops under a Kickstart Your AI Fluency series.",
-          "useCase": "Use Zapier's rubric as a template for assessing AI readiness across client teams. The four tier model maps cleanly to workforce transformation engagements.",
-          "action": "Review the Zapier AI fluency rubric and adapt it for your team or client workforce assessments. Consider how it maps to your automation maturity model.",
-          "clientPitch": "Zapier just set the bar for AI readiness in hiring. We can help you build a similar fluency framework tailored to your industry and toolstack.",
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Regulation",
+          "headline": "Class action lawsuit alleges Perplexity routed user chats to Meta and Google without consent",
+          "description": "A 135-page federal complaint filed in San Francisco claims that tracking tools embedded in Perplexity's code sent user chat data directly to Google and Meta before Perplexity itself processed it. The suit alleges trackers harvested email addresses, Facebook IDs, IP addresses, and device information, even in incognito mode. The complaint includes 14 counts covering invasion of privacy, the Electronic Communications Privacy Act, and unfair competition. The proposed class covers all non-paying users from December 2022 through February 2026.",
+          "useCase": "If you embed third-party analytics or ad SDKs in AI products, audit exactly what data they transmit and when. This lawsuit shows that pre-processing data leakage to third parties can trigger federal privacy claims even without a traditional data breach.",
+          "action": "If you embed third-party analytics or ad SDKs in AI products, audit exactly what data they transmit and when. Pre-processing data leakage to third parties can trigger federal privacy claims.",
+          "clientPitch": "",
           "tools": [
-            "Zapier",
-            "Zapier Agents",
-            "Zapier Academy"
+            "Perplexity",
+            "Google Analytics",
+            "Meta Pixel"
           ],
-          "timeline": "Available now",
+          "timeline": "Lawsuit filed March 31, 2026",
           "confidence": "verified",
-          "sourceTier": 2,
+          "sourceTier": 1,
           "sources": [
             {
-              "url": "https://zapier.com/playbooks/kickstart-ai-fluency",
-              "name": "Zapier"
+              "url": "https://www.bloomberg.com/news/articles/2026-04-01/perplexity-ai-machine-accused-of-sharing-data-with-meta-google",
+              "name": "Bloomberg"
             },
             {
-              "url": "https://hrheretics.substack.com/p/why-zapier-requires-100-ai-fluency",
-              "name": "HR Heretics"
+              "url": "https://www.almanacnews.com/technology/2026/04/02/bombshell-ai-class-action-suit-alleges-users-chats-with-perplexity-go-straight-to-meta-google/",
+              "name": "The Almanac"
             }
           ],
-          "sourceUrl": "https://zapier.com/playbooks/kickstart-ai-fluency",
-          "sourceName": "Zapier"
-        },
-        {
-          "score": 7,
-          "tag": "WATCH",
-          "category": "Tools",
-          "headline": "OpenAI Codex CLI ships first class plugins and multi agent v2 workflow addressing",
-          "description": "OpenAI released a major Codex CLI update introducing first class plugin support with sync at startup, browsing via /plugins, and streamlined auth handling. Multi agent workflows now use readable path based addresses like /root/agent_a with structured inter agent messaging. The app server backed TUI is now the default interface, with improved image, shell, and filesystem tooling.",
-          "useCase": "The plugin system and multi agent addressing make Codex CLI a viable orchestration layer for complex developer workflows. Evaluate whether it complements or competes with your current Claude Code or Cursor setup.",
-          "action": "Test the new Codex CLI plugin system. Evaluate the multi agent addressing scheme for workflows that require coordinated sub agents across codebases.",
-          "clientPitch": "Codex CLI just became a real multi agent platform. If your dev teams use OpenAI tooling, this changes what you can automate in code review and deployment pipelines.",
-          "tools": [
-            "OpenAI Codex CLI",
-            "OpenAI API"
-          ],
-          "timeline": "Available now",
-          "confidence": "verified",
-          "sourceTier": 2,
-          "sources": [
-            {
-              "url": "https://releasebot.io/updates/openai",
-              "name": "Releasebot"
-            }
-          ],
-          "sourceUrl": "https://releasebot.io/updates/openai",
-          "sourceName": "Releasebot"
+          "sourceUrl": "https://www.bloomberg.com/news/articles/2026-04-01/perplexity-ai-machine-accused-of-sharing-data-with-meta-google",
+          "sourceName": "Bloomberg"
         },
         {
           "score": 7,
           "tag": "WATCH",
           "category": "Models",
-          "headline": "DeepSeek V3.2 delivers frontier reasoning under MIT license at $0.28 per million input tokens",
-          "description": "DeepSeek V3.2 ships with 685B total parameters but activates only 37B per token via Mixture of Experts. Its Sparse Attention mechanism cuts attention complexity from quadratic to near linear, enabling real 128K context inference. The model matches OpenAI o1 on reasoning benchmarks while costing roughly one tenth of Western frontier model pricing. Released under MIT license with zero downstream obligations.",
-          "useCase": "DeepSeek V3.2 is the strongest candidate for cost sensitive reasoning workloads in production pipelines. The MIT license removes commercial friction for self hosted deployments.",
-          "action": "Benchmark DeepSeek V3.2 against your current reasoning model on representative tasks. Calculate TCO for self hosted vs API deployment at your volume.",
-          "clientPitch": "Frontier reasoning at a fraction of the cost, with no license restrictions. We can help you evaluate whether DeepSeek V3.2 fits into your multi model architecture.",
+          "headline": "Google Gemini 3.1 Flash-Lite enters preview at $0.25 per million input tokens",
+          "description": "Google released Gemini 3.1 Flash-Lite in preview on Vertex AI and Google AI Studio. The model matches Gemini 2.5 Flash quality while delivering 2.5x faster time to first token and 45% faster output generation. It supports configurable thinking levels (minimal, low, medium, high) to balance quality and speed. Priced at $0.25 per million input tokens and $1.50 per million output tokens, it is one-eighth the cost of Gemini 3.1 Pro.",
+          "useCase": "For high-volume, latency-sensitive workloads like classification, extraction, or chat routing, Flash-Lite's price and speed make it a drop-in replacement for heavier models on tasks that do not need deep reasoning.",
+          "action": "For high-volume, latency-sensitive workloads like classification, extraction, or chat routing, Flash-Lite's price and speed make it viable as a routing or triage model in multi-model pipelines.",
+          "clientPitch": "",
           "tools": [
-            "DeepSeek V3.2",
-            "H100 GPUs"
+            "Gemini 3.1 Flash-Lite",
+            "Vertex AI",
+            "Google AI Studio"
           ],
-          "timeline": "Available now",
-          "confidence": "verified",
-          "sourceTier": 2,
-          "sources": [
-            {
-              "url": "https://www.spheron.network/blog/deepseek-vs-llama-4-vs-qwen3/",
-              "name": "Spheron"
-            },
-            {
-              "url": "https://aitoolranked.com/blog/best-open-source-llm-2026-llama-deepseek-qwen-comparison",
-              "name": "AI Tool Ranked"
-            }
-          ],
-          "sourceUrl": "https://www.spheron.network/blog/deepseek-vs-llama-4-vs-qwen3/",
-          "sourceName": "Spheron"
-        },
-        {
-          "score": 7,
-          "tag": "WATCH",
-          "category": "Agents",
-          "headline": "Agentic AI Foundation launches under Linux Foundation unifying MCP, goose, and AGENTS.md",
-          "description": "The Linux Foundation announced the Agentic AI Foundation with founding contributions from Anthropic (Model Context Protocol), Block (goose), and OpenAI (AGENTS.md). Platinum members include AWS, Google, Microsoft, Cloudflare, and Bloomberg. AGENTS.md has been adopted by over 60,000 open source projects. The foundation aims to standardize the agentic layer across the industry.",
-          "useCase": "The convergence of MCP, goose, and AGENTS.md under one foundation signals that multi agent interoperability is now an industry priority, not a single vendor play.",
-          "action": "Track AAIF governance decisions and spec updates. If you build agent workflows, align with MCP for tool integration and A2A for agent to agent communication.",
-          "clientPitch": "The three major agent standards are now under one roof. We can help you build agent architectures that align with the emerging consensus stack.",
-          "tools": [
-            "MCP",
-            "goose",
-            "AGENTS.md",
-            "A2A"
-          ],
-          "timeline": "Foundation active now",
+          "timeline": "Available now in preview",
           "confidence": "verified",
           "sourceTier": 1,
           "sources": [
             {
-              "url": "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation",
-              "name": "Linux Foundation"
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
+              "name": "Google Blog"
             },
             {
-              "url": "https://www.prnewswire.com/news-releases/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation-aaif-anchored-by-new-project-contributions-including-model-context-protocol-mcp-goose-and-agentsmd-302636897.html",
-              "name": "PR Newswire"
+              "url": "https://venturebeat.com/technology/google-releases-gemini-3-1-flash-lite-at-1-8th-the-cost-of-pro",
+              "name": "VentureBeat"
             }
           ],
-          "sourceUrl": "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation",
-          "sourceName": "Linux Foundation"
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
+          "sourceName": "Google Blog"
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Enterprise",
+          "headline": "ChatGPT uninstalls surge 295% as QuitGPT movement tops 2.5 million supporters",
+          "description": "OpenAI's agreement to deploy its AI on U.S. Department of Defense classified networks triggered the QuitGPT boycott movement. U.S. mobile uninstalls of ChatGPT jumped 295% day over day and over 1.5 million users cancelled subscriptions. Anthropic's Claude, which publicly refused the same deal, reached the number one spot on the U.S. App Store. OpenAI CEO Sam Altman acknowledged the deal looked 'sloppy and opportunistic' and said the company intends to revise the contract.",
+          "useCase": "If your product depends on a single AI provider, this episode illustrates the brand risk of upstream policy decisions. Architect for multi-provider switching so your product is not tied to one vendor's political exposure.",
+          "action": "If your product depends on a single AI provider, architect for multi-provider switching so your product is not tied to one vendor's political exposure.",
+          "clientPitch": "",
+          "tools": [
+            "ChatGPT",
+            "Claude"
+          ],
+          "timeline": "Ongoing",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sources": [
+            {
+              "url": "https://techcrunch.com/2026/03/02/chatgpt-uninstalls-surged-by-295-after-dod-deal/",
+              "name": "TechCrunch"
+            },
+            {
+              "url": "https://www.euronews.com/next/2026/03/02/cancel-chatgpt-ai-boycott-surges-after-openai-pentagon-military-deal",
+              "name": "Euronews"
+            }
+          ],
+          "sourceUrl": "https://techcrunch.com/2026/03/02/chatgpt-uninstalls-surged-by-295-after-dod-deal/",
+          "sourceName": "TechCrunch"
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Hardware",
+          "headline": "Nothing confirms AI smart glasses for 2027 and AI earbuds for 2026",
+          "description": "Nothing Technology plans to release AI-enhanced smart glasses with cameras, microphones, and speakers in the first half of 2027, and AI-powered earbuds later this year. CEO Carl Pei shifted to a multi-device strategy after initially dismissing the smart glasses category. The devices will connect to a smartphone and cloud for AI query processing.",
+          "useCase": "If you build voice-first or ambient AI applications, Nothing's entry alongside Meta Ray-Bans signals growing distribution for always-on AI hardware. Start prototyping voice and camera-triggered workflows that work across glasses and earbuds.",
+          "action": "If you build voice-first or ambient AI applications, Nothing's entry signals growing distribution for always-on AI hardware. Prototype voice and camera-triggered workflows.",
+          "clientPitch": "",
+          "tools": [
+            "Nothing Smart Glasses",
+            "Nothing AI Earbuds"
+          ],
+          "timeline": "Earbuds 2026, glasses H1 2027",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sources": [
+            {
+              "url": "https://techcrunch.com/2026/04/01/nothings-ai-devices-plan-reportedly-contains-smart-glasses-and-earbuds/",
+              "name": "TechCrunch"
+            },
+            {
+              "url": "https://www.bloomberg.com/news/articles/2026-03-31/device-startup-nothing-technology-plans-to-release-ai-glasses-next-year",
+              "name": "Bloomberg"
+            }
+          ],
+          "sourceUrl": "https://techcrunch.com/2026/04/01/nothings-ai-devices-plan-reportedly-contains-smart-glasses-and-earbuds/",
+          "sourceName": "TechCrunch"
         },
         {
           "score": 6,
           "tag": "WATCH",
           "category": "Models",
-          "headline": "Anthropic Mythos data leak confirms step change model in early access with security partners",
-          "description": "A data leak on March 26 confirmed Anthropic has trained a model internally called Mythos, described as a step change beyond Opus 4.6. The model is reportedly in early access with cybersecurity partners. No public release date is set, but prediction markets give roughly 25% odds of an announcement before April 30. Anthropic has strong incentive to launch before its planned October 2026 IPO.",
-          "useCase": "If Mythos delivers on the leaked benchmarks, it could reset expectations for complex agentic workflows. Plan evaluation capacity for when it drops.",
-          "action": "Monitor Anthropic announcements. Do not commit to long term model lock in until the Mythos launch timeline is clearer.",
-          "clientPitch": "Anthropic's next model may significantly shift the capability frontier. We are tracking the release timeline so your architecture stays ready to adopt.",
+          "headline": "Meta postpones frontier model Avocado to May after falling short of Gemini in internal tests",
+          "description": "Meta's next frontier model, codenamed Avocado, was scheduled for March but has been pushed to May or June. Internal benchmarks showed the model underperforming Google's Gemini on reasoning, coding, and writing tasks. Meta is continuing to iterate before public release.",
+          "useCase": "If you are planning to build on Meta's open-weight models, factor in the delay. For time-sensitive projects requiring frontier-grade reasoning, Gemini 3.1 or Claude Opus 4.6 remain the available options.",
+          "action": "If you are planning to build on Meta's open-weight models, factor in the delay. For time-sensitive projects, Gemini 3.1 or Claude Opus 4.6 remain available.",
+          "clientPitch": "",
           "tools": [
-            "Claude API",
-            "Anthropic"
+            "Meta Avocado",
+            "Llama"
           ],
-          "timeline": "No public date, possible Q2 2026",
-          "confidence": "speculative",
-          "sourceTier": 2,
-          "sources": [
-            {
-              "url": "https://renovateqr.com/blog/ai-models-april-2026",
-              "name": "RenovateQR"
-            }
-          ],
-          "sourceUrl": "https://renovateqr.com/blog/ai-models-april-2026",
-          "sourceName": "RenovateQR"
-        },
-        {
-          "score": 5,
-          "tag": "LOW",
-          "category": "Automation",
-          "headline": "n8n 2.0 ships AI Agent Tool Node with native LangChain integration and autosave",
-          "description": "n8n 2.0 introduced the AI Agent Tool Node for multi agent orchestration, native LangChain integration, and a Save and Publish workflow for safer production deployments. The release also includes security hardening and execution reliability improvements. n8n has grown from a niche developer tool into a serious enterprise alternative after raising $55 million in Series B.",
-          "useCase": "The AI Agent Tool Node makes n8n a native orchestration layer for LLM powered workflows. Evaluate for clients who need self hosted agent automation with full data control.",
-          "action": "Test n8n 2.0 AI Agent Tool Node for a representative multi step workflow. Compare execution costs against Zapier and Make for high volume agent loops.",
-          "clientPitch": "n8n 2.0 now supports native AI agent orchestration at zero per execution cost when self hosted. Ideal for high volume, compliance sensitive automation.",
-          "tools": [
-            "n8n",
-            "LangChain"
-          ],
-          "timeline": "Available now",
+          "timeline": "Delayed to May/June 2026",
           "confidence": "verified",
           "sourceTier": 2,
           "sources": [
             {
-              "url": "https://www.digidop.com/blog/n8n-vs-make-vs-zapier",
-              "name": "Digidop"
+              "url": "https://thenextweb.com/news/the-unreleased-ai-metas-model",
+              "name": "The Next Web"
             }
           ],
-          "sourceUrl": "https://www.digidop.com/blog/n8n-vs-make-vs-zapier",
-          "sourceName": "Digidop"
-        },
-        {
-          "score": 5,
-          "tag": "LOW",
-          "category": "Models",
-          "headline": "OpenAI confirms next gen model Spud has completed pretraining, expected Q2 2026 as GPT 5.5",
-          "description": "OpenAI has finalized pretraining on its next generation model codenamed Spud, expected to launch as GPT 5.5 or potentially GPT 6. Prediction markets and analysts point to a Q2 2026 release, likely before June 30. The model follows GPT 5.4 which already set records on computer use and knowledge work benchmarks.",
-          "useCase": "Factor Spud into any model selection decisions happening in Q2. If you are locking in API contracts, negotiate flexibility for model upgrades.",
-          "action": "Do not lock into long term GPT 5.4 commitments without upgrade clauses. Watch for benchmark leaks that signal release timing.",
-          "clientPitch": "OpenAI's next model is imminent. We can structure your AI contracts to accommodate model transitions without workflow disruption.",
-          "tools": [
-            "OpenAI API"
-          ],
-          "timeline": "Expected Q2 2026",
-          "confidence": "speculative",
-          "sourceTier": 2,
-          "sources": [
-            {
-              "url": "https://renovateqr.com/blog/ai-models-april-2026",
-              "name": "RenovateQR"
-            }
-          ],
-          "sourceUrl": "https://renovateqr.com/blog/ai-models-april-2026",
-          "sourceName": "RenovateQR"
-        },
-        {
-          "score": 5,
-          "tag": "LOW",
-          "category": "Tools",
-          "headline": "Gemini 3.1 Flash Image enters public preview with native image generation",
-          "description": "Google released Gemini 3.1 Flash Image in public preview, enabling high quality image generation with improved pricing and latency. Gemini 3.1 Pro leads 13 of 16 benchmarks with 77.1% on ARC AGI 2, more than double Gemini 3 Pro. Flash tier pricing sits at $0.50/$3 per million tokens, undercutting most competitors.",
-          "useCase": "Flash Image opens native multimodal generation at the cheapest tier in the market. Useful for any workflow that needs image output without a separate generation API.",
-          "action": "Test Gemini 3.1 Flash Image for document, diagram, or content generation workflows where cost per call matters more than peak quality.",
-          "clientPitch": "Google's cheapest model tier now generates images natively. This simplifies multimodal pipelines and cuts the need for separate image generation services.",
-          "tools": [
-            "Gemini API",
-            "Vertex AI"
-          ],
-          "timeline": "Public preview now",
-          "confidence": "verified",
-          "sourceTier": 1,
-          "sources": [
-            {
-              "url": "https://docs.cloud.google.com/vertex-ai/docs/release-notes",
-              "name": "Google Cloud"
-            }
-          ],
-          "sourceUrl": "https://docs.cloud.google.com/vertex-ai/docs/release-notes",
-          "sourceName": "Google Cloud"
-        },
-        {
-          "score": 4,
-          "tag": "LOW",
-          "category": "Automation",
-          "headline": "Make.com launches AI Agents and Grid for enterprise automation governance",
-          "description": "Make.com introduced AI Agents for intelligent workflow processing and Make Grid for enterprise wide automation governance. The platform now integrates natively with OpenAI, Anthropic Claude, and Google AI models. Recent updates also include redesigned navigation and enhanced HTTP capabilities for custom API work.",
-          "useCase": "Make Grid addresses a real gap in automation governance for enterprises running hundreds of scenarios. Evaluate for clients who need visibility across distributed automation.",
-          "action": "Review Make Grid governance features if you manage large Make.com deployments. Compare against n8n and Zapier for enterprise oversight capabilities.",
-          "clientPitch": "Make.com now offers enterprise governance for automation at scale. If your clients outgrew scenario level management, Grid provides the oversight layer.",
-          "tools": [
-            "Make.com",
-            "OpenAI API",
-            "Claude API",
-            "Gemini API"
-          ],
-          "timeline": "Available now",
-          "confidence": "verified",
-          "sourceTier": 2,
-          "sources": [
-            {
-              "url": "https://www.digitalapplied.com/blog/zapier-vs-make-vs-n8n-2026-automation-comparison",
-              "name": "Digital Applied"
-            }
-          ],
-          "sourceUrl": "https://www.digitalapplied.com/blog/zapier-vs-make-vs-n8n-2026-automation-comparison",
-          "sourceName": "Digital Applied"
+          "sourceUrl": "https://thenextweb.com/news/the-unreleased-ai-metas-model",
+          "sourceName": "The Next Web"
         }
-      ]
+      ],
+      "totalScanned": 8,
+      "relevant": 8,
+      "critical": 4,
+      "watch": 4,
+      "low": 0
     },
     "2026-04-03": {
       "dateKey": "2026-04-03",
