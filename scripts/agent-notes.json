@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-03T22:00+06:00",
+  "lastUpdated": "2026-04-04T06:45+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://docs.anthropic.com/en/release-notes/overview returned 403 on 2026-04-03. Use WebSearch as fallback.",
@@ -31,6 +31,9 @@
     "2026-04-03: Releasebot.io and llm-stats.com also now return 403. Fewer fetchable sources than April 2.",
     "2026-04-03 evening: Second run. Google Gemini Flex/Priority tiers, axios supply chain attack, Gemini billing caps, and Qwen 3.6 Plus Preview. 4 items (2 CRITICAL, 2 WATCH). Replaced morning digest for the same dateKey.",
     "2026-04-03: Google blog posts (blog.google) also return 403 via WebFetch. Confirmed via search results instead.",
-    "2026-04-03: Axios supply chain attack (March 30) is a critical security item. Even though 4 days old, included because it directly affects npm-based AI toolchains and was not in previous digests."
+    "2026-04-03: Axios supply chain attack (March 30) is a critical security item. Even though 4 days old, included because it directly affects npm-based AI toolchains and was not in previous digests.",
+    "2026-04-04: 4 items (2 CRITICAL, 2 WATCH). Gemma 4 open model family (Apache 2.0, function calling), Claude Haiku 3 retirement countdown (15 days), Vercel AI SDK 6 Agent abstraction, Anthropic 1M context beta retirement April 30.",
+    "2026-04-04: All 6 primary WebFetch sources still return 403. WebSearch remains the only viable approach.",
+    "2026-04-04: Gemini billing cap changes (April 1) and Flex/Priority tiers already in April 3 digest. Skipped to avoid duplication."
   ]
 }
