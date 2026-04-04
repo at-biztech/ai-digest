@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-04-04",
     "2026-04-03",
     "2026-04-02",
     "2026-04-01"
@@ -567,6 +568,123 @@
       "critical": 2,
       "watch": 2,
       "low": 0
+    },
+    "2026-04-04": {
+      "dateKey": "2026-04-04",
+      "date": "April 4, 2026",
+      "summary": "Google drops Gemma 4 under Apache 2.0 with function calling and multimodal across all variants, Anthropic sets a 15 day countdown on Claude Haiku 3 retirement, Vercel ships AI SDK 6 with a native Agent abstraction, and the 1M context beta for older Claude models ends April 30.",
+      "totalScanned": 4,
+      "relevant": 4,
+      "critical": 2,
+      "watch": 2,
+      "low": 0,
+      "items": [
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Open Source Models",
+          "headline": "Google releases Gemma 4 open model family with function calling under Apache 2.0",
+          "description": "Google DeepMind shipped four Gemma 4 variants on April 2: E2B (2.3B effective), E4B (4.5B effective), 26B MoE, and 31B dense. All support native function calling, structured outputs, system instructions, and multimodal input (image, video, audio on smaller models). Context windows reach 256K on the larger variants. Benchmarks show dramatic jumps over Gemma 3: AIME math from 20.8% to 89.2%, LiveCodeBench from 29.1% to 80.0%. The Apache 2.0 license removes previous restrictions on commercial use.",
+          "action": "Evaluate Gemma 4 31B and 26B MoE for self hosted agentic workflows where function calling and structured output are needed. The Apache 2.0 license makes it viable for client deployments without per token costs.",
+          "clientPitch": "Self hosted AI that calls your tools and returns structured data, with no per token fees and no vendor lock in. The 26B MoE variant runs fast enough for production while matching much larger models on reasoning.",
+          "useCase": "On premise AI agents for clients who cannot send data to external APIs. Local function calling pipelines that interact with internal systems. Cost elimination on high volume structured extraction tasks.",
+          "tools": [
+            "Gemma 4",
+            "Ollama",
+            "vLLM",
+            "n8n",
+            "Make.com"
+          ],
+          "timeline": "Available now on AI Studio and Gemini API. AICore Developer Preview for Android integration.",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+          "sourceName": "Google Blog",
+          "sources": [
+            "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+            "https://android-developers.googleblog.com/2026/04/AI-Core-Developer-Preview.html",
+            "https://ai.google.dev/gemma/docs/releases"
+          ]
+        },
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "API Deprecations",
+          "headline": "Claude Haiku 3 retires April 19 with all requests failing after cutoff",
+          "description": "Anthropic confirmed that claude-3-haiku-20240307 will stop accepting requests on April 19, 2026. This is 15 days away. Any integration still referencing the old model ID will break. The recommended migration path is Claude Haiku 4.5 (claude-haiku-4-5-20251001), which is faster and more capable but priced at $0.80/$4.00 per million tokens versus the legacy $0.25/$1.25.",
+          "action": "Audit all API calls, automation nodes, and agent configs for references to claude-3-haiku-20240307. Update to claude-haiku-4-5-20251001. Budget for the pricing difference on high volume workflows or evaluate Gemma 4 as a self hosted alternative for simpler tasks.",
+          "clientPitch": "Your Claude Haiku integrations will break on April 19 unless we update the model references. The upgrade also brings better output quality. We should review which workflows can absorb the cost increase and which should move to alternatives.",
+          "useCase": "Any n8n, Make.com, or Zapier workflow calling Claude Haiku 3 directly. Airtable automations using Anthropic API. Custom agent pipelines with hardcoded model IDs.",
+          "tools": [
+            "Claude API",
+            "n8n",
+            "Make.com",
+            "Zapier",
+            "Airtable"
+          ],
+          "timeline": "Retirement on April 19, 2026. 15 days remaining.",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "sourceName": "Anthropic Docs",
+          "sources": [
+            "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+            "https://docs.anthropic.com/en/release-notes/overview"
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "SDKs and Frameworks",
+          "headline": "Vercel AI SDK 6 ships Agent abstraction with built in tool execution loop",
+          "description": "Vercel released AI SDK 6, the major version upgrade of the TypeScript AI toolkit with over 20 million monthly npm downloads. The headline feature is a first class Agent abstraction: define an agent once with its model, instructions, and tools, then reuse it across the application. The ToolLoopAgent class handles the full execution cycle of calling the LLM, executing tool calls, feeding results back, and repeating until completion. A codemod (npx @ai-sdk/codemod v6) automates migration from v5.",
+          "action": "Review the Agent abstraction for TypeScript based agent pipelines. The unified provider API means switching between Claude, GPT, and Gemini requires changing one line. Consider migrating existing custom agent loops to the built in ToolLoopAgent.",
+          "clientPitch": "The most popular TypeScript AI framework now has native agent support. This standardizes how we build AI agents across projects and makes it trivial to swap models without rewriting logic.",
+          "useCase": "Full stack AI applications in Next.js. Multi step agent workflows in Node.js backends. Rapid prototyping of tool using agents that need to work across Claude, GPT, and Gemini.",
+          "tools": [
+            "Vercel AI SDK",
+            "Next.js",
+            "Node.js",
+            "Claude API",
+            "OpenAI API",
+            "Gemini API"
+          ],
+          "timeline": "Available now. Run npx @ai-sdk/codemod v6 for automated migration.",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://vercel.com/blog/ai-sdk-6",
+          "sourceName": "Vercel Blog",
+          "sources": [
+            "https://vercel.com/blog/ai-sdk-6",
+            "https://github.com/vercel/ai/releases"
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "API Changes",
+          "headline": "Anthropic ends 1M context beta on April 30 as native support moves to 4.6 models",
+          "description": "The 1M token context window beta for Claude Sonnet 4.5 and Claude Sonnet 4 shuts down on April 30, 2026. After that date, the context-1m-2025-08-07 beta header will have no effect and requests exceeding 200K tokens will return errors. Claude Sonnet 4.6 and Claude Opus 4.6 support 1M context natively at standard pricing with no beta header required. Separately, the max_tokens cap has been raised to 300K on the Message Batches API for the 4.6 models using the output-300k-2026-03-24 beta header.",
+          "action": "If using context-1m-2025-08-07 beta header with Sonnet 4.5 or Sonnet 4, migrate to Sonnet 4.6 or Opus 4.6 before April 30. Remove the beta header after migration. For batch workloads needing long outputs, test the new 300K output cap on 4.6 models.",
+          "clientPitch": "The large context window capability is moving from beta to native on newer models. We need to update any long document processing pipelines before April 30 to avoid failures. The 300K output cap on batch processing also opens up new possibilities for bulk content generation.",
+          "useCase": "Long document analysis pipelines. Contract review systems processing documents over 200K tokens. Batch processing workflows that generate large structured outputs.",
+          "tools": [
+            "Claude API",
+            "Claude Sonnet 4.6",
+            "Claude Opus 4.6",
+            "Message Batches API"
+          ],
+          "timeline": "Beta retirement on April 30, 2026. 26 days remaining. 300K output available now via beta header.",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://docs.anthropic.com/en/release-notes/overview",
+          "sourceName": "Anthropic Release Notes",
+          "sources": [
+            "https://docs.anthropic.com/en/release-notes/overview",
+            "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          ]
+        }
+      ]
     }
   }
 }
