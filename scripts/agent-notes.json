@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-04T06:45+06:00",
+  "lastUpdated": "2026-04-05T10:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://docs.anthropic.com/en/release-notes/overview returned 403 on 2026-04-03. Use WebSearch as fallback.",
@@ -34,6 +34,10 @@
     "2026-04-03: Axios supply chain attack (March 30) is a critical security item. Even though 4 days old, included because it directly affects npm-based AI toolchains and was not in previous digests.",
     "2026-04-04: 4 items (2 CRITICAL, 2 WATCH). Gemma 4 open model family (Apache 2.0, function calling), Claude Haiku 3 retirement countdown (15 days), Vercel AI SDK 6 Agent abstraction, Anthropic 1M context beta retirement April 30.",
     "2026-04-04: All 6 primary WebFetch sources still return 403. WebSearch remains the only viable approach.",
-    "2026-04-04: Gemini billing cap changes (April 1) and Flex/Priority tiers already in April 3 digest. Skipped to avoid duplication."
+    "2026-04-04: Gemini billing cap changes (April 1) and Flex/Priority tiers already in April 3 digest. Skipped to avoid duplication.",
+    "2026-04-05: 4 items (2 CRITICAL, 2 WATCH). Anthropic third party tool cutoff (immediate), Gemini 2.0/2.5 June deprecation wave, OpenAI Assistants API August sunset, Claw Code open source launch.",
+    "2026-04-05: All 6 primary WebFetch sources still return 403. llm-stats.com and devflokers.com also return 403.",
+    "2026-04-05: Heavy deprecation awareness day. Three major API providers (Anthropic, Google, OpenAI) all have active or approaching retirement deadlines. Consider a consolidated deadline tracker item in future digests.",
+    "2026-04-05: Anthropic third party tool cutoff is the biggest immediate action item. Affects anyone routing Claude through non-Anthropic agent tools using subscription credentials."
   ]
 }
