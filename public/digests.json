@@ -31,7 +31,7 @@
             "Claude",
             "OpenAI API"
           ],
-          "timeline": "Available now (Frontier program)",
+          "timeline": "Available now",
           "confidence": "verified",
           "sourceTier": 1,
           "sourceUrl": "https://dataconomy.com/2026/04/02/microsoft-upgrades-365-copilot-researcher-with-new-critique-mode/",
@@ -92,7 +92,7 @@
             "Copilot Cowork",
             "Claude"
           ],
-          "timeline": "Early access now, E7 tier May 1",
+          "timeline": "Available now",
           "confidence": "verified",
           "sourceTier": 1,
           "sourceUrl": "https://startupnews.fyi/2026/04/02/microsoft-unveils-ai-upgrades-rolls-out-copilot-cowork-to-early-access-customers/",
@@ -152,7 +152,7 @@
             "Cisco Duo IAM",
             "MCP"
           ],
-          "timeline": "Rolling out April through June 2026",
+          "timeline": "April to June 2026",
           "confidence": "verified",
           "sourceTier": 1,
           "sourceUrl": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m03/cisco-reimagines-security-for-the-agentic-workforce.html",
@@ -486,7 +486,7 @@
             "npm",
             "Node.js"
           ],
-          "timeline": "Malicious versions removed. Remediation ongoing.",
+          "timeline": "Resolved",
           "confidence": "verified",
           "sourceTier": 1,
           "sourceUrl": "https://www.malwarebytes.com/blog/news/2026/03/axios-supply-chain-attack-chops-away-at-npm-trust",
@@ -596,7 +596,7 @@
             "n8n",
             "Make.com"
           ],
-          "timeline": "Available now on AI Studio and Gemini API. AICore Developer Preview for Android integration.",
+          "timeline": "Available now",
           "confidence": "verified",
           "sourceTier": 1,
           "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
@@ -623,7 +623,7 @@
             "Zapier",
             "Airtable"
           ],
-          "timeline": "Retirement on April 19, 2026. 15 days remaining.",
+          "timeline": "April 19, 2026",
           "confidence": "verified",
           "sourceTier": 1,
           "sourceUrl": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
@@ -650,7 +650,7 @@
             "OpenAI API",
             "Gemini API"
           ],
-          "timeline": "Available now. Run npx @ai-sdk/codemod v6 for automated migration.",
+          "timeline": "Available now",
           "confidence": "verified",
           "sourceTier": 1,
           "sourceUrl": "https://vercel.com/blog/ai-sdk-6",
@@ -675,7 +675,7 @@
             "Claude Opus 4.6",
             "Message Batches API"
           ],
-          "timeline": "Beta retirement on April 30, 2026. 26 days remaining. 300K output available now via beta header.",
+          "timeline": "April 30, 2026",
           "confidence": "verified",
           "sourceTier": 1,
           "sourceUrl": "https://docs.anthropic.com/en/release-notes/overview",
@@ -712,7 +712,7 @@
             "n8n",
             "Make.com"
           ],
-          "timeline": "Effective April 4, 2026. One time credit redeemable until April 17.",
+          "timeline": "April 4, 2026",
           "confidence": "verified",
           "sourceTier": 1,
           "sourceUrl": "https://venturebeat.com/technology/anthropic-cuts-off-the-ability-to-use-claude-subscriptions-with-openclaw-and",
@@ -766,7 +766,7 @@
             "Make.com",
             "Zapier"
           ],
-          "timeline": "Shutdown August 26, 2026. 143 days remaining. Migration guide available now.",
+          "timeline": "August 26, 2026",
           "confidence": "verified",
           "sourceTier": 1,
           "sourceUrl": "https://community.openai.com/t/assistants-api-beta-deprecation-august-26-2026-sunset/1354666",
@@ -792,7 +792,7 @@
             "Ollama",
             "vLLM"
           ],
-          "timeline": "Available now. Rust port in progress for production deployment.",
+          "timeline": "Available now",
           "confidence": "verified",
           "sourceTier": 2,
           "sourceUrl": "https://www.24-7pressrelease.com/press-release/533389/claw-code-launches-open-source-ai-coding-agent-framework-with-72000-github-stars-in-first-days",
