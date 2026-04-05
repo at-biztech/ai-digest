@@ -474,131 +474,212 @@
     "2026-04-03": {
       "dateKey": "2026-04-03",
       "date": "April 3, 2026",
-      "summary": "Google splits Gemini inference into Flex and Priority tiers, cutting batch costs 50% and adding guaranteed low latency at a premium, giving builders a new lever to optimize agentic workflow spend.",
+      "summary": "OpenAI fully retires GPT-4o from all plans as Salesforce turns Slackbot into an MCP powered enterprise agent and CNN reports Anthropic's unreleased Mythos model marks a cybersecurity watershed moment.",
       "items": [
         {
-          "score": 8,
+          "score": 9,
           "tag": "CRITICAL",
-          "category": "Infrastructure",
-          "headline": "Google Gemini API launches Flex and Priority inference tiers",
-          "description": "Google announced two new inference options for the Gemini API on April 3. Flex inference costs 50% of standard pricing but does not guarantee latency, targeting a 1 to 15 minute window. Unlike the existing Batch API, Flex uses the same synchronous endpoints, so no file management or polling is needed. Priority inference guarantees ultra low latency at 75% to 100% above standard rates. Priority is available to Tier 2 and Tier 3 paid projects across the GenerateContent API and the new Interactions API.",
-          "action": "Audit your Gemini API calls. Move background processing, evaluations, and non user facing agentic chains to Flex. Keep customer facing calls on Priority. The synchronous interface means existing code works with minimal changes.",
-          "clientPitch": "",
-          "useCase": "For multi step agentic workflows where each call depends on the previous output, Flex is transformative. A 10 step chain that costs $1.00 today drops to $0.50 with no architectural changes, just a parameter switch. Priority gives production chatbots an SLA they never had on Gemini before.",
+          "category": "API Changes",
+          "headline": "OpenAI completes GPT-4o retirement across all ChatGPT plans with automatic migration to GPT 5.x",
+          "description": "OpenAI shut down GPT-4o access for the last remaining user group: Business, Enterprise, and Edu customers running Custom GPTs. Custom GPTs that specified GPT-4o as their underlying model were automatically migrated to GPT-5.3 Instant or GPT-5.4 Thinking. Only 0.1% of users were still selecting GPT-4o daily, with the vast majority already on GPT-5.2.",
+          "action": "Audit any Custom GPTs in your ChatGPT Business or Enterprise workspace to confirm the automatic migration preserved expected behavior. Test edge cases where GPT-4o specific prompt tuning may produce different results on GPT-5.x replacements.",
+          "clientPitch": "GPT-4o is gone as of today. If your team had Custom GPTs still pinned to it, they have been auto migrated to GPT-5.x. Verify that output quality and tool integrations still work as expected.",
+          "useCase": "Enterprise teams with Custom GPTs built on GPT-4o for internal workflows, customer support bots, or knowledge retrieval. Any automation pipeline that referenced GPT-4o by name in ChatGPT Business or Edu.",
           "tools": [
-            "Gemini API"
+            "ChatGPT Business",
+            "ChatGPT Enterprise",
+            "ChatGPT Edu",
+            "Custom GPTs"
           ],
-          "timeline": "Available now",
+          "timeline": "April 3, 2026",
           "confidence": "verified",
           "sourceTier": 1,
-          "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/",
-          "sourceName": "Google Blog",
+          "sourceUrl": "https://help.openai.com/en/articles/20001051-retiring-gpt-4o-and-other-chatgpt-models",
+          "sourceName": "OpenAI",
           "sources": [
-            {
-              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/",
-              "name": "Google Blog"
-            },
-            {
-              "url": "https://seekingalpha.com/news/4572373-google-introduces-new-pricing-tiers-for-gemini-based-on-inference-usage",
-              "name": "Seeking Alpha"
-            }
+            "https://help.openai.com/en/articles/20001051-retiring-gpt-4o-and-other-chatgpt-models",
+            "https://openai.com/index/retiring-gpt-4o-and-older-models/",
+            "https://evermx.com/case/gpt-4o-final-retirement-april-3-enterprise-custom-gpts-migration"
           ]
         },
         {
           "score": 8,
           "tag": "CRITICAL",
-          "category": "Infrastructure",
-          "headline": "Axios npm package compromised with RAT affecting 100M+ weekly downloads",
-          "description": "On March 30, an attacker used stolen maintainer credentials to publish two malicious versions of axios (1.14.1 and 0.30.4) to npm. A postinstall script downloaded an obfuscated dropper that fetched a platform specific Remote Access Trojan for macOS, Windows, and Linux. The malicious versions were live from 00:21 to 03:29 UTC on March 31. Axios has over 100 million weekly npm downloads and is a dependency in most Node.js AI toolchains. Anyone who ran npm install during the 3 hour window may be affected. The coincidental timing with the Claude Code source code leak (same day) amplified confusion, but the two events are unrelated.",
-          "action": "Check your lockfiles for axios 1.14.1 or 0.30.4 immediately. If present, rotate all credentials on the affected machine, scan for RAT indicators listed in the SANS and Palo Alto advisories, and pin axios to a known safe version.",
-          "clientPitch": "",
-          "useCase": "Axios is embedded in nearly every Node.js integration stack. If you build automations that install npm packages in CI/CD or on client infrastructure, this is a direct supply chain risk. Lockfile auditing and version pinning should be standard practice for every deployment pipeline.",
+          "category": "Product Launch",
+          "headline": "Salesforce turns Slackbot into enterprise AI agent with MCP support and desktop monitoring",
+          "description": "Salesforce shipped 30 new AI features for Slack including full MCP client integration that connects Slackbot to Agentforce, Google Workspace, Microsoft 365, Notion, Workday, ServiceNow, and over 6,000 apps. The agent can now operate outside Slack to monitor desktop activity, take screenshots for context, and draft follow ups based on deals, conversations, and calendar data. Skills, deep research, and memory are live on Business+ and Enterprise+ with free and Pro preview access starting in April.",
+          "action": "Enable Slackbot MCP integration in your Slack Business+ or Enterprise+ workspace and test it against your existing automation stack. Evaluate whether the desktop agent capability can replace or augment current workflow tools like Make.com or n8n for common trigger and action patterns.",
+          "clientPitch": "Slackbot is now a full blown enterprise agent that connects to 6,000+ apps through MCP and can watch what you are doing on your desktop. This changes the equation for teams already building automations in Slack.",
+          "useCase": "Teams using Slack as their collaboration hub who want agentic workflow automation without leaving the platform. Particularly relevant for sales, project management, and operations teams that currently chain multiple tools together.",
           "tools": [
-            "npm",
-            "Node.js"
+            "Slack",
+            "Slackbot",
+            "Agentforce",
+            "MCP",
+            "Salesforce"
           ],
-          "timeline": "Resolved",
+          "timeline": "April 3, 2026",
           "confidence": "verified",
           "sourceTier": 1,
-          "sourceUrl": "https://www.malwarebytes.com/blog/news/2026/03/axios-supply-chain-attack-chops-away-at-npm-trust",
-          "sourceName": "Malwarebytes",
+          "sourceUrl": "https://techcrunch.com/2026/03/31/salesforce-announces-an-ai-heavy-makeover-for-slack-with-30-new-features/",
+          "sourceName": "TechCrunch",
           "sources": [
-            {
-              "url": "https://www.malwarebytes.com/blog/news/2026/03/axios-supply-chain-attack-chops-away-at-npm-trust",
-              "name": "Malwarebytes"
-            },
-            {
-              "url": "https://unit42.paloaltonetworks.com/axios-supply-chain-attack/",
-              "name": "Palo Alto Unit 42"
-            },
-            {
-              "url": "https://www.sans.org/blog/axios-npm-supply-chain-compromise-malicious-packages-remote-access-trojan",
-              "name": "SANS Institute"
-            }
+            "https://techcrunch.com/2026/03/31/salesforce-announces-an-ai-heavy-makeover-for-slack-with-30-new-features/",
+            "https://www.itpro.com/software/slackbot-just-got-a-big-update-with-mcp-and-desktop-access",
+            "https://www.computerworld.com/article/4153622/slacks-ai-updates-signal-shift-towards-agent-orchestration.html"
+          ]
+        },
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Research",
+          "headline": "Experts warn Anthropic's unreleased Mythos model marks cybersecurity watershed as agentic attackers emerge",
+          "description": "A leaked Anthropic blog post revealed that the unreleased Claude Mythos model can exploit vulnerabilities at an unprecedented pace, far ahead of any other AI model in cyber capabilities. Cato Networks CEO Shlomo Kramer called it a watershed event, warning that a single AI agent could scan for and exploit vulnerabilities faster and more persistently than hundreds of human hackers. Anthropic is privately briefing government officials and letting select organizations test the model to improve defenses.",
+          "action": "Brief your security team on the shift from human speed to agent speed attack vectors. Prioritize patching known vulnerabilities in internet facing infrastructure before models with these capabilities reach general availability.",
+          "clientPitch": "The next generation of AI models can autonomously find and exploit security holes faster than any human team can patch them. This changes the cost equation for cybersecurity from reactive patching to proactive hardening.",
+          "useCase": "Security operations teams, penetration testing firms, and CISOs planning defense strategies against AI augmented threat actors. Any organization with public facing APIs or web applications.",
+          "tools": [
+            "Claude Mythos",
+            "Cato Networks",
+            "AI Security"
+          ],
+          "timeline": "April 3, 2026",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://www.cnn.com/2026/04/03/tech/anthropic-mythos-ai-cybersecurity",
+          "sourceName": "CNN",
+          "sources": [
+            "https://www.cnn.com/2026/04/03/tech/anthropic-mythos-ai-cybersecurity",
+            "https://www.benzinga.com/markets/tech/26/04/51644894/anthropic-openais-next-models-could-be-a-watershed-event-for-cybersecurity-warns-expert-agentic-attackers-are-coming",
+            "https://krdo.com/news/2026/04/03/anthropics-next-model-could-be-a-watershed-moment-for-cybersecurity-experts-say-that-could-also-be-a-concern/"
           ]
         },
         {
           "score": 7,
           "tag": "WATCH",
-          "category": "Infrastructure",
-          "headline": "Gemini API enforces monthly spend caps per billing tier from April 1",
-          "description": "Google now enforces hard monthly spend caps on all Gemini API billing accounts. Tier 1 accounts are capped at $250 per month, Tier 2 at $2,000, and Tier 3 ranges from $20,000 to $100,000+. New users must use prepaid billing. The tier qualification thresholds have been restructured with lower entry points. Once a cap is hit, API calls are rejected until the next billing cycle or a tier upgrade.",
-          "action": "",
-          "clientPitch": "Google now enforces hard budget caps on Gemini API usage, which means predictable costs but also a risk of service interruption if limits are hit mid production.",
-          "useCase": "If you run Gemini calls inside Make.com or n8n workflows that scale with client volume, a $250 Tier 1 cap can halt production without warning. Calculate your monthly token burn and upgrade tiers proactively. The new Flex inference tier helps stretch the budget further within these caps.",
+          "category": "Industry",
+          "headline": "Anthropic and OpenAI both target late 2026 Nasdaq listings in race to go public first",
+          "description": "Axios reported that both companies plan to file for IPOs later this year, with each hoping to beat the other to market. Anthropic has engaged Goldman Sachs and JPMorgan Chase with a target listing as early as October 2026 at a $400 to $500 billion valuation. OpenAI is targeting a valuation approaching $1 trillion, and the two listings could collectively raise upwards of $150 billion.",
+          "action": "Track IPO timelines if your organization has commercial agreements with either company. Public market pressure may accelerate product roadmaps and pricing changes as both companies optimize for revenue growth metrics ahead of listing.",
+          "clientPitch": "Anthropic and OpenAI are racing to go public this year. Expect aggressive product launches, pricing moves, and enterprise sales pushes from both as they build their IPO narratives.",
+          "useCase": "Enterprise procurement teams negotiating multi year AI contracts should factor in how IPO pressure may affect pricing, support commitments, and product continuity at both companies.",
           "tools": [
-            "Gemini API"
+            "Claude API",
+            "OpenAI API"
           ],
-          "timeline": "In effect since April 1, 2026",
+          "timeline": "April 3, 2026",
           "confidence": "verified",
           "sourceTier": 1,
-          "sourceUrl": "https://discuss.ai.google.dev/t/why-billing-update-gemini-api-usage-tier-updates-and-billing-caps-starting-apr-2026/134392",
-          "sourceName": "Google AI Developers Forum",
+          "sourceUrl": "https://www.axios.com/2026/04/03/anthropic-openai-ipo",
+          "sourceName": "Axios",
           "sources": [
-            {
-              "url": "https://discuss.ai.google.dev/t/why-billing-update-gemini-api-usage-tier-updates-and-billing-caps-starting-apr-2026/134392",
-              "name": "Google AI Developers Forum"
-            },
-            {
-              "url": "https://blog.laozhang.ai/en/posts/google-gemini-billing-tier-policy-changes",
-              "name": "LaoZhang AI Blog"
-            }
+            "https://www.axios.com/2026/04/03/anthropic-openai-ipo",
+            "https://www.investing.com/news/stock-market-news/anthropic-considers-ipo-as-soon-as-q4-2026-the-information-4584016",
+            "https://winbuzzer.com/2026/03/30/anthropic-ipo-q4-2026-60-billion-target-xcxwbn/"
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Regulation",
+          "headline": "California AI rules emerge as de facto national standard while White House pushes federal preemption",
+          "description": "Axios reported that California's multipronged regulatory approach, combining Newsom's executive order with new legislative bills on chatbot safety for minors, will likely force AI companies to treat state rules as a national baseline. The White House simultaneously pushed its March 20 National Policy Framework calling for broad federal preemption of state AI laws. The resulting tension between state and federal approaches leaves AI companies navigating competing compliance requirements.",
+          "action": "Map your AI products against California's emerging disclosure requirements for content policy, bias testing, and civil rights compliance. Prepare dual compliance documentation that satisfies both state frameworks and the anticipated federal standard.",
+          "clientPitch": "California is becoming the regulatory floor for AI in the US regardless of what happens at the federal level. Companies building or deploying AI products need to comply with California's rules or risk being locked out of the largest state market.",
+          "useCase": "Legal and compliance teams at AI vendors and enterprise deployers who operate across multiple US states and need to navigate the patchwork of state versus federal AI regulation.",
+          "tools": [
+            "California AI Procurement",
+            "White House AI Framework"
+          ],
+          "timeline": "April 3, 2026",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://www.axios.com/2026/04/03/california-national-testing-ground-ai-rules",
+          "sourceName": "Axios",
+          "sources": [
+            "https://www.axios.com/2026/04/03/california-national-testing-ground-ai-rules",
+            "https://rollcall.com/2026/03/20/white-house-ai-framework-calls-for-preemption-of-state-laws/",
+            "https://www.transparencycoalition.ai/news/ai-legislative-update-april3-2026"
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Industry",
+          "headline": "Anthropic acquires biotech AI startup Coefficient Bio for $400 million to enter drug discovery",
+          "description": "Anthropic paid roughly $400 million in stock for Coefficient Bio, a stealth startup with fewer than 10 employees founded by former Genentech computational biology researchers. The team built AI models for planning drug R&D, managing clinical regulatory strategy, and identifying new drug opportunities. The acquisition expands Anthropic's healthcare and life sciences division following the October launch of Claude for Life Sciences.",
+          "action": "If you build healthcare or life sciences workflows on Claude, watch for new specialized capabilities emerging from the Coefficient Bio integration. Evaluate whether Claude's life sciences tools could replace or augment existing drug discovery pipeline components.",
+          "clientPitch": "Anthropic is investing real capital in making Claude a platform for drug discovery and clinical research. This signals that vertical AI for life sciences is becoming a core business line, not a side project.",
+          "useCase": "Pharmaceutical R&D teams, biotech startups, and clinical research organizations evaluating AI tools for drug discovery, regulatory strategy, and biological research workflows.",
+          "tools": [
+            "Claude API",
+            "Claude for Life Sciences"
+          ],
+          "timeline": "April 3, 2026",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/",
+          "sourceName": "TechCrunch",
+          "sources": [
+            "https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/",
+            "https://siliconangle.com/2026/04/03/anthropic-reportedly-acquires-medical-ai-startup-coefficient-bio-400m/",
+            "https://www.theinformation.com/articles/anthropic-acquires-startup-coefficient-bio-400-million"
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Regulation",
+          "headline": "Tennessee bans AI from representing itself as a mental health professional with private right of action",
+          "description": "Governor Bill Lee signed SB 1580, prohibiting any party developing or deploying AI systems from advertising that AI can act as a qualified mental health professional. The law passed the Senate 32 to 0 and the House 94 to 0, taking effect July 1, 2026. Violations carry up to $5,000 per incident under the Tennessee Consumer Protection Act with a private right of action for affected individuals.",
+          "action": "Review any AI products marketed with mental health adjacent language in Tennessee or nationwide. The unanimous bipartisan passage signals that similar legislation will spread to other states quickly.",
+          "clientPitch": "Tennessee just set a legal precedent that AI cannot market itself as a therapist. If your product touches mental health, audit your marketing and product copy before July 1 or face per violation fines.",
+          "useCase": "AI chatbot companies, telehealth platforms, and wellness apps that use AI for conversational mental health support or coaching. Legal teams assessing state by state compliance for health adjacent AI products.",
+          "tools": [
+            "AI Chatbots",
+            "Telehealth Platforms"
+          ],
+          "timeline": "April 3, 2026",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://www.troutmanprivacy.com/2026/04/tennessee-enacts-health-care-ai-bill-with-private-right-of-action/",
+          "sourceName": "Troutman Pepper",
+          "sources": [
+            "https://www.troutmanprivacy.com/2026/04/tennessee-enacts-health-care-ai-bill-with-private-right-of-action/",
+            "https://www.transparencycoalition.ai/news/ai-legislative-update-april3-2026",
+            "https://legiscan.com/TN/bill/SB1580/2025"
           ]
         },
         {
           "score": 6,
           "tag": "WATCH",
-          "category": "Models",
-          "headline": "Alibaba releases Qwen 3.6 Plus Preview with 1M context on OpenRouter",
-          "description": "Alibaba launched Qwen 3.6 Plus as a free preview on OpenRouter on March 30. The model supports a 1 million token context window, up to 65,536 output tokens, always on chain of thought reasoning, and native function calling. It beats Claude 4.5 Opus on Terminal Bench 2.0 (61.6 vs 59.3) and leads on OmniDocBench v1.5 (91.2). The model uses a hybrid architecture and is available via API.",
-          "action": "",
-          "clientPitch": "A new open weight model from Alibaba matches or exceeds top commercial models on coding and document understanding benchmarks, available for free during preview.",
-          "useCase": "A free 1M context model with native tool use is immediately useful for document heavy agentic workflows where cost is a constraint. The function calling support means it slots into existing orchestration frameworks without adapter layers. Worth benchmarking against your current Gemini or Claude calls for long context tasks.",
+          "category": "Infrastructure",
+          "headline": "IBM and Arm partner to run Arm workloads on Z mainframes for enterprise AI",
+          "description": "IBM announced a strategic collaboration with Arm to bring Arm based software environments into IBM Z and LinuxONE mainframes through expanded virtualization. The partnership targets AI and data intensive workloads that need the reliability of mainframe infrastructure with the flexibility of the Arm ecosystem. The companies will create shared technology layers to enable enterprise systems to recognize and execute Arm applications natively.",
+          "action": "If your organization runs mission critical workloads on IBM Z, track this collaboration for potential consolidation of Arm based AI inference alongside existing mainframe processing. Evaluate whether dual architecture support could simplify your infrastructure stack.",
+          "clientPitch": "IBM is opening its mainframe platform to the Arm ecosystem. For enterprises running both legacy mainframe and modern AI workloads, this could eliminate the need for separate infrastructure stacks.",
+          "useCase": "Large enterprises in banking, insurance, and government that run IBM Z mainframes and want to deploy AI inference alongside existing transaction processing without migrating off mainframe infrastructure.",
           "tools": [
-            "OpenRouter",
-            "Qwen API"
+            "IBM Z",
+            "LinuxONE",
+            "Arm"
           ],
-          "timeline": "Free preview, available now",
+          "timeline": "April 2, 2026",
           "confidence": "verified",
-          "sourceTier": 2,
-          "sourceUrl": "https://www.buildfastwithai.com/blogs/qwen-3-6-plus-preview-review",
-          "sourceName": "Build Fast with AI",
+          "sourceTier": 1,
+          "sourceUrl": "https://newsroom.ibm.com/2026-04-02-ibm-announces-strategic-collaboration-with-arm-to-shape-the-future-of-enterprise-computing",
+          "sourceName": "IBM",
           "sources": [
-            {
-              "url": "https://www.buildfastwithai.com/blogs/qwen-3-6-plus-preview-review",
-              "name": "Build Fast with AI"
-            },
-            {
-              "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
-              "name": "Hugging Face"
-            }
+            "https://newsroom.ibm.com/2026-04-02-ibm-announces-strategic-collaboration-with-arm-to-shape-the-future-of-enterprise-computing",
+            "https://www.theregister.com/2026/04/02/ibm_arm_software_mainframes_ai_support/",
+            "https://www.itpro.com/infrastructure/ibm-strikes-arm-deal-in-ai-focused-hardware-push"
           ]
         }
       ],
-      "totalScanned": 4,
-      "relevant": 4,
-      "critical": 2,
-      "watch": 2,
+      "totalScanned": 8,
+      "relevant": 8,
+      "critical": 3,
+      "watch": 5,
       "low": 0
     },
     "2026-04-04": {
