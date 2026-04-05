@@ -235,7 +235,7 @@ export default function App() {
             <WeeklySummary digests={digests} dates={dates} currentDate={cur} onNavigate={(dateKey, headline) => { setCur(dateKey); setAutoExpand(headline) }} />
 
             <footer>
-              <p className="ft-meta">{dates.length} digests in archive</p>
+              <p className="ft-about">We cover AI tools, APIs, models, and capabilities that affect how systems are built. New releases, pricing changes, deprecations, and major industry events. No funding rounds, no hype. Just what changed and what it means for builders.</p>
             </footer>
           </article>
         )}
