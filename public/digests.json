@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-04-06",
     "2026-04-05",
     "2026-04-04",
     "2026-04-03",
@@ -1088,6 +1089,112 @@
       "critical": 3,
       "watch": 5,
       "low": 0
+    },
+    "2026-04-06": {
+      "dateKey": "2026-04-06",
+      "date": "April 6, 2026",
+      "summary": "OpenAI restructures Codex pricing for teams and begins Sora wind down while Google ships Deep Research Agent API and new TTS models.",
+      "items": [
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Pricing",
+          "headline": "OpenAI adds pay as you go Codex seats for Business and Enterprise and cuts ChatGPT Business to $20 per seat",
+          "description": "Starting April 2, teams on ChatGPT Business and Enterprise can add Codex only seats with usage based billing and no rate limits. Token consumption is billed per million input, cached input, and output tokens. OpenAI also reduced the ChatGPT Business annual price from $25 to $20 per seat and is offering up to $500 in credits for new Codex team members.",
+          "action": "",
+          "clientPitch": "Teams can now give individual developers AI coding access without paying for full ChatGPT seats, cutting per head costs significantly.",
+          "useCase": "For organizations running mixed AI toolchains, Codex only seats decouple coding agent costs from chat seat licensing. This changes the unit economics of deploying AI assisted development across teams that already use other LLM providers for general tasks.",
+          "tools": [
+            "OpenAI Codex",
+            "ChatGPT Business",
+            "ChatGPT Enterprise"
+          ],
+          "timeline": "April 2, 2026",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://openai.com/index/codex-flexible-pricing-for-teams/",
+          "sourceName": "OpenAI",
+          "sources": [
+            "https://openai.com/index/codex-flexible-pricing-for-teams/",
+            "https://www.ghacks.net/2026/04/03/openai-adds-pay-as-you-go-codex-seats-for-chatgpt-business-and-enterprise-teams/"
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "API Release",
+          "headline": "Google ships Gemini Deep Research Agent API in preview powered by Gemini 3 Pro",
+          "description": "Google released the Gemini Deep Research Agent via the Interactions API, enabling developers to embed autonomous multi step research into applications. The agent uses Gemini 3 Pro as its reasoning core, processes PDFs, CSVs, and web data, and returns structured JSON with citations. It scores 46.4% on Humanity's Last Exam and 66.1% on DeepSearchQA benchmarks.",
+          "action": "",
+          "clientPitch": "Applications can now run hours of research autonomously and return sourced reports without human intervention.",
+          "useCase": "This is a turnkey research agent accessible through a single API call. For systems that currently chain multiple LLM calls with web scraping to gather intelligence, this replaces that entire pipeline with a managed service that handles planning, retrieval, and synthesis natively.",
+          "tools": [
+            "Gemini API",
+            "Interactions API",
+            "Gemini 3 Pro"
+          ],
+          "timeline": "Available now",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://ai.google.dev/gemini-api/docs/deep-research",
+          "sourceName": "Google AI for Developers",
+          "sources": [
+            "https://ai.google.dev/gemini-api/docs/deep-research",
+            "https://blog.google/innovation-and-ai/technology/developers-tools/deep-research-agent-gemini-api/"
+          ]
+        },
+        {
+          "score": 6,
+          "tag": "WATCH",
+          "category": "Deprecation",
+          "headline": "OpenAI Sora app closes April 26 with Videos API and Sora 2 models removed September 24",
+          "description": "OpenAI is executing a two stage Sora shutdown. The Sora web and mobile app will be discontinued on April 26, 2026. The Videos API, sora-2, sora-2-pro, and all related model snapshots will be removed from the API on September 24, 2026. Users should export content before the app closure date.",
+          "action": "",
+          "clientPitch": "Any workflows using the Sora API for video generation need to be migrated to alternative providers before the September deadline.",
+          "useCase": "If any client workflows include OpenAI video generation via the Videos API, this is a hard sunset with no replacement from OpenAI. Migration to Runway, Pika, or other providers needs to start now given the September 24 API cutoff.",
+          "tools": [
+            "OpenAI Videos API",
+            "Sora 2"
+          ],
+          "timeline": "App: April 26, 2026. API: September 24, 2026",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+          "sourceName": "OpenAI Help Center",
+          "sources": [
+            "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+            "https://the-decoder.com/openai-sets-two-stage-sora-shutdown-with-app-closing-april-2026-and-api-following-in-september/"
+          ]
+        },
+        {
+          "score": 5,
+          "tag": "LOW",
+          "category": "API Release",
+          "headline": "Google releases Gemini 2.5 Flash TTS and 2.5 Pro TTS models in preview",
+          "description": "Google launched two new text to speech models in preview via the Gemini API. Gemini 2.5 Flash TTS is optimized for low latency, while Gemini 2.5 Pro TTS targets higher quality output. Both feature enhanced expressivity, precision pacing, and seamless dialogue handling.",
+          "action": "",
+          "clientPitch": "",
+          "useCase": "These models add native TTS to the Gemini API stack, which simplifies voice enabled workflows that previously required a separate provider. The Flash variant is suited to real time applications like voice agents, while Pro fits asynchronous content production.",
+          "tools": [
+            "Gemini API",
+            "Gemini 2.5 Flash TTS",
+            "Gemini 2.5 Pro TTS"
+          ],
+          "timeline": "Available now",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://ai.google.dev/gemini-api/docs/changelog",
+          "sourceName": "Google AI for Developers",
+          "sources": [
+            "https://ai.google.dev/gemini-api/docs/changelog"
+          ]
+        }
+      ],
+      "totalScanned": 4,
+      "relevant": 3,
+      "critical": 0,
+      "watch": 3,
+      "low": 1
     }
   }
 }
