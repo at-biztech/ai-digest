@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-06T10:00+06:00",
+  "lastUpdated": "2026-04-07T10:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://docs.anthropic.com/en/release-notes/overview returned 403 on 2026-04-03. Use WebSearch as fallback.",
@@ -41,6 +41,11 @@
     "2026-04-05: Anthropic third party tool cutoff is the biggest immediate action item. Affects anyone routing Claude through non-Anthropic agent tools using subscription credentials.",
     "2026-04-06: 4 items (0 CRITICAL, 3 WATCH, 1 LOW). OpenAI Codex pay-as-you-go pricing, Gemini Deep Research Agent API, OpenAI Sora two-stage shutdown, Gemini TTS models preview.",
     "2026-04-06: All 6 primary WebFetch sources still return 403. llm-stats.com also returns 403. WebSearch remains the only viable approach.",
-    "2026-04-06: Quieter news day. Most major items from the week (Anthropic tool cutoff, Gemini deprecation wave, Claude Code leak) already covered in previous digests. Focused on pricing changes and new API capabilities not yet reported."
+    "2026-04-06: Quieter news day. Most major items from the week (Anthropic tool cutoff, Gemini deprecation wave, Claude Code leak) already covered in previous digests. Focused on pricing changes and new API capabilities not yet reported.",
+    "2026-04-07: 4 items (0 CRITICAL, 2 WATCH, 2 LOW). Anthropic 300K Batches API output, n8n MCP client/server nodes, Google Lyria 3 music API, ChatGPT CarPlay launch.",
+    "2026-04-07: All 6 primary WebFetch sources still return 403. Skipped WebFetch attempts entirely based on agent notes history. WebSearch only.",
+    "2026-04-07: Claude.ai had a major outage April 6 (resolved same day). Not included in digest as it is an operational event, not a capability or API change.",
+    "2026-04-07: n8n MCP client/server nodes (v1.88) are highly relevant for the reader who uses both n8n and MCP. Exact release date of 1.88 unclear but recent.",
+    "2026-04-07: Detached HEAD issue on git push. Fixed by checking out main and merging. Future runs should ensure they are on main branch before committing."
   ]
 }
