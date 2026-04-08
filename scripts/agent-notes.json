@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-08T10:00+06:00",
+  "lastUpdated": "2026-04-08T22:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://docs.anthropic.com/en/release-notes/overview returned 403 on 2026-04-03. Use WebSearch as fallback.",
@@ -52,6 +52,13 @@
     "2026-04-08: GitHub releases pages (github.com/n8n-io/n8n/releases) remain fetchable via WebFetch. Good source for n8n release details.",
     "2026-04-08: Gemini 3.1 Ultra release date ambiguous across sources (some say March, others April 5). Used April 5 based on most specific source. Not in any previous digest so included regardless.",
     "2026-04-08: Claude outage continued April 7 (elevated errors, 1700+ Downdetector reports). Excluded per established precedent of skipping operational events.",
-    "2026-04-08: Detached HEAD issue recurred. Fixed again by checking out main and merging. The repo enters detached HEAD state between sessions."
+    "2026-04-08: Detached HEAD issue recurred. Fixed again by checking out main and merging. The repo enters detached HEAD state between sessions.",
+    "2026-04-08 evening: Replaced morning digest. 6 items (1 CRITICAL, 3 WATCH, 2 LOW). Claude Mythos Preview / Project Glasswing (CRITICAL), Frontier Model Forum anti-distillation coalition, OpenAI Codex legacy model removal (carried from morning), Veo 3.1 Fast price cut, Codex CLI update, n8n 2.16.0 Data Table MCP (carried from morning).",
+    "2026-04-08 evening: Claude Mythos Preview is the biggest story of the week. Anthropic built its most capable model and restricted it to security research only. Multiple tier 1 sources (TechCrunch, CNBC, Fortune, Axios) all dated April 7.",
+    "2026-04-08 evening: Dropped Gemini 3.1 Ultra from morning digest. Original date was April 5, exceeding the 48 hour window on this run.",
+    "2026-04-08 evening: Frontier Model Forum anti-distillation story (Bloomberg April 6, Japan Times April 7) is industry defining. OpenAI, Anthropic, Google cooperating on threat intelligence is unprecedented.",
+    "2026-04-08 evening: Detached HEAD issue recurred again. 29 commits were stranded. Fixed by merging d816cbd into main before committing. Root cause: sessions start in detached HEAD state.",
+    "2026-04-08 evening: GPT-5.4 mini/nano confirmed as March 17. Sora API expansion confirmed as March 12. Responses API Skills confirmed as February 11. Mistral Large 3 confirmed as December 2025. All excluded as stale.",
+    "2026-04-08 evening: No new Zapier, Make.com, or Airtable product updates found for April 7-8. Zapier latest documented updates are from February 2026."
   ]
 }
