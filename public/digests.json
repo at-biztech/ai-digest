@@ -1330,10 +1330,16 @@
           "confidence": "verified",
           "sourceTier": 1,
           "sourceUrl": "https://ai.google.dev/gemini-api/docs/changelog",
-          "sourceName": "Google AI for Developers",
+          "sourceName": "Google AI Changelog",
           "sources": [
-            "https://ai.google.dev/gemini-api/docs/changelog",
-            "https://smartchunks.com/google-gemini-3-1-ultra-gpqa-diamond-benchmark/"
+            {
+              "url": "https://ai.google.dev/gemini-api/docs/changelog",
+              "name": "Google AI Changelog"
+            },
+            {
+              "url": "https://smartchunks.com/google-gemini-3-1-ultra-gpqa-diamond-benchmark/",
+              "name": "SmartChunks"
+            }
           ]
         },
         {
