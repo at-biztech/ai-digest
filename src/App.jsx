@@ -58,9 +58,9 @@ function Item({ item, dateKey, onSave, autoOpen, onAutoOpened }) {
       {open && <div className="item-overlay" onClick={() => setOpen(false)} />}
       {open && (
         <div className="item-card" onClick={e => e.stopPropagation()}>
-          <div className="card-head">
-            <span className="card-cat">{item.category}</span>
-            <button className="card-close" onClick={() => setOpen(false)}>&times;</button>
+          <div className={`card-visual cat-${(item.category || 'other').toLowerCase().replace(/\s+/g,'')}`}>
+            <span className="card-cat-label">{item.category}</span>
+            <button className="card-close-top" onClick={() => setOpen(false)}>&times;</button>
           </div>
           <h3 className="card-hl">{item.headline}</h3>
           <p className="card-desc">{item.description}</p>
