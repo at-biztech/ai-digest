@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-04-16",
     "2026-04-15",
     "2026-04-14",
     "2026-04-13",
@@ -2281,6 +2282,175 @@
             "https://deepmind.google/blog/gemini-robotics-er-1-6/",
             "https://deepmind.google/models/gemini-robotics/gemini-robotics-er/",
             "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-1-6/"
+          ]
+        }
+      ]
+    },
+    "2026-04-16": {
+      "dateKey": "2026-04-16",
+      "date": "April 16, 2026",
+      "summary": "**OpenAI ships GPT-5.4-Cyber through an expanded Trusted Access for Cyber program to answer Anthropic Mythos, Anthropic rebuilds the Claude Code desktop app around parallel sessions and adds scheduled cloud Routines, Anthropic moves Claude Enterprise to flat per seat plus metered compute billing, OpenAI Codex CLI 0.121.0 stable ships plugin marketplace installs, Claude Code 2.1.110 adds a fullscreen TUI and a push notification tool, and Google releases a native Gemini macOS app with a global Option+Space shortcut.**",
+      "totalScanned": 6,
+      "relevant": 6,
+      "critical": 3,
+      "watch": 3,
+      "low": 0,
+      "items": [
+        {
+          "score": 9,
+          "tag": "CRITICAL",
+          "category": "Model Releases",
+          "headline": "OpenAI launches GPT-5.4-Cyber and scales Trusted Access for Cyber to thousands of vetted defenders",
+          "description": "OpenAI shipped GPT-5.4-Cyber, a cyber permissive variant of GPT-5.4 tuned for defensive security with added binary reverse engineering capability, and rolled it into a tiered Trusted Access for Cyber program open to thousands of verified individual defenders and hundreds of security teams protecting critical software. Individuals verify at chatgpt.com/cyber while enterprises request access through an OpenAI representative, with higher tiers requiring customers to waive Zero Data Retention so OpenAI can monitor usage. The move directly answers Anthropic Mythos with a broad verified access model instead of Anthropic's tightly gated approach.",
+          "action": "If you run a SOC, pentesting practice, or vulnerability research team, apply for Trusted Access for Cyber now to get early seats on GPT-5.4-Cyber. Audit ZDR commitments in your enterprise contracts before accepting higher tier access, and model the split sourcing pattern of broad OpenAI Cyber access alongside narrow Anthropic Mythos seats for the same defensive workloads.",
+          "clientPitch": "Builders of defensive security tooling now have two philosophically opposed frontier options. OpenAI Cyber will be available to thousands of verified defenders while Anthropic Mythos stays locked to 11 elite partners. That means your cyber automation stack can now draw on restricted frontier capability without negotiating a bespoke preview seat.",
+          "useCase": "SOC automation, binary reverse engineering for malware analysis, vulnerability research workflows that previously tripped safety refusals, red team exercises for internal systems, and government or regulated enterprise security teams that need vetted frontier model access.",
+          "tools": [
+            "OpenAI API",
+            "ChatGPT",
+            "Trusted Access for Cyber"
+          ],
+          "timeline": "April 14, 2026",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://openai.com/index/scaling-trusted-access-for-cyber-defense/",
+          "sourceName": "OpenAI",
+          "sources": [
+            "https://openai.com/index/scaling-trusted-access-for-cyber-defense/",
+            "https://www.axios.com/2026/04/14/openai-model-cyber-program-release",
+            "https://thehackernews.com/2026/04/openai-launches-gpt-54-cyber-with.html",
+            "https://thenextweb.com/news/openai-gpt-5-4-cyber-trusted-access-defenders-mythos",
+            "https://siliconangle.com/2026/04/14/openai-launches-gpt-5-4-cyber-model-vetted-security-professionals/",
+            "https://www.helpnetsecurity.com/2026/04/15/openai-gpt-5-4-cyber/"
+          ]
+        },
+        {
+          "score": 9,
+          "tag": "CRITICAL",
+          "category": "Tools & Platforms",
+          "headline": "Anthropic rebuilds Claude Code desktop around parallel sessions and ships scheduled, API, and GitHub triggered Routines",
+          "description": "Anthropic released a redesigned Claude Code desktop app for Mac with multiple parallel sessions per window, an integrated terminal, file editor, HTML and PDF preview, and a faster diff viewer in a drag and drop layout. Alongside it, the company shipped Routines in research preview: saved configurations that bundle a prompt, one or more repositories, and connectors, then run on Claude Code web infrastructure on a cron schedule, from a dedicated HTTP endpoint, or in response to GitHub events, all without the user's laptop needing to be online. Pro users get 5 routine runs per day, Max gets 15, and Team and Enterprise get 25.",
+          "action": "Install the new Claude Code desktop build on Pro, Max, Team, or Enterprise accounts and move your multi repo orchestration workflows into parallel sessions. Replace any lightweight cron driven Claude Code shell scripts with Routines, and wire up API triggered Routines to incoming webhooks from n8n, Zapier, or Make so business events can kick off Claude Code runs directly.",
+          "clientPitch": "Claude Code now runs scheduled automations in the cloud. That removes the laptop dependency that previously kept it out of production, and the GitHub trigger mode means PR events can spin up isolated Claude sessions without any custom infrastructure. This is the closest Anthropic has come to shipping a managed agent service inside the consumer plans.",
+          "useCase": "Nightly code review jobs, scheduled documentation refreshes, GitHub PR triage agents, API triggered customer ticket handlers, and parallel multi repo refactors that benefit from the new desktop side by side session layout.",
+          "tools": [
+            "Claude Code",
+            "Claude Desktop",
+            "GitHub",
+            "n8n",
+            "Zapier"
+          ],
+          "timeline": "April 14, 2026",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://code.claude.com/docs/en/routines",
+          "sourceName": "Anthropic Claude Code Docs",
+          "sources": [
+            "https://code.claude.com/docs/en/routines",
+            "https://9to5mac.com/2026/04/14/anthropic-adds-repeatable-routines-feature-to-claude-code-heres-how-it-works/",
+            "https://siliconangle.com/2026/04/14/anthropics-claude-code-gets-automated-routines-desktop-makeover/",
+            "https://venturebeat.com/orchestration/we-tested-anthropics-redesigned-claude-code-desktop-app-and-routines-heres-what-enterprises-should-know",
+            "https://www.macrumors.com/2026/04/15/anthropic-rebuilds-claude-code-desktop-app/",
+            "https://www.theregister.com/2026/04/14/claude_code_routines/"
+          ]
+        },
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Pricing",
+          "headline": "Anthropic moves Claude Enterprise to a flat $20 per seat plus metered compute billing model",
+          "description": "Anthropic confirmed a pricing overhaul for Claude Enterprise that replaces the previous up to $200 per licensed seat plan with a flat $20 per user per month base fee plus consumption based charges for compute capacity used. Previous seats came with a set allowance of discounted tokens, while the new model shifts most spend onto metered usage. Reports indicate the change is expected to double or triple costs for heavy power users while lowering entry costs for lightly used seats.",
+          "action": "Pull the last 30 days of Claude Enterprise token usage from the Usage and Cost API and rebuild your TCO model against the new $20 per seat plus compute pricing before your renewal. Identify power users whose consumption would push them into the doubled or tripled cost bracket and consider routing them through prompt caching, compaction, or Haiku 4.5 tiered workflows to contain spend.",
+          "clientPitch": "Claude Enterprise is no longer a predictable flat seat cost. Finance teams need to model the new $20 per seat floor plus metered compute, and builders need to aggressively adopt 1 hour prompt caching and compaction to keep the bill under control. Clients that did not track per user consumption yesterday will need to start today.",
+          "useCase": "Finance and procurement planning for Claude Enterprise renewals, cost allocation between teams and projects, and optimization of token heavy workflows such as long context code review, document processing, and agentic pipelines.",
+          "tools": [
+            "Claude Enterprise",
+            "Claude API",
+            "Usage and Cost API"
+          ],
+          "timeline": "April 15, 2026",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-switches-to-usage-based-billing-for-enterprise-customers/",
+          "sourceName": "PYMNTS",
+          "sources": [
+            "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-switches-to-usage-based-billing-for-enterprise-customers/",
+            "https://www.gurufocus.com/news/8795305/anthropic-adjusts-pricing-model-for-claude-enterprise-edition",
+            "https://www.digitaltoday.co.kr/en/view/48037/anthropic-shifts-claude-enterprise-to-usage-based-pricing-signalling-higher-costs-for-companies"
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools & Platforms",
+          "headline": "OpenAI Codex CLI 0.121.0 ships stable with plugin marketplace installs, reverse history search, and sandbox fixes",
+          "description": "OpenAI cut the Codex CLI 0.121.0 stable release after nearly two weeks of alpha builds, adding `codex marketplace add` with app server support for installing plugin marketplaces directly from GitHub and a TUI reverse history search. The release also lands macOS sandbox handling fixes, Windows path compatibility improvements, and app server plumbing for remote control workflows. An immediate 0.122.0 alpha branch was opened the same day, signalling continued rapid iteration.",
+          "action": "Upgrade local and CI Codex CLI installs to 0.121.0, then publish any internal plugin bundles through the new marketplace add path instead of hand rolled install scripts. If you run Codex on Windows or macOS sandbox profiles, retest your pipelines against the fixes before the next release train.",
+          "clientPitch": "Codex CLI now treats third party plugin marketplaces as a first class install surface, matching the MCP registry path in GitHub Copilot CLI. That makes it realistic to distribute client specific Codex agents through internal GitHub repos and to have Codex self install them on new workstations.",
+          "useCase": "Internal Codex plugin distribution, templated developer onboarding on macOS and Windows, and agent driven CI workflows that previously tripped over sandbox edge cases.",
+          "tools": [
+            "OpenAI Codex CLI",
+            "GitHub",
+            "MCP"
+          ],
+          "timeline": "April 15, 2026",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://github.com/openai/codex/releases",
+          "sourceName": "OpenAI Codex GitHub Releases",
+          "sources": [
+            "https://github.com/openai/codex/releases",
+            "https://developers.openai.com/codex/changelog"
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools & Platforms",
+          "headline": "Claude Code 2.1.110 adds fullscreen TUI, a mobile push notification tool, and expanded Remote Control command reach",
+          "description": "Anthropic shipped Claude Code 2.1.110 with a new `/tui` command and `tui` setting that renders the terminal UI in flicker free fullscreen mode, plus a push notification tool that fires mobile alerts through Remote Control with an optional `Push when Claude decides` toggle. The release also swaps Ctrl+O to toggle between the normal and verbose transcript, adds a `/focus` view toggle, lets `/autocompact`, `/context`, `/exit`, and `/reload-plugins` run from Remote Control clients, and resurrects unexpired scheduled tasks on `--resume` and `--continue`. A thin 2.1.109 release earlier the same day added a rotating progress hint to the extended thinking indicator.",
+          "action": "Upgrade to 2.1.110 and turn on `/tui fullscreen` for long running Claude Code sessions where scrollback flicker has been a friction point. Pair the push notification tool with mobile Remote Control so long Routines and scheduled tasks can interrupt you when they need input instead of silently stalling.",
+          "clientPitch": "Claude Code just gained a real fullscreen terminal UI and mobile push alerts. That means a developer can kick off a long Claude Code run from a desktop, walk away, and get notified on phone when a plan needs approval, without wiring up any external notification service.",
+          "useCase": "Long agent runs that need human approval gates, mobile first developers running Remote Control from the road, and CI-adjacent Claude Code workflows that previously had no way to surface attention requests.",
+          "tools": [
+            "Claude Code",
+            "Claude Remote Control"
+          ],
+          "timeline": "April 15, 2026",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases",
+          "sourceName": "Claude Code GitHub Releases",
+          "sources": [
+            "https://github.com/anthropics/claude-code/releases",
+            "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+          ]
+        },
+        {
+          "score": 6,
+          "tag": "WATCH",
+          "category": "Tools & Platforms",
+          "headline": "Google ships native Gemini macOS app with global Option+Space shortcut, screen sharing, and file analysis",
+          "description": "Google released a native Gemini app for macOS, available free for all Gemini users on macOS 15 and later running Apple Silicon. The app adds a global Option+Space shortcut for summoning Gemini anywhere on the desktop, window level screen sharing for contextual questions, and built in image generation, screen analysis, and file review. Gemini is the last of the three major AI assistants to ship a dedicated Mac app, closing a long standing gap with ChatGPT and Claude.",
+          "action": "Install the Gemini Mac app on workstations that already use Gemini API credits to move ad hoc document analysis and image generation off the browser. If you deploy managed macOS fleets, stage the download from gemini.google/mac and lock the global shortcut through MDM so it does not clash with internal productivity hotkeys.",
+          "clientPitch": "Gemini now sits natively next to Claude and ChatGPT on macOS. For clients that have standardised on Google Workspace but bounced between Gemini browser tabs, this removes a daily friction point and opens the door to full screen share assisted support.",
+          "useCase": "Ad hoc Gemini usage inside Google Workspace centric teams, contextual troubleshooting through screen sharing, and file grounded drafting or analysis that previously required uploading files through the web UI.",
+          "tools": [
+            "Gemini",
+            "Gemini API",
+            "macOS"
+          ],
+          "timeline": "April 15, 2026",
+          "confidence": "verified",
+          "sourceTier": 1,
+          "sourceUrl": "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/",
+          "sourceName": "TechCrunch",
+          "sources": [
+            "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/",
+            "https://www.bloomberg.com/news/articles/2026-04-15/google-debuts-standalone-gemini-app-for-apple-s-macos",
+            "https://www.macrumors.com/2026/04/15/google-gemini-mac-app/",
+            "https://9to5google.com/2026/04/15/gemini-app-mac/",
+            "https://gemini.google/mac/"
           ]
         }
       ]
