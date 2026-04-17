@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-16T12:00+06:00",
+  "lastUpdated": "2026-04-17T12:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://platform.claude.com/docs/en/release-notes/overview is fetchable via WebFetch as of 2026-04-09. Best primary source for Anthropic API changes.",
@@ -156,6 +156,19 @@
     "2026-04-16: EU AI Act extension request from 15 industry associations (April 13) is advocacy, not a policy change. Skipped as no immediate API or product capability change.",
     "2026-04-16: GPT-6/Spud rumor window April 14 passed with no launch. Skipped as speculation.",
     "2026-04-16: Detached HEAD recurred again at session start (3fdfaa7). Fixed by fetch origin/main, checkout main, fast-forward merge. Root cause persists: sessions still start in detached HEAD state.",
-    "2026-04-16: Push successful using git push -u origin main directly, no retry needed. Successful push from 3fdfaa7 to 46d2f3d."
+    "2026-04-16: Push successful using git push -u origin main directly, no retry needed. Successful push from 3fdfaa7 to 46d2f3d.",
+    "2026-04-17: 4 items (2 CRITICAL, 2 WATCH, 0 LOW). Claude Opus 4.7 generally available on Claude API / Bedrock / Vertex AI / Foundry with new tokenizer (up to 35% more tokens, effective cost rise) plus xhigh effort, task budgets, 3.75MP vision, and breaking removal of Extended Thinking Budgets / sampling params / prefill (CRITICAL 9, dated April 14 primary release notes but launch was April 16). Claude Code 2.1.111 paired launch with /effort xhigh slider, Max tier auto mode on Opus 4.7, /ultrareview multi agent review, /less-permission-prompts skill, PowerShell Windows rollout, plan file renaming, plus 2.1.112 hotfix (CRITICAL 8). EU Parliament votes to delay AI Act high risk obligations to Dec 2 2027, sectoral to Aug 2 2028, watermarking to Nov 2 2026, pending Council approval before June (WATCH 7). GitHub Copilot CLI 1.0.29 through 1.0.31 add Opus 4.7 routing, /statusline command, restored image clipboard paste, optional MCP type field, Windows/Ubuntu frame fix (WATCH 7).",
+    "2026-04-17: platform.claude.com/docs/en/release-notes/overview still fetchable via WebFetch and was the freshest primary source confirming Opus 4.7 launch details. anthropic.com/news/claude-opus-4-7 returned 403 via WebFetch, used WebSearch summary of the announcement page plus VentureBeat and AWS Bedrock blog.",
+    "2026-04-17: github.com/anthropics/claude-code/releases fetchable. v2.1.111 (April 16 15:18 UTC) is the substantive release; v2.1.112 (April 16 19:55 UTC) is a one liner auto mode availability hotfix bundled into the same item. No releases dated April 17.",
+    "2026-04-17: github.com/github/copilot-cli/releases fetchable. v1.0.29 added Opus 4.7 support and MCP type field relaxation (April 16 15:03 UTC), v1.0.30 added /statusline and image paste (April 16 19:10 UTC), v1.0.31 fixed Windows/Ubuntu frame rendering (April 16 21:21 UTC). All three combined into one WATCH item given shared launch day and thematic overlap.",
+    "2026-04-17: github.com/openai/codex/releases shows v0.122.0-alpha.1 (April 15 21:51), alpha.3 (April 16 18:09), alpha.5 (April 16 23:47). All pre release alphas, skipped per established precedent.",
+    "2026-04-17: github.com/n8n-io/n8n/releases shows n8n@2.17.2 pre release April 16 with editor icon centering, trigger panel refresh, and AI Gateway credentials endpoint instance URL. Pre release plus mostly minor, skipped per established n8n minor bugfix precedent.",
+    "2026-04-17: EU Parliament vote April 16 confirmed across CIO, DPO Centre, Help Net Security. Included because it is a structural change to the compliance calendar for EU-facing builders even though not yet law (Council approval still pending).",
+    "2026-04-17: Anthropic CPO leaving Figma board (TechCrunch April 16) is corporate governance and already telegraphed by the April 15 design tool scoop. Skipped.",
+    "2026-04-17: PwC AI Performance study, Stanford AI Index recap charts, and Nvidia stock rally April 16 skipped as business/analytics without API or capability change.",
+    "2026-04-17: XChat standalone messaging app April 17 launch is consumer messaging / not AI-specific. Skipped.",
+    "2026-04-17: DeepSeek V4 still not launched. Rumor window still open into May. Skipped as speculation.",
+    "2026-04-17: Zapier, Make.com, Airtable had no product updates found for April 16-17.",
+    "2026-04-17: Detached HEAD recurred at session start (c87ee4c). Fixed by fetch origin/main, checkout main, fast-forward from detached HEAD commit chain. Root cause persists: sessions still start in detached HEAD state."
   ]
 }
