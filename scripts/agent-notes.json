@@ -183,6 +183,21 @@
     "2026-04-18: DeepSeek V4 still not released. Best estimates now point to late April. Skipped as speculation.",
     "2026-04-18: No new Zapier, Make.com, or Airtable product updates found for April 17 to 18.",
     "2026-04-18: No detached HEAD issue this session. Started on main, up to date with origin/main.",
-    "2026-04-18: Push successful using git push -u origin main with token URL. No retry needed."
+    "2026-04-18: Push successful using git push -u origin main with token URL. No retry needed.",
+    "2026-04-20: 3 items (2 CRITICAL, 1 WATCH, 0 LOW). Claude Haiku 3 retirement now effective (CRITICAL 9, all API requests returning errors since April 19), Cloudflare Agents Week infrastructure stack with AI Gateway routing 70 plus models across 14 providers (CRITICAL 8, April 13 to 17 but not in any prior digest), GLM-5 deprecated on NVIDIA NIM today with GLM-5.1 replacement not yet confirmed on platform (WATCH 7).",
+    "2026-04-20: platform.claude.com/docs/en/release-notes/overview still fetchable via WebFetch. Latest entry remains April 16 Opus 4.7 GA. No new entries for April 17 through 20. platform.claude.com/docs/en/about-claude/model-deprecations returned 503 this session.",
+    "2026-04-20: github.com/anthropics/claude-code/releases fetchable. v2.1.114 (April 18 01:34 UTC) is a single crash fix in the permission dialog for agent teams teammate tool requests. Skipped per minor bugfix precedent.",
+    "2026-04-20: github.com/openai/codex/releases shows only 0.122.0-alpha.10 through alpha.12 (April 18 to 19). All pre release alphas, skipped per established precedent.",
+    "2026-04-20: github.com/n8n-io/n8n/releases shows no new versions since 2.17.2 pre release April 16. No n8n releases April 17 to 20.",
+    "2026-04-20: github.com/github/copilot-cli/releases shows no new versions since v1.0.32 April 17. No Copilot CLI releases April 18 to 20.",
+    "2026-04-20: github.com/openai/openai-agents-python/releases shows no new versions since v0.14.2 April 18 (already covered in April 18 digest context).",
+    "2026-04-20: Cloudflare Agents Week (April 13 to 17) was not covered in any prior digest. Included using the Claude for Word precedent (3 days late, significant, never covered). AI Gateway is structurally important for the reader who manages multi provider LLM routing in automations.",
+    "2026-04-20: Claude Haiku 3 retirement was covered in April 18 digest as 'retires tomorrow' (WATCH 7). Today's item reframes as the completed event with updated action guidance since calls are now actively failing.",
+    "2026-04-20: DeepSeek V4 still not released. Multiple sources confirm late April window. SitePoint article title says 'released' but article content is speculative. Skipped as speculation.",
+    "2026-04-20: Gemini 3.1 Pro Preview confirmed as February 19 release. Gemini 3.1 Flash-Lite confirmed as March 3 release. Both stale, skipped.",
+    "2026-04-20: No new Zapier, Make.com, or Airtable product updates found for April 18 to 20.",
+    "2026-04-20: Quiet weekend. Saturday and Sunday produce fewer product launches. Three items is appropriate for the news volume.",
+    "2026-04-20: No detached HEAD issue this session. Started on main, up to date with origin/main.",
+    "2026-04-20: Push successful using git push -u origin main with token URL after setting remote URL. Initial push failed due to local proxy URL."
   ]
 }
