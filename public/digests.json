@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-05-07",
     "2026-05-06",
     "2026-05-05",
     "2026-05-04",
@@ -4823,6 +4824,121 @@
       "relevant": 3,
       "critical": 0,
       "watch": 3,
+      "low": 0
+    },
+    "2026-05-07": {
+      "dateKey": "2026-05-07",
+      "date": "May 7, 2026",
+      "summary": "Anthropic upgrades Managed Agents with public beta Outcomes and multiagent orchestration plus a Dreaming research preview, doubles Claude Code rate limits backed by a SpaceX Colossus 1 compute deal, and ships a critical stdio MCP memory leak fix in Claude Code 2.1.132.",
+      "items": [
+        {
+          "score": 9,
+          "tag": "CRITICAL",
+          "category": "Tools",
+          "headline": "Anthropic opens Outcomes and multiagent orchestration to Managed Agents public beta and launches Dreaming research preview",
+          "description": "Outcomes, previously in research preview, move to public beta under the managed-agents-2026-04-01 beta header with the ability to define explicit success criteria; internal tests show up to 10 percentage point task success improvement and Harvey legal agents saw a sixfold completion rate increase. Multiagent sessions let a lead agent delegate subtasks to specialist agents with independent models, prompts, and tools running in parallel on a shared filesystem with full traceability in the Claude Console; Netflix used it to identify recurring issues across hundreds of build logs. Dreaming, a new research preview available via Claude Console waitlist, reviews agent memory stores overnight, surfaces recurring errors and shared preferences, and rewrites experience files without additional per-session token cost.",
+          "action": "Add the managed-agents-2026-04-01 beta header to access Outcomes and multiagent sessions today. Join the Dreaming waitlist on Claude Console if you run long-horizon agents where accumulated experience would improve recurring task quality.",
+          "tools": [
+            "Claude Managed Agents",
+            "Claude API",
+            "Claude Console"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://platform.claude.com/docs/en/release-notes/overview",
+              "name": "Anthropic Platform Release Notes"
+            },
+            {
+              "url": "https://thenewstack.io/anthropic-managed-agents-dreaming-outcomes/",
+              "name": "The New Stack"
+            },
+            {
+              "url": "https://sdtimes.com/ai/new-in-claude-managed-agents-dreaming-outcomes-and-multiagent-orchestration/",
+              "name": "SD Times"
+            },
+            {
+              "url": "https://money.usnews.com/investing/news/articles/2026-05-06/anthropic-unveils-dreaming-feature-to-help-its-ai-agents-self-improve",
+              "name": "US News"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Infrastructure",
+          "headline": "Anthropic doubles Claude Code rate limits and signs Colossus 1 compute deal with SpaceX",
+          "description": "Claude Code Pro, Max, Team, and Enterprise seat plans get a 2x increase in the five-hour usage limit effective immediately, with peak-hour throttling fully removed for Pro and Max accounts. Tier 1 Opus API callers gain a 1500 percent increase in input tokens per minute and a 900 percent increase in output tokens per minute. The capacity comes from Anthropic taking exclusive access to all compute at SpaceX Colossus 1 in Memphis, adding more than 300 megawatts and 220,000 NVIDIA GPUs expected online within the month.",
+          "action": "No action required; limits increase automatically. Builders running high-volume Opus 4.7 agentic loops that previously hit per-minute throughput ceilings should retest capacity now. Claude Code heavy users on Pro and Max plans can remove any queue-management workarounds built around peak-hour throttling.",
+          "tools": [
+            "Claude Code",
+            "Claude API",
+            "Claude Opus 4.7"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://www.anthropic.com/news/higher-limits-spacex",
+              "name": "Anthropic"
+            },
+            {
+              "url": "https://9to5google.com/2026/05/06/claude-code-is-getting-higher-usage-limits-doubled-for-most-users/",
+              "name": "9to5Google"
+            },
+            {
+              "url": "https://thenextweb.com/news/anthropic-claude-code-rate-limits-spacex-colossus-1",
+              "name": "The Next Web"
+            },
+            {
+              "url": "https://www.xda-developers.com/anthropic-is-doubling-claude-codes-hourly-rate-limits-removing-peak-hours-andworking-with-spacex/",
+              "name": "XDA Developers"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Claude Code 2.1.132 patches 10GB stdio MCP memory leak and fixes silent prompt cache TTL downgrade",
+          "description": "Version 2.1.132 patches an unbounded memory growth bug that could drive RSS past 10GB in persistent processes using stdio MCP servers, a critical fix for any server or CI deployment using long-running Claude Code sessions. Version 2.1.129 adds the --plugin-url flag for installing plugin zip archives from remote URLs and fixes a latent billing error where the 1-hour prompt cache TTL was silently downgrading to 5 minutes. The same series resolves Bedrock and Vertex 400 errors triggered by ENABLE_PROMPT_CACHING_1H and adds CLAUDE_CODE_SESSION_ID to Bash subprocess environments for distributed tracing.",
+          "action": "Update to v2.1.132 immediately if running Claude Code with stdio MCP servers in any persistent process. If you set 1-hour prompt cache before this patch, verify your actual cache TTL in production logs as billing may have been calculated at 5-minute rather than 1-hour rates.",
+          "tools": [
+            "Claude Code",
+            "MCP",
+            "Amazon Bedrock",
+            "Google Vertex AI"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases",
+              "name": "GitHub Releases"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        }
+      ],
+      "totalScanned": 3,
+      "relevant": 3,
+      "critical": 2,
+      "watch": 1,
       "low": 0
     }
   }

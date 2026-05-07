@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-06T09:00+06:00",
+  "lastUpdated": "2026-05-07T09:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://platform.claude.com/docs/en/release-notes/overview is fetchable via WebFetch as of 2026-04-09. Best primary source for Anthropic API changes.",
@@ -387,6 +387,19 @@
     "2026-05-06: OpenAI Realtime API Beta retires tomorrow May 7. Already covered May 3 as countdown. Not re-included.",
     "2026-05-06: No new Zapier, Make.com, or Airtable product updates found for May 4-6.",
     "2026-05-06: No detached HEAD issue this session. Repo started on main branch.",
-    "2026-05-06: NOTE for May 7 run: OpenAI Realtime API Beta retires today (May 7). Reframe as completed event if not already covered (was covered May 3 as countdown - do NOT re-include per duplication rule). Check Code with Claude Extended for any new Anthropic announcements including Jupiter model launch."
+    "2026-05-06: NOTE for May 7 run: OpenAI Realtime API Beta retires today (May 7). Reframe as completed event if not already covered (was covered May 3 as countdown - do NOT re-include per duplication rule). Check Code with Claude Extended for any new Anthropic announcements including Jupiter model launch.",
+    "2026-05-07: 3 items (2 CRITICAL, 1 WATCH, 0 LOW). Anthropic Managed Agents Dreaming research preview + Outcomes + Multiagent Sessions public beta (CRITICAL 9, May 6, platform.claude.com primary + TheNewStack/SDTimes/USNews), Anthropic doubles Claude Code rate limits backed by SpaceX Colossus 1 deal (CRITICAL 8, May 6, anthropic.com/news/higher-limits-spacex primary), Claude Code 2.1.132 stdio MCP memory leak fix + 2.1.129 remote plugin URL install (WATCH 7, May 6, GitHub releases).",
+    "2026-05-07: platform.claude.com/docs/en/release-notes/overview now shows May 6 entry for Managed Agents (Multiagent sessions, Outcomes public beta, Webhooks, Vault mcp_oauth background refresh). Previous May 6 agent run missed this because it ran before the entry was posted. Always re-fetch the primary source even on same-day runs.",
+    "2026-05-07: Claude Security public beta (announced April 30, SiliconANGLE) was not in any prior digest but is 7 days old on May 7. Skipped per date rules - maximum extended window applied in prior runs was 5 days (Gemini Deep Research Max). At 7 days Claude Security falls outside even the extended window.",
+    "2026-05-07: xAI Grok model deprecation (May 15, 8 models including grok-3 and grok-4 variants) - docs.x.ai returned 403. Announcement date could not be confirmed within 48-hour window. Skipped. If confirmed in May 8 run with announcement date, include as WATCH 7.",
+    "2026-05-07: OpenAI Realtime API Beta retires today (May 7). Covered May 3 as countdown. Not re-included per duplication rule.",
+    "2026-05-07: n8n 2.19.3 and 2.19.4 (May 6, stable) contain meaningful fixes (Python Code stdlib restoration, Git SSH support, AI Builder workflow visibility) but no major new capabilities. Skipped per established minor bugfix/improvement precedent. n8n 2.20.0 (May 5) is pre-release, skipped per pre-release precedent.",
+    "2026-05-07: Claude Code 2.1.129-2.1.132 all released May 6 UTC. The 10GB+ stdio MCP memory leak fix in 2.1.132 is the most urgent fix. The 1-hour prompt cache TTL silent downgrade to 5 minutes (fixed in 2.1.129) is a latent billing error that could have affected any deployment using ENABLE_PROMPT_CACHING_1H.",
+    "2026-05-07: Anthropic SpaceX deal includes 300MW+, 220,000 NVIDIA GPUs at Colossus 1 in Memphis coming online within the month. Total Anthropic compute agreements now span SpaceX (300MW), Amazon (5GW agreement, 1GW by end 2026), Google/Broadcom (5GW from 2027), Microsoft/NVIDIA ($30B Azure), Fluidstack ($50B). This is a dramatic compute expansion that directly enables the rate limit increases.",
+    "2026-05-07: Jupiter model NOT announced at Code with Claude Extended (May 7, SF). Still in red-team testing. No confirmed launch date.",
+    "2026-05-07: GitHub Copilot CLI 1.0.42 (May 6) adds only a minor warning message improvement for MCP server names with whitespace. Skipped per minor bugfix precedent. 1.0.41 was already covered in May 6 digest.",
+    "2026-05-07: No new Zapier, Make.com, or Airtable product updates found for May 6-7.",
+    "2026-05-07: No detached HEAD issue this session. Repo started on main branch and up to date with origin/main.",
+    "2026-05-07: Code with Claude Extended (May 7, SF) was for independent developers and early-stage founders with workshops; no major platform announcements confirmed beyond what was already announced May 6."
   ]
 }
