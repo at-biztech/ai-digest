@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-05-08",
     "2026-05-07",
     "2026-05-06",
     "2026-05-05",
@@ -4939,6 +4940,186 @@
       "relevant": 3,
       "critical": 2,
       "watch": 1,
+      "low": 0
+    },
+    "2026-05-08": {
+      "dateKey": "2026-05-08",
+      "date": "May 8, 2026",
+      "summary": "OpenAI replaces the retired Realtime API Beta with three production-grade voice models including GPT-Realtime-2 with GPT-5-class reasoning; Google brings Gemini 3.1 Flash-Lite to general availability; xAI gives 7 days notice before retiring 8 Grok models on May 15.",
+      "items": [
+        {
+          "score": 9,
+          "tag": "CRITICAL",
+          "category": "Models",
+          "headline": "OpenAI replaces deprecated Realtime API Beta with three production voice models including GPT-5-class reasoning",
+          "description": "GPT-Realtime-2 is OpenAI's first voice model with GPT-5-class reasoning, a 128K token context window, and adjustable reasoning levels from minimal to extra-high, priced at $32 per million audio input tokens and $64 per million output tokens. GPT-Realtime-Translate adds live speech-to-speech translation across 70-plus input languages into 13 output languages at $0.034 per minute, enabling real-time interpreter use cases for the first time in the OpenAI API. GPT-Realtime-Whisper delivers live streaming transcription at $0.017 per minute, transcribing as the speaker talks rather than after a full utterance.",
+          "action": "Migrate any integrations that used the now-retired Realtime API Beta gpt-4o-realtime-preview endpoints to the new GPT-Realtime-2, GPT-Realtime-Translate, or GPT-Realtime-Whisper models depending on your use case. GPT-Realtime-2 with xhigh reasoning is the new ceiling for voice agents that need multi-step problem solving.",
+          "tools": [
+            "OpenAI Realtime API",
+            "GPT-Realtime-2",
+            "GPT-Realtime-Translate",
+            "GPT-Realtime-Whisper"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
+              "name": "OpenAI"
+            },
+            {
+              "url": "https://9to5mac.com/2026/05/07/openai-has-new-voice-models-that-reason-translate-and-transcribe-as-you-speak/",
+              "name": "9to5Mac"
+            },
+            {
+              "url": "https://www.neowin.net/news/openai-unveils-trio-of-realtime-audio-models-to-power-next-gen-voice-agents/",
+              "name": "Neowin"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Models",
+          "headline": "Google brings Gemini 3.1 Flash-Lite to general availability as fastest lowest-cost 3.1 model",
+          "description": "Gemini 3.1 Flash-Lite exits the preview it entered on March 3 and is now generally available with a production SLA via Google AI Studio and the Gemini Enterprise Agent Platform at $0.25 per million input tokens and $1.50 per million output tokens. Google positions it as the fastest and most cost-efficient model in the 3.1 series, citing p95 full-reply latency of 1.8 seconds and sub-second p95 for classifier and tool-call workloads. Early adopters including Gladly, JetBrains, and Ramp report roughly 60 percent lower costs compared to thinking-tier models on comparable token mixes.",
+          "action": "Evaluate routing high-volume production classification, RAG re-ranking, and tool-dispatch tasks from Gemini 3.1 Flash to Flash-Lite. Run an A/B quality comparison on your actual workload before full migration.",
+          "tools": [
+            "Gemini 3.1 Flash-Lite",
+            "Google AI Studio",
+            "Gemini Enterprise Agent Platform"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-flash-lite-is-now-generally-available",
+              "name": "Google Cloud Blog"
+            },
+            {
+              "url": "https://siliconangle.com/2026/03/03/google-launches-speedy-gemini-3-1-flash-lite-model-preview/",
+              "name": "SiliconANGLE"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Models",
+          "headline": "xAI retires 8 Grok models on May 15 with 7 days notice and no fast-tier replacement",
+          "description": "Grok-3, grok-4-0709, grok-4-fast-reasoning, grok-4-fast-non-reasoning, grok-4-1-fast-reasoning, grok-4-1-fast-non-reasoning, grok-code-fast-1, and grok-imagine-image-pro all retire on May 15 at 12pm PT. The deprecation notice was issued with approximately two weeks of warning, and no direct migration path to a comparable fast or cost-optimized Grok tier is documented. The fast-reasoning variants were particularly recently introduced, leaving builders who migrated to them with minimal time to re-evaluate provider routing.",
+          "action": "Audit any xAI Grok API integrations in automations or agent pipelines before May 15. For grok-3 general-purpose use, evaluate Grok 4.3 or DeepSeek V4-Pro as alternatives. For code-fast workloads, evaluate GPT-5.5 Instant or Claude Haiku 4.5.",
+          "tools": [
+            "xAI Grok API"
+          ],
+          "confidence": "reported",
+          "sources": [
+            {
+              "url": "https://docs.x.ai/developers/models",
+              "name": "xAI Docs"
+            },
+            {
+              "url": "https://releasebot.io/updates/xai",
+              "name": "Releasebot"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Claude Code 2.1.133 exposes effort level to hooks and fixes MCP OAuth proxy and subagent skill discovery",
+          "description": "Hooks now receive the active effort level via an effort.level field in the JSON input payload and a $CLAUDE_EFFORT environment variable, enabling conditional hook logic that scales side effects based on how much reasoning Claude is applying. A long-standing bug where MCP OAuth flows ignored HTTP(S)_PROXY, NO_PROXY, and mTLS settings is now fixed, resolving silent OAuth failures behind corporate proxies. Subagents no longer fail to discover project, user, and plugin skills, which had broken multi-agent orchestration setups relying on skill inheritance.",
+          "action": "Update to 2.1.133. Add effort-conditional logic in any hooks that trigger expensive side effects. If you run MCP OAuth servers behind a corporate proxy and had silent failures, test them now. Rebuild any multi-agent pipelines that stopped inheriting skills after the 2.1.12x regression.",
+          "tools": [
+            "Claude Code",
+            "MCP"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases",
+              "name": "GitHub"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "GitHub Copilot CLI ships security hardening and rubber-duck Claude agent in two stable releases",
+          "description": "Version 1.0.42 adds enhanced MCP server diagnostics with stderr output for easier server debugging, a -C flag to change working directory mid-session, remote session export for non-GitHub repositories, and an experimental rubber-duck agent powered by Claude for structured thinking in restricted environments. Version 1.0.43 follows with server-side model routing in Auto mode, security hardening against RCE vulnerabilities, improved MCP subprocess termination, and username toggle in the statusline picker.",
+          "action": "Update to v1.0.43 for the RCE hardening. Use the -C flag in scripts that need to run commands from a different working directory without a subshell. Evaluate the rubber-duck agent for projects where code cannot leave the machine.",
+          "tools": [
+            "GitHub Copilot CLI",
+            "MCP",
+            "Claude"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/github/copilot-cli/releases",
+              "name": "GitHub"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 6,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "OpenAI Codex CLI 0.129.0 stable ships workspace plugin sharing and modal Vim editing",
+          "description": "The stable release of 0.129.0 lands workspace-level plugin sharing with access controls and source filtering, allowing team members to share a common plugin catalog without individual installations. Modal Vim editing is included as the default TUI input mode for Vim users. Experimental goals persistence introduced in the 0.128.x alpha series is carried into stable.",
+          "action": "Update to 0.129.0. If running Codex CLI across a team, configure workspace plugin sharing to standardize the tool catalog and reduce per-member setup friction.",
+          "tools": [
+            "OpenAI Codex CLI"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/openai/codex/releases",
+              "name": "GitHub"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        }
+      ],
+      "totalScanned": 6,
+      "relevant": 6,
+      "critical": 1,
+      "watch": 5,
       "low": 0
     }
   }

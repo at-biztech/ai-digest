@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-07T09:00+06:00",
+  "lastUpdated": "2026-05-08T09:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://platform.claude.com/docs/en/release-notes/overview is fetchable via WebFetch as of 2026-04-09. Best primary source for Anthropic API changes.",
@@ -400,6 +400,19 @@
     "2026-05-07: GitHub Copilot CLI 1.0.42 (May 6) adds only a minor warning message improvement for MCP server names with whitespace. Skipped per minor bugfix precedent. 1.0.41 was already covered in May 6 digest.",
     "2026-05-07: No new Zapier, Make.com, or Airtable product updates found for May 6-7.",
     "2026-05-07: No detached HEAD issue this session. Repo started on main branch and up to date with origin/main.",
-    "2026-05-07: Code with Claude Extended (May 7, SF) was for independent developers and early-stage founders with workshops; no major platform announcements confirmed beyond what was already announced May 6."
+    "2026-05-07: Code with Claude Extended (May 7, SF) was for independent developers and early-stage founders with workshops; no major platform announcements confirmed beyond what was already announced May 6.",
+    "2026-05-08: 6 items (1 CRITICAL, 5 WATCH, 0 LOW). OpenAI replaces Realtime API Beta with GPT-Realtime-2 (GPT-5-class reasoning, 128K context), GPT-Realtime-Translate (70+ languages live), GPT-Realtime-Whisper (live STT) - all CRITICAL 9. Gemini 3.1 Flash-Lite GA (May 8, Google Cloud Blog confirmed, $0.25/$1.50 per 1M tokens, 1.8s p95 latency) WATCH 7. xAI retires 8 Grok models May 15 including grok-3, grok-code-fast-1, grok-4-1-fast-* variants - announced ~May 6-7, WATCH 7. Claude Code 2.1.133 (May 7 23:49 UTC) with effort.level in hooks, MCP OAuth proxy fix, subagent skill discovery fix - WATCH 7. GitHub Copilot CLI v1.0.42+v1.0.43 (both May 6) with rubber-duck Claude agent, RCE hardening, -C flag, server-side Auto routing - WATCH 7. OpenAI Codex CLI 0.129.0 stable (May 7) with workspace plugin sharing - WATCH 6.",
+    "2026-05-08: platform.claude.com/docs/en/release-notes/overview still fetchable. Latest entry remains May 6 Managed Agents updates, already covered in May 7 digest. No new API entries May 7-8.",
+    "2026-05-08: github.com/anthropics/claude-code/releases fetchable. v2.1.133 (May 7 23:49 UTC) is the freshest release, with effort.level hooks, sandbox binary path settings, parentSettingsBehavior for SDK policy merge, and multiple important bug fixes (parallel sessions 401, MCP OAuth proxy, subagent skills).",
+    "2026-05-08: github.com/openai/codex/releases fetchable. v0.129.0 stable (May 7 17:02 UTC) is the first stable after weeks of 0.129.0-alpha.x series. Workspace plugin sharing is the standout feature.",
+    "2026-05-08: github.com/github/copilot-cli/releases fetchable. v1.0.42 (May 6, 14:57 UTC) and v1.0.43 (May 6, 22:00 UTC) both stable releases on same day. Combined into one WATCH 7 item. v1.0.44-x are pre-releases, skipped per established precedent.",
+    "2026-05-08: github.com/n8n-io/n8n/releases fetchable. n8n@2.19.5 (May 7) is HTTPS connection fix only. All 2.20.x are pre-release. Both skipped per established precedent.",
+    "2026-05-08: xAI Grok deprecation: docs.x.ai/developers/release-notes returned 403. Confirmation came from multiple search results and aggregators. Confidence set to 'reported'. The May 7 agent note flagged this as a candidate if announcement date confirmed within 48-hour window - confirmed as announced night before May 7 (~May 6-7).",
+    "2026-05-08: Gemini 3.1 Flash-Lite: blog.google returns 403. cloud.google.com/blog URL was fetchable and confirmed May 8 publication date. The Google AI news search also confirmed May 8 launch. Preview was March 3 (evaluated and skipped as stale in April 20 digest research). GA is new event.",
+    "2026-05-08: OpenAI voice API: openai.com/index/advancing-voice-intelligence returned 403 via WebFetch. Confirmed via 9to5Mac (May 7), Neowin (May 7), TechCrunch (May 7), KELO (May 7), The Manila Times (May 8). Strong multi-source confirmation. The new Realtime API replaces the Beta which retired May 7 (covered May 3 as countdown).",
+    "2026-05-08: Items evaluated and rejected: n8n 2.19.5 (HTTPS fix only), n8n 2.20.x (pre-release), Codex 0.130.x (pre-release), Copilot CLI 1.0.44-x (pre-release). OpenAI $122B raise skipped as funding event. Microsoft AI diffusion report skipped as policy/research. JPMorgan AI reclassification skipped as business/finance. ChatGPT ads testing skipped as consumer product event.",
+    "2026-05-08: No new Zapier, Make.com, or Airtable product updates found for May 7-8.",
+    "2026-05-08: NOTE for May 15 run: xAI Grok retirement effective May 15 (grok-3, code-fast-1, grok-4-1-fast-*, grok-4-fast-*, grok-4-0709, grok-imagine-image-pro). Reframe as completed event if not re-included (already covered today as countdown WATCH 7).",
+    "2026-05-08: No detached HEAD issue this session. Repo appears to be on main branch."
   ]
 }
