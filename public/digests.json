@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-05-09",
     "2026-05-08",
     "2026-05-07",
     "2026-05-06",
@@ -5120,6 +5121,161 @@
       "relevant": 6,
       "critical": 1,
       "watch": 5,
+      "low": 0
+    },
+    "2026-05-09": {
+      "dateKey": "2026-05-09",
+      "date": "May 9, 2026",
+      "summary": "ClaudeBleed lets any Chrome extension hijack Claude with Gmail and GitHub exfiltration risk; Gemini API File Search adds native multimodal RAG and three developer tools ship significant stable releases.",
+      "items": [
+        {
+          "score": 9,
+          "tag": "CRITICAL",
+          "category": "Tools",
+          "headline": "ClaudeBleed lets any Chrome extension hijack Claude and exfiltrate Gmail and GitHub data",
+          "description": "LayerX disclosed ClaudeBleed on May 8, a vulnerability in the Claude Chrome extension where any installed extension can issue commands to Claude without additional permissions, enabling data exfiltration from Gmail, GitHub, and Google Drive. Anthropic released a partial patch in version 1.0.70 on May 6, but researchers bypassed it in under three hours by switching Claude to privileged execution mode, which the user is never prompted to approve. The root cause remains unfixed.",
+          "action": "Disable or uninstall the Claude Chrome extension in production and enterprise contexts until a complete fix is confirmed; audit browser extension lists on developer workstations where Claude in Chrome is active.",
+          "tools": [
+            "Claude in Chrome",
+            "Claude Desktop Extension"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://www.securityweek.com/vulnerability-in-claude-extension-for-chrome-exposes-ai-agent-to-takeover/",
+              "name": "SecurityWeek"
+            },
+            {
+              "url": "https://layerxsecurity.com/blog/a-flaw-in-claudes-browser-extension-allows-any-extension-to-hijack-it/",
+              "name": "LayerX Security"
+            },
+            {
+              "url": "https://cyberinsider.com/claudebleed-allows-any-chrome-extension-to-control-anthropics-ai-assistant/",
+              "name": "CyberInsider"
+            },
+            {
+              "url": "https://www.infosecurity-magazine.com/news/zeroclick-flaw-claude-dxt/",
+              "name": "Infosecurity Magazine"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Tools",
+          "headline": "Gemini API File Search now indexes and queries images natively with free managed embeddings",
+          "description": "Google updated the Gemini API File Search tool on May 5 to process images and text together using the gemini-embedding-2 model, eliminating the need for a separate embedding pipeline in multimodal RAG systems. Storage and query-time embeddings are free; builders pay only for initial indexing. Custom metadata filtering and page-level citations ship alongside multimodal support, covering both retrieval precision and enterprise audit requirements.",
+          "action": "Migrate multimodal document processing pipelines to Gemini File Search to remove the external image embedding service and reduce cost; test with PDF and PNG or JPEG corpora ahead of Google I/O on May 19 where further Gemini announcements are expected.",
+          "tools": [
+            "Gemini API",
+            "gemini-embedding-2",
+            "Gemini File Search"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/",
+              "name": "Google Blog"
+            },
+            {
+              "url": "https://letsdatascience.com/news/gemini-api-adds-multimodal-file-search-features-8ba179c4",
+              "name": "Lets Data Science"
+            },
+            {
+              "url": "https://dev.to/googleai/multimodal-rag-with-the-gemini-api-file-search-tool-a-developer-guide-5878",
+              "name": "Google AI on DEV"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Claude Code 2.1.136 adds hard deny auto mode rules and fixes MCP server persistence after context clears",
+          "description": "The May 8 release adds settings.autoMode.hard_deny, a new classifier rule type that unconditionally blocks auto mode without any prompt, giving CI and restricted enterprise deployments a strict deny-list control over agentic behaviour. Two production-breaking bugs are also fixed: MCP servers configured in .mcp.json and plugins disappearing after /clear, and a rare login loop caused by concurrent credential writes overwriting OAuth tokens. Version 2.1.137 released May 9 adds a Windows extension activation fix.",
+          "action": "Adopt hard_deny rules in managed settings for any CI pipeline running Claude Code in unattended mode; verify MCP server persistence after /clear and re-test deployments using concurrent multi-session auth.",
+          "tools": [
+            "Claude Code"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases",
+              "name": "GitHub Releases"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Codex CLI 0.130.0 adds remote control command for headless pipelines and AWS console-login auth",
+          "description": "The May 8 stable release ships codex remote-control, enabling headless app-server startup from CI pipelines and scripts without a TTY session. App-server clients can now paginate large conversation threads, removing the memory ceiling for long-running agent loops. Bedrock auth gains support for AWS console-login credentials, simplifying deployment in teams using federated SSO rather than long-lived IAM access keys.",
+          "action": "Integrate codex remote-control into CI agent pipelines to trigger Codex tasks without interactive sessions; update Bedrock auth configuration if using AWS console-login federated credentials.",
+          "tools": [
+            "OpenAI Codex CLI"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/openai/codex/releases",
+              "name": "GitHub Releases"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "GitHub Copilot CLI 1.0.44 lets hooks return responses without an LLM call and stacks multiple skills mid-input",
+          "description": "Stable v1.0.44 ships the hook bypass pattern, where request handling in hooks can return a response directly without triggering an LLM call, enabling caching layers, routing logic, or fixed-response commands at zero API token cost. Mid-input slash commands now support invoking multiple skills in a single entry, enabling multi-step compound tasks without sequential re-prompting. A prerelease flag is added to copilot update for staged enterprise rollouts.",
+          "action": "Use hook bypass for any predictable repetitive Copilot commands to cut API token spend; test multi-skill invocation for compound task chains that previously required chained prompts.",
+          "tools": [
+            "GitHub Copilot CLI"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/github/copilot-cli/releases",
+              "name": "GitHub Releases"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        }
+      ],
+      "totalScanned": 5,
+      "relevant": 5,
+      "critical": 2,
+      "watch": 3,
       "low": 0
     }
   }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-08T09:00+06:00",
+  "lastUpdated": "2026-05-09T09:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://platform.claude.com/docs/en/release-notes/overview is fetchable via WebFetch as of 2026-04-09. Best primary source for Anthropic API changes.",
@@ -413,6 +413,18 @@
     "2026-05-08: Items evaluated and rejected: n8n 2.19.5 (HTTPS fix only), n8n 2.20.x (pre-release), Codex 0.130.x (pre-release), Copilot CLI 1.0.44-x (pre-release). OpenAI $122B raise skipped as funding event. Microsoft AI diffusion report skipped as policy/research. JPMorgan AI reclassification skipped as business/finance. ChatGPT ads testing skipped as consumer product event.",
     "2026-05-08: No new Zapier, Make.com, or Airtable product updates found for May 7-8.",
     "2026-05-08: NOTE for May 15 run: xAI Grok retirement effective May 15 (grok-3, code-fast-1, grok-4-1-fast-*, grok-4-fast-*, grok-4-0709, grok-imagine-image-pro). Reframe as completed event if not re-included (already covered today as countdown WATCH 7).",
-    "2026-05-08: No detached HEAD issue this session. Repo appears to be on main branch."
+    "2026-05-08: No detached HEAD issue this session. Repo appears to be on main branch.",
+    "2026-05-09: 5 items (2 CRITICAL, 3 WATCH, 0 LOW). ClaudeBleed zero-click Chrome extension vulnerability disclosed May 8, Anthropic partial patch 1.0.70 bypassed in 3 hours (CRITICAL 9). Gemini API File Search multimodal update May 5, never covered, 4-day extended window applied (CRITICAL 8). Claude Code 2.1.136 with hard_deny auto mode rules and MCP server persistence fix (WATCH 7). Codex CLI 0.130.0 with codex remote-control headless startup and Bedrock console-login auth (WATCH 7). GitHub Copilot CLI 1.0.44 with hook LLM bypass and multi-skill mid-input invocation (WATCH 7).",
+    "2026-05-09: ClaudeBleed confirmed as publicly disclosed May 8 by SecurityWeek. LayerX reported to Anthropic before May 6; partial fix 1.0.70 released May 6 but bypassed in under 3 hours. Root cause unfixed. Any Chrome extension can issue commands to Claude without permissions. Affects Gmail, GitHub, Google Drive data. Action: disable Claude Chrome extension in enterprise.",
+    "2026-05-09: Gemini API File Search multimodal (May 5) is 4 days old but never covered in any prior digest. Applied Cloudflare Agents Week precedent (3-7 days old, significant, never covered). blog.google primary source returned 403 via WebFetch; confirmed via letsdatascience.com, dev.to/googleai, analyticsvidhya.com. Scored CRITICAL 8 for RAG pipeline impact (removes external image embedding step, free storage).",
+    "2026-05-09: Claude Code 2.1.134-2.1.137 all released between May 7-9 UTC. v2.1.133 was covered in May 8 digest. v2.1.136 (May 8 18:39 UTC) is the substantive release; v2.1.137 (May 9 00:11 UTC) is Windows extension fix only, bundled into same item.",
+    "2026-05-09: OpenAI Codex CLI 0.130.0 stable (May 8 23:09 UTC) released AFTER May 8 Almaty digest was created. The 0.129.0 was covered in May 8 digest. Remote-control headless feature and Bedrock console-login auth are the main builder-relevant features.",
+    "2026-05-09: GitHub Copilot CLI v1.0.44 stable (May 8 19:39 UTC = May 9 00:39 Almaty). Released after May 8 Almaty digest closed. The hook bypass pattern (return response without LLM call) is the most significant feature for cost-conscious builders. Multi-skill invocation is a genuine compound task accelerator.",
+    "2026-05-09: Jupiter model STILL not launched. Anthropic Akamai .8B compute deal (Bloomberg May 8) is infrastructure/business event, skipped. OpenAI Advanced Account Security (May 7) and ads manager (May 5) are consumer-facing features, skipped. n8n 2.19.5 (May 7) and 2.20.x (pre-release) are minor bugfixes, skipped. DALL-E 2/3 retirement (May 12) not re-included (covered May 3).",
+    "2026-05-09: ai.google.dev/gemini-api/docs/changelog returned 403 again (consistent with sourceNotes). Google blog posts also return 403. WebSearch confirmed Gemini File Search multimodal via secondary sources.",
+    "2026-05-09: github.com/anthropics/claude-code/releases fetchable. github.com/openai/codex/releases fetchable. github.com/github/copilot-cli/releases fetchable. github.com/n8n-io/n8n/releases fetchable. All four GitHub release pages remain reliable primary sources.",
+    "2026-05-09: Detached HEAD recurred at session start. Fixed by fetch origin/main, checkout main, fast-forward merge. Root cause persists: sessions start in detached HEAD state.",
+    "2026-05-09: NOTE for May 12 run: DALL-E 2/3 retirement (covered May 3 as countdown). Reframe as completed event. xAI Grok 8-model retirement May 15 countdown covered May 8. EU AI Act August 2026 high-risk obligations coming.",
+    "2026-05-09: NOTE for May 19 run: Google I/O 2026 starts May 19. Expect major Gemini/Android/AI announcements. Pre-position by checking io.google/2026 in the days before."
   ]
 }
