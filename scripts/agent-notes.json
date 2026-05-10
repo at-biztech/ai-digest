@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-09T09:00+06:00",
+  "lastUpdated": "2026-05-10T09:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://platform.claude.com/docs/en/release-notes/overview is fetchable via WebFetch as of 2026-04-09. Best primary source for Anthropic API changes.",
@@ -425,6 +425,18 @@
     "2026-05-09: github.com/anthropics/claude-code/releases fetchable. github.com/openai/codex/releases fetchable. github.com/github/copilot-cli/releases fetchable. github.com/n8n-io/n8n/releases fetchable. All four GitHub release pages remain reliable primary sources.",
     "2026-05-09: Detached HEAD recurred at session start. Fixed by fetch origin/main, checkout main, fast-forward merge. Root cause persists: sessions start in detached HEAD state.",
     "2026-05-09: NOTE for May 12 run: DALL-E 2/3 retirement (covered May 3 as countdown). Reframe as completed event. xAI Grok 8-model retirement May 15 countdown covered May 8. EU AI Act August 2026 high-risk obligations coming.",
-    "2026-05-09: NOTE for May 19 run: Google I/O 2026 starts May 19. Expect major Gemini/Android/AI announcements. Pre-position by checking io.google/2026 in the days before."
+    "2026-05-09: NOTE for May 19 run: Google I/O 2026 starts May 19. Expect major Gemini/Android/AI announcements. Pre-position by checking io.google/2026 in the days before.",
+    "2026-05-10: 2 items (0 CRITICAL, 2 WATCH, 0 LOW). Gemini Interactions API breaking schema change (outputs->steps, default May 20, legacy removed June 6) WATCH 7. Gemini CLI 0.41.0 (real-time voice, headless workspace trust, shell allowlist, ContextManager, May 5) WATCH 6 via extended window.",
+    "2026-05-10: Quiet Sunday. No new Claude Code releases after v2.1.138 (May 9, internal fixes only, skipped per minor bugfix precedent). No new Anthropic API entries (platform.claude.com still shows May 6 Managed Agents as latest). No new OpenAI announcements since May 8 (voice API, GPT-5.5-Cyber both already covered). No new n8n stable (2.20.x still pre-release). No new Codex CLI stable (0.131.0-alpha.x). No new GitHub Copilot CLI after v1.0.44 (May 8, covered May 9). No new Gemini CLI after v0.41.2 (May 6).",
+    "2026-05-10: Gemini Interactions API breaking change: opt-out header is Api-Revision: 2026-05-06. Announcement date approximately May 7-9 based on 'new features shipped after May 7 will only appear in steps responses' and the migration guide URL pattern. Cannot confirm exact date as ai.google.dev/gemini-api/docs/changelog returns 403. Included under extended window (never covered, significant). Confidence reported.",
+    "2026-05-10: Gemini CLI v0.41.0 (May 5) is 5 days old. Applied Cloudflare Agents Week precedent (3-7 days, significant, never covered). Previous Gemini CLI coverage was v0.39.1 CRITICAL in May 2 digest. v0.40.x was skipped as minor. v0.41.0 is the first major stable with voice mode and headless security enhancements.",
+    "2026-05-10: Gemini 3.2 Flash appeared in leaked iOS app builds and AI Studio metadata on May 5 but no official announcement. Polymarket leading outcome is May 19 (38%) - likely at Google I/O. Skip as speculation.",
+    "2026-05-10: OpenAI Astral acquisition (March 19) was surfaced by HN aggregator but is 7 weeks old. Stale, skipped.",
+    "2026-05-10: DALL-E 2/3 retirement tomorrow May 12 covered May 3 as countdown. Not re-included per duplication rule. May 12 run should reframe as completed event.",
+    "2026-05-10: xAI Grok 8-model retirement May 15 covered May 8 as countdown. Not re-included per duplication rule. May 15 run should reframe as completed event.",
+    "2026-05-10: Google Android Show I/O Edition livestream on May 12 (announced May 5, outside 48h window). Android 17, Gemini AI updates expected. May 12 run should cover actual announcements.",
+    "2026-05-10: Google I/O starts May 19. Gemini 4 rumored with 84.6% ARC-AGI2 and 2M+ context window. Major announcements expected across Gemini, Android 17, XR. Pre-fetch io.google/2026 ahead of May 19 run.",
+    "2026-05-10: Detached HEAD recurred at session start. Fixed by fetch origin/main, checkout main, fast-forward merge (bd6b165 to c055131). Root cause persists: sessions start in detached HEAD state.",
+    "2026-05-10: No new Zapier, Make.com, or Airtable product updates found for May 9-10."
   ]
 }

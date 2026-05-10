@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-05-10",
     "2026-05-09",
     "2026-05-08",
     "2026-05-07",
@@ -5276,6 +5277,76 @@
       "relevant": 5,
       "critical": 2,
       "watch": 3,
+      "low": 0
+    },
+    "2026-05-10": {
+      "dateKey": "2026-05-10",
+      "date": "May 10, 2026",
+      "summary": "Google announces a breaking schema change to the Gemini Interactions API requiring migration before June 6, and Gemini CLI 0.41.0 ships real-time voice mode with hardened headless security.",
+      "items": [
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Infrastructure",
+          "headline": "Gemini Interactions API drops outputs array for steps in breaking schema change ahead of June 6 deadline",
+          "description": "Google published a migration guide announcing a breaking schema change to the Gemini Interactions API (v1beta): the flat outputs array is being replaced by a structured steps array containing typed entries for model output, tool calls, and user input. New API features shipped after May 7 are exclusively available in the steps schema; builders on the legacy outputs format will not receive them. The default switches to steps on May 20 and the legacy schema is permanently removed on June 6.",
+          "action": "Add Api-Revision: 2026-05-06 to current Interactions API calls to preserve legacy behavior until ready to migrate; plan migration to the steps schema before June 6. New integrations should send Api-Revision: 2026-05-20 to access features already locked to the new format.",
+          "tools": [
+            "Gemini API",
+            "Gemini Interactions API"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026",
+              "name": "Google AI Developers"
+            },
+            {
+              "url": "https://ai.google.dev/gemini-api/docs/changelog",
+              "name": "Gemini API Changelog"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 6,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Gemini CLI 0.41.0 adds real-time voice mode and mandatory workspace trust for headless pipelines",
+          "description": "Gemini CLI stable v0.41.0 shipped May 5 with real-time voice interaction supporting both cloud and on-device local backends, making audio input available without cloud round-trips in automation contexts. Headless environments now require explicit workspace trust, and a new shell command validation layer with a core tools allowlist prevents untrusted path execution in CI/CD pipelines. ContextManager and auto-memory scratchpad persistence improve session continuity for multi-turn agent workflows, and Gemma 4 is now a selectable model.",
+          "action": "Run npx gemini-cli update or reinstall to 0.41.0; review headless workspace trust settings and explicitly declare the shell command allowlist before deploying to CI/CD to avoid unexpected runtime rejections after update.",
+          "tools": [
+            "Gemini CLI",
+            "Gemma 4"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.41.0",
+              "name": "GitHub"
+            },
+            {
+              "url": "https://geminicli.com/docs/changelogs/latest/",
+              "name": "Gemini CLI Docs"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        }
+      ],
+      "totalScanned": 2,
+      "relevant": 2,
+      "critical": 0,
+      "watch": 2,
       "low": 0
     }
   }
