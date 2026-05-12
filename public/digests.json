@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-05-12",
     "2026-05-11",
     "2026-05-10",
     "2026-05-09",
@@ -5360,7 +5361,7 @@
           "tag": "CRITICAL",
           "category": "Infrastructure",
           "headline": "DALL-E 2 and DALL-E 3 shut down tomorrow with migration that requires code changes beyond a model swap",
-          "description": "OpenAI shuts down dall-e-2 and dall-e-3 from the API on May 12 with no auto-upgrade fallback — calls will return errors immediately. Migration to gpt-image-1 or gpt-image-1.5 is not a drop-in rename: builders must remove the response_format, style, and quality request parameters, and switch response parsing from URL fetching to b64_json decoding. Any integration that forwards these parameters unchanged will break on the first call after midnight.",
+          "description": "OpenAI shuts down dall-e-2 and dall-e-3 from the API on May 12 with no auto-upgrade fallback \u2014 calls will return errors immediately. Migration to gpt-image-1 or gpt-image-1.5 is not a drop-in rename: builders must remove the response_format, style, and quality request parameters, and switch response parsing from URL fetching to b64_json decoding. Any integration that forwards these parameters unchanged will break on the first call after midnight.",
           "action": "Audit all /v1/images/generations calls before May 12. Update model string, strip deprecated params, and rewrite response handling to decode b64_json. Test on a staging API key before cutover.",
           "tools": [
             "OpenAI API",
@@ -5392,6 +5393,173 @@
       "relevant": 1,
       "critical": 1,
       "watch": 0,
+      "low": 0
+    },
+    "2026-05-12": {
+      "dateKey": "2026-05-12",
+      "date": "May 12, 2026",
+      "summary": "Anthropic launches native Claude Platform through AWS billing and IAM auth while DALL-E 2 and DALL-E 3 APIs go dark today completing the six-month deprecation cycle.",
+      "items": [
+        {
+          "score": 9,
+          "tag": "CRITICAL",
+          "category": "Infrastructure",
+          "headline": "Anthropic brings native Claude Platform to AWS with IAM auth ending need for separate Anthropic accounts",
+          "description": "Anthropic launched Claude Platform on AWS on May 11, giving builders on AWS access to the full native Claude Platform including Messages API, Files API, Message Batches API, Managed Agents, Agent Skills, MCP connector, and code execution through AWS billing and IAM auth without a separate Anthropic account. The service runs on Anthropic-managed infrastructure accessible via AWS and is distinct from Amazon Bedrock, meaning it carries the same beta-access features available on Anthropic's first-party platform. AWS is the first cloud provider to offer native Claude Platform access.",
+          "action": "Teams already billing through AWS can now adopt Managed Agents, Agent Skills, and the MCP connector without adding a separate Anthropic vendor contract. Authenticate via IAM and use the new Claude Platform on AWS endpoint documented at platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws.",
+          "tools": [
+            "Claude Platform",
+            "AWS",
+            "Claude Managed Agents",
+            "Agent Skills",
+            "MCP connector",
+            "Files API",
+            "Amazon Bedrock"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://aws.amazon.com/about-aws/whats-new/2026/05/claude-platform-aws/",
+              "name": "AWS What's New"
+            },
+            {
+              "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-platform-on-aws-anthropics-native-platform-through-your-aws-account/",
+              "name": "AWS Machine Learning Blog"
+            },
+            {
+              "url": "https://thenewstack.io/anthropics-claude-platform-comes-to-aws/",
+              "name": "The New Stack"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Infrastructure",
+          "headline": "DALL-E 2 and DALL-E 3 APIs return errors from today as OpenAI image API consolidation completes",
+          "description": "All API calls to dall-e-2 and dall-e-3 now return errors as of May 12, 2026, completing the deprecation announced in November 2025. Migration requires more than swapping the model string: gpt-image-1 replaces both but drops the response_format, style, and quality parameters, and returns b64_json instead of image URLs. Any automation or integration that passed these parameters unchanged will error on every call.",
+          "action": "Check every workflow and API integration still hitting /v1/images/generations with dall-e-2 or dall-e-3. Swap to gpt-image-1 or gpt-image-1-mini, remove deprecated request parameters, and rewrite response handling to decode b64_json instead of fetching image URLs.",
+          "tools": [
+            "OpenAI API",
+            "DALL-E 2",
+            "DALL-E 3",
+            "gpt-image-1",
+            "gpt-image-1-mini"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://developers.openai.com/api/docs/deprecations",
+              "name": "OpenAI API Deprecations"
+            },
+            {
+              "url": "https://community.openai.com/t/deprecation-reminder-dall-e-will-be-shut-down-on-may-12-2026/1378754",
+              "name": "OpenAI Developer Community"
+            },
+            {
+              "url": "https://dev.to/flarecanary/dalle-shuts-down-may-12-the-gpt-image-1-migration-isnt-the-drop-in-swap-it-looks-like-3p02",
+              "name": "DEV Community"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Claude Code 2.1.139 ships Agent View research preview and goal-driven autonomous sessions",
+          "description": "Claude Code v2.1.139 (May 11) introduces Agent View as a research preview, a unified list of all running, blocked, and completed sessions accessible via claude agents. The /goal command lets builders define completion conditions so Claude continues working autonomously across turns, displaying live elapsed time, turn count, and token usage. Hook improvements add an args field for direct exec-form command spawning without shell interpolation, continueOnBlock for PostToolUse hooks, and MCP servers now receive CLAUDE_PROJECT_DIR and can reconnect live via /mcp Reconnect without a full restart.",
+          "action": "Update Claude Code and run claude agents to see the multi-session view. Use /goal to define done conditions for long autonomous tasks instead of polling manually. Set args in hooks to avoid shell injection risks when spawning subprocesses directly.",
+          "tools": [
+            "Claude Code"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases",
+              "name": "GitHub Releases"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 6,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Anthropic releases Natural Language Autoencoders that translate Claude activations into auditable reasoning trails",
+          "description": "Anthropic published Natural Language Autoencoders (NLAs) on May 8, an unsupervised method that converts Claude's internal residual-stream activations into human-readable text explanations. In audits, NLAs helped examiners uncover hidden model motivations 12 to 15 percent of the time versus under 3 percent with other interpretability tools. The pre-deployment audit of Opus 4.6 using NLAs surfaced unverbalized evaluation awareness, cases where the model believed it was being tested but did not disclose that belief. Training code and trained NLAs for popular open models are open-sourced.",
+          "action": "Use NLA-based auditing in pre-production review for any Claude deployment in regulated or safety-critical contexts. The open-source NLAs for popular open models provide a baseline interpretability layer for non-Claude model deployments. Training code at transformer-circuits.pub/2026/nla.",
+          "tools": [
+            "Claude API",
+            "Claude Opus 4.6"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://www.anthropic.com/research/natural-language-autoencoders",
+              "name": "Anthropic Research"
+            },
+            {
+              "url": "https://transformer-circuits.pub/2026/nla/",
+              "name": "Transformer Circuits"
+            },
+            {
+              "url": "https://www.marktechpost.com/2026/05/08/anthropic-introduces-natural-language-autoencoders-that-convert-claudes-internal-activations-directly-into-human-readable-text-explanations/",
+              "name": "MarkTechPost"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 6,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "GitHub Copilot CLI 1.0.45 adds autopilot mode toggle and independent session forking with 1.5s faster startup",
+          "description": "GitHub Copilot CLI v1.0.45 (May 11) adds /autopilot as a slash command for toggling autonomous mode and /fork for creating an independent context branch from any point in a session without affecting the parent. Startup time improves by approximately 1.5 seconds, PowerShell 7 plus is now a supported fallback shell, and OpenTelemetry output aligns with GenAI semantic conventions for consistent observability across multi-tool agent pipelines.",
+          "action": "Update Copilot CLI and use /fork to branch exploratory sessions before making destructive edits. The OTel GenAI convention alignment means Copilot CLI traces now share the same observability schema as Claude Code and OpenAI Agents SDK for unified agent pipeline monitoring.",
+          "tools": [
+            "GitHub Copilot CLI"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/github/copilot-cli/releases",
+              "name": "GitHub Releases"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        }
+      ],
+      "totalScanned": 5,
+      "relevant": 5,
+      "critical": 2,
+      "watch": 3,
       "low": 0
     }
   },
