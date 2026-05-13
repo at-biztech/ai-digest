@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-11T09:00+06:00",
+  "lastUpdated": "2026-05-13T09:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://platform.claude.com/docs/en/release-notes/overview is fetchable via WebFetch as of 2026-04-09. Best primary source for Anthropic API changes.",
@@ -459,6 +459,18 @@
     "2026-05-12: n8n 1.123.42 (May 8, stable) has no published changelog. 2.20.x still pre-release. Both skipped per established precedents.",
     "2026-05-12: Codex CLI 0.131.0 still in alpha (0.131.0-alpha.6 on May 11). Skipped per pre-release precedent.",
     "2026-05-12: No new Zapier, Make.com, or Airtable product updates found for May 11-12.",
-    "2026-05-12: NOTE for May 13 run: Cover Google Android Show I/O Edition actual announcements (Android 17, Gemini agentic features, Aluminium OS). NOTE for May 15 run: xAI 8-model Grok retirement effective today (grok-3, grok-code-fast-1, grok-4-1-fast-*, grok-4-fast-*, grok-4-0709, grok-imagine-image-pro). Reframe as completed event."
+    "2026-05-12: NOTE for May 13 run: Cover Google Android Show I/O Edition actual announcements (Android 17, Gemini agentic features, Aluminium OS). NOTE for May 15 run: xAI 8-model Grok retirement effective today (grok-3, grok-code-fast-1, grok-4-1-fast-*, grok-4-fast-*, grok-4-0709, grok-imagine-image-pro). Reframe as completed event.",
+    "2026-05-13: 2 items (1 CRITICAL, 1 WATCH, 0 LOW). Anthropic fast mode research preview now supports Opus 4.7 via speed: fast + fast-mode-2026-02-01 beta header (CRITICAL 8, May 12, platform.claude.com primary source). Anthropic Claude for Legal launches with 12 practice-area Cowork plugins plus 20-plus MCP connectors including Thomson Reuters Westlaw, Harvey, DocuSign, Everlaw, Box, iManage and cross-app Microsoft 365 context (WATCH 7, May 12, TechCrunch/Bloomberg/Fortune/Artificial Lawyer).",
+    "2026-05-13: OpenAI Deployment Company formal launch (May 11, 150 FDEs, Tomoro acquisition) skipped per duplication rule. May 5 digest already covered OpenAI enterprise JV as WATCH 7. May 12 agent notes also flagged this as skipped. Not re-included.",
+    "2026-05-13: Google Android Show I/O Edition (May 12) covered Gemini Intelligence for Android (cross-app task automation, auto-fill), Googlebooks hardware, Android Auto, Chrome Gemini integration, Create My Widget. All consumer and hardware features with no Gemini API or developer capability changes. Skipped.",
+    "2026-05-13: Claude Code v2.1.140 (May 12 21:09 UTC) is primarily bugfixes plus subagent_type case-insensitive matching. No major new capabilities. Skipped per minor bugfix precedent. v2.1.139 was covered in May 12 digest.",
+    "2026-05-13: GitHub Copilot CLI v1.0.46 (May 12 20:53 UTC) adds deprecation warnings for old CLI versions to prevent premium model access loss, PowerShell improvements, read-only gh auto-approval, crash fixes. Predominantly fixes. Skipped per bugfix precedent. v1.0.45 was covered in May 12 digest.",
+    "2026-05-13: n8n@2.21.0 pre-release (May 12) has Airtable and Salesforce node updates, AI Builder restore archived workflows, and security fix for password reset token logging. Pre-release, skipped per established pre-release exclusion precedent.",
+    "2026-05-13: OpenAI Realtime voice models (GPT-Realtime-2, GPT-Realtime-Translate, GPT-Realtime-Whisper) were May 7 announcement, covered in May 8 digest. GPT-5.5 Instant was May 5, covered in May 6 digest. Both outside window.",
+    "2026-05-13: Anthropic fast mode for Opus 4.7 - same pricing, rate limits, and waitlist access as Opus 4.6 fast mode. Waitlist at claude.com/fast-mode. Fast mode was first launched February 7 for Opus 4.6 only. This is the first extension to a newer model. Score 8 reflects direct API capability expansion on the top-tier model.",
+    "2026-05-13: Claude for Legal arrives as Claude Cowork plugins + MCP connectors simultaneously. 12 plugins are practice-area bundles (commercial counsel, employment counsel, litigation associate, law student, and others). The MCP connector pattern matches earlier financial services agents (May 5 digest). All available to paying Claude customers immediately.",
+    "2026-05-13: Detached HEAD recurred at session start. Fixed by fetch origin/main, checkout main, fast-forward merge. Root cause persists: sessions start in detached HEAD state.",
+    "2026-05-13: No new Zapier, Make.com, or Airtable product updates found for May 12-13.",
+    "2026-05-13: NOTE for May 15 run: xAI 8-model Grok retirement effective May 15 (grok-3, grok-code-fast-1, grok-4-1-fast-*, grok-4-fast-*, grok-4-0709, grok-imagine-image-pro). Reframe as completed event. NOTE for May 19 run: Google I/O 2026 keynote starts May 19. Expect Gemini 4 (2M context, 84.6% ARC-AGI2), Android 17, agentic coding tools. Pre-fetch io.google/2026."
   ]
 }

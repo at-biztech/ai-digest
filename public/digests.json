@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-05-13",
     "2026-05-12",
     "2026-05-11",
     "2026-05-10",
@@ -5361,7 +5362,7 @@
           "tag": "CRITICAL",
           "category": "Infrastructure",
           "headline": "DALL-E 2 and DALL-E 3 shut down tomorrow with migration that requires code changes beyond a model swap",
-          "description": "OpenAI shuts down dall-e-2 and dall-e-3 from the API on May 12 with no auto-upgrade fallback \u2014 calls will return errors immediately. Migration to gpt-image-1 or gpt-image-1.5 is not a drop-in rename: builders must remove the response_format, style, and quality request parameters, and switch response parsing from URL fetching to b64_json decoding. Any integration that forwards these parameters unchanged will break on the first call after midnight.",
+          "description": "OpenAI shuts down dall-e-2 and dall-e-3 from the API on May 12 with no auto-upgrade fallback — calls will return errors immediately. Migration to gpt-image-1 or gpt-image-1.5 is not a drop-in rename: builders must remove the response_format, style, and quality request parameters, and switch response parsing from URL fetching to b64_json decoding. Any integration that forwards these parameters unchanged will break on the first call after midnight.",
           "action": "Audit all /v1/images/generations calls before May 12. Update model string, strip deprecated params, and rewrite response handling to decode b64_json. Test on a staging API key before cutover.",
           "tools": [
             "OpenAI API",
@@ -5561,6 +5562,68 @@
       "critical": 2,
       "watch": 3,
       "low": 0
+    },
+    "2026-05-13": {
+      "dateKey": "2026-05-13",
+      "date": "May 13, 2026",
+      "summary": "Anthropic extends fast mode to Opus 4.7 and launches a legal-vertical plugin bundle with 12 practice-area plugins and 20-plus MCP connectors for law firms and in-house counsel.",
+      "items": [
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Models",
+          "headline": "Anthropic extends fast mode research preview to Opus 4.7 bringing top-tier model into speed tier",
+          "description": "Fast mode is now available for Claude Opus 4.7 via the speed parameter set to fast and the fast-mode-2026-02-01 beta header, extending the research preview that launched for Opus 4.6 in February to the most capable Claude model. Pricing, rate limits, and waitlist access terms are identical to Opus 4.6 fast mode. Builders running long-horizon agentic workloads that previously required choosing between Opus-class intelligence and acceptable latency can now access both from the same model.",
+          "action": "Join the fast mode waitlist at claude.com/fast-mode if you run Opus 4.7 workloads where output speed is a bottleneck. Swap in the fast-mode-2026-02-01 beta header alongside your existing Opus 4.7 calls.",
+          "tools": [
+            "Claude API",
+            "Claude Opus 4.7"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://platform.claude.com/docs/en/release-notes/overview",
+              "name": "Anthropic Release Notes"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Anthropic launches Claude for Legal with 12 practice area plugins and 20-plus MCP connectors",
+          "description": "Anthropic released Claude for Legal, a bundle of 12 practice-area Claude Cowork plugins covering commercial counsel, employment counsel, litigation associate, law student, and others, alongside more than 20 MCP connectors for legal platforms including Thomson Reuters Westlaw, Harvey, DocuSign, Everlaw, Box, and iManage. A cross-app Microsoft 365 integration carries conversation context across Word, Outlook, Excel, and PowerPoint within a single agent session. The plugins and connectors are available now to all paying Claude customers.",
+          "action": "If you build legal or compliance automations, audit which of the 20-plus new MCP connectors replace custom integrations you maintain. The plugin architecture is a direct model for building similar vertical bundles in healthcare, finance, or real estate.",
+          "tools": [
+            "Claude",
+            "Claude Cowork",
+            "MCP"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://techcrunch.com/2026/05/12/the-ai-legal-services-industry-is-heating-up-anthropic-is-getting-in-on-the-action/",
+              "name": "TechCrunch"
+            },
+            {
+              "url": "https://www.artificiallawyer.com/2026/05/12/claude-for-legal-launches-may-reshape-the-legal-tech-world/",
+              "name": "Artificial Lawyer"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        }
+      ]
     }
   },
   "items": [],
