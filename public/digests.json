@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-05-14",
     "2026-05-13",
     "2026-05-12",
     "2026-05-11",
@@ -5622,6 +5623,69 @@
           "sourceTier": 0,
           "sourceUrl": "",
           "sourceName": ""
+        }
+      ]
+    },
+    "2026-05-14": {
+      "dateKey": "2026-05-14",
+      "date": "May 14, 2026",
+      "summary": "xAI retires 8 Grok models including grok-3 and grok-code-fast-1 at noon PT tomorrow May 15, Claude Code ships workload identity federation and CI hook notification fields in v2.1.141, and GitHub Copilot CLI adds cloud agent session resume.",
+      "items": [
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Infrastructure",
+          "headline": "xAI retires 8 Grok models including grok-3 and all grok-4-fast variants at noon PT tomorrow May 15",
+          "description": "Eight Grok models including grok-3, grok-code-fast-1, all grok-4-1-fast and grok-4-fast variants, grok-4-0709, and grok-imagine-image-pro shut down at 12:00pm PT on May 15. Any API call to these model IDs after that timestamp returns an error with no fallback. The migration path is grok-4.3 for code and reasoning workloads, grok-4.20-non-reasoning for fast non-reasoning pipelines, and grok-imagine-image for image generation.",
+          "action": "Audit any automation or agent pipeline using xAI Grok APIs before midnight tonight Almaty time. Swap grok-code-fast-1 and grok-3 to grok-4.3, and grok-4-fast variants to grok-4.20-non-reasoning. Test integrations before the May 15 noon PT cutoff.",
+          "tools": [
+            "xAI API",
+            "Grok"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://docs.x.ai/developers/migration/may-15-retirement",
+              "name": "xAI Docs"
+            }
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Claude Code 2.1.141 adds workload identity federation env var and CI-friendly hook notification fields",
+          "description": "v2.1.141 introduces ANTHROPIC_WORKSPACE_ID for workload identity federation, enabling Claude Code deployments to authenticate via cloud provider identity tokens without static API keys. The terminalSequence field in hook JSON output triggers desktop notifications, window titles, and bells from hooks even when running without a controlling terminal, making CI pipelines observable. The release also adds claude agents --cwd path for directory-scoped agent listing and a Rewind menu Summarize up to here compression option, alongside 60-plus bug fixes.",
+          "action": "Set ANTHROPIC_WORKSPACE_ID in CI environments to migrate from static API keys to identity-based auth. Use the terminalSequence hook field to route build completion events to desktop notification systems or terminal multiplexers without requiring an attached terminal.",
+          "tools": [
+            "Claude Code",
+            "Claude API"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases",
+              "name": "GitHub Releases"
+            }
+          ]
+        },
+        {
+          "score": 6,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "GitHub Copilot CLI 1.0.47 adds cloud agent session resume and named fork tracking",
+          "description": "v1.0.47 enables --resume to reconnect to Copilot cloud agent sessions started by remote teammates, making it possible to pick up long-running agent tasks from any workstation. The /fork command now accepts an optional session name and forked sessions display their origin session, enabling cleaner session trees when branching agentic workflows. Copilot Max plan subscribers now see the correct list of available premium models.",
+          "action": "Use copilot --resume to connect to shared cloud agent sessions and implement handoff patterns within distributed teams. Pair with named /fork sessions to maintain readable agent genealogy in multi-branch workflows.",
+          "tools": [
+            "GitHub Copilot CLI"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/github/copilot-cli/releases",
+              "name": "GitHub Releases"
+            }
+          ]
         }
       ]
     }
