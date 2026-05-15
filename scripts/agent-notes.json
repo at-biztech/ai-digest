@@ -484,7 +484,20 @@
     "2026-05-14: Google I/O 2026 keynote is May 19 (5 days away). No developer API changes announced yet. Expect Gemini 4 (2M context, 84.6% ARC-AGI2 per prior signals), Android 17, new Veo model. Pre-fetch io.google/2026 on May 19 run.",
     "2026-05-14: No new Zapier, Make.com, or Airtable product updates found for May 13-14.",
     "2026-05-14: Detached HEAD recurred at session start. Fixed by fetch origin/main, checkout main, fast-forward merge. Root cause persists: sessions start in detached HEAD state.",
-    "2026-05-14: NOTE for May 15 run: xAI 8-model Grok retirement completed at noon PT. Reframe as completed event (grok-3, grok-code-fast-1, grok-4-1-fast-*, grok-4-fast-*, grok-4-0709, grok-imagine-image-pro all return errors). NOTE for May 19 run: Google I/O 2026 keynote starts May 19. Cover actual announcements."
+    "2026-05-14: NOTE for May 15 run: xAI 8-model Grok retirement completed at noon PT. Reframe as completed event (grok-3, grok-code-fast-1, grok-4-1-fast-*, grok-4-fast-*, grok-4-0709, grok-imagine-image-pro all return errors). NOTE for May 19 run: Google I/O 2026 keynote starts May 19. Cover actual announcements.",
+    "2026-05-15: 5 items (1 CRITICAL, 3 WATCH, 1 LOW). Anthropic Agent SDK credits billing split starting June 15 (CRITICAL 8, VentureBeat/SiliconANGLE May 13-14, programmatic usage moves to separate credit pool $20-$200/month by tier). xAI Grok 8-model retirement completed with silent redirect to grok-4.3 pricing (WATCH 7). Claude for Small Business with 15 workflows and 8 connectors (WATCH 7, May 13, TechCrunch/Axios). Claude Code 2.1.142 with dispatched agent config flags and Opus 4.7 fast mode default (WATCH 7, May 14). GitHub Copilot CLI 1.0.48 with token price display in model picker (LOW 5, May 14).",
+    "2026-05-15: IMPORTANT NOTE: xAI Grok retirement uses SILENT REDIRECT behavior, NOT error responses. Deprecated slugs still resolve but bill at grok-4.3 pricing ($1.25/$2.50 per MTok). This is different from Haiku 3 and DALL-E retirements where calls returned errors. Update agent notes precedent: check xAI docs.x.ai/developers/migration/may-15-retirement for redirect vs. error pattern.",
+    "2026-05-15: Anthropic Agent SDK credits (May 13) was NOT covered in May 13 or May 14 digests despite being published May 13 (VentureBeat) and May 14 (SiliconANGLE, The Register). Both dates are within the 48h window from May 15. The billiing split is a structural change: interactive Claude Code in terminal is NOT affected, only programmatic/headless usage.",
+    "2026-05-15: Claude for Small Business (May 13) was NOT covered in any prior digest. TechCrunch, Axios, SiliconANGLE all dated May 13. Continues Anthropic vertical bundle pattern: Financial Services (May 5), Legal (May 12), Small Business (May 13). Three vertical packs in 10 days.",
+    "2026-05-15: Claude Code 2.1.142 released May 14 22:55 UTC = May 15 04:55 Almaty. Within window. The CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1 env var is the rollback switch for teams affected by the Opus 4.7 fast mode default change.",
+    "2026-05-15: GitHub Copilot CLI 1.0.48 (May 14 13:53 UTC) stable. v1.0.48-0 through -2 were pre-releases on May 13. Scored LOW 5 because predominantly fixes with only model pricing display as a notable feature. v1.0.47 was covered in May 14 digest.",
+    "2026-05-15: GLM-4.7 confirmed as December 22 2025. Way stale. The 'GLM-4.7 with 1.2% hallucination rate' reference in search results was a general article, not a May 2026 launch. Skipped.",
+    "2026-05-15: OpenAI realtime voice models (GPT-Realtime-2 etc.) appeared in search results as 'May 14 announcement' but this was covered as CRITICAL 9 in May 8 digest. Skipped as duplicate.",
+    "2026-05-15: n8n@2.21.2 (May 14) is pre-release. n8n@2.20.7 (May 13) is AxiosHeaders bugfix only (already skipped in May 14 agent notes). No new n8n stable in window.",
+    "2026-05-15: OpenAI Codex CLI still on 0.131.0-alpha.18 (May 14). All pre-release. Skipped per established precedent.",
+    "2026-05-15: No new Zapier, Make.com, or Airtable product updates found for May 14-15.",
+    "2026-05-15: No detached HEAD issue this session. Repo was on main branch.",
+    "2026-05-15: NOTE for May 19 run: Google I/O 2026 keynote starts May 19. Expect Gemini 4 (2M context, 84.6% ARC-AGI2 per prior signals), Android 17, Veo update, agentic coding tools. Pre-fetch io.google/2026. This will be a major news day."
   ],
-  "lastUpdated": "2026-05-14T09:00+06:00"
+  "lastUpdated": "2026-05-15T09:00+06:00"
 }

@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-05-15",
     "2026-05-14",
     "2026-05-13",
     "2026-05-12",
@@ -5363,7 +5364,7 @@
           "tag": "CRITICAL",
           "category": "Infrastructure",
           "headline": "DALL-E 2 and DALL-E 3 shut down tomorrow with migration that requires code changes beyond a model swap",
-          "description": "OpenAI shuts down dall-e-2 and dall-e-3 from the API on May 12 with no auto-upgrade fallback — calls will return errors immediately. Migration to gpt-image-1 or gpt-image-1.5 is not a drop-in rename: builders must remove the response_format, style, and quality request parameters, and switch response parsing from URL fetching to b64_json decoding. Any integration that forwards these parameters unchanged will break on the first call after midnight.",
+          "description": "OpenAI shuts down dall-e-2 and dall-e-3 from the API on May 12 with no auto-upgrade fallback \u2014 calls will return errors immediately. Migration to gpt-image-1 or gpt-image-1.5 is not a drop-in rename: builders must remove the response_format, style, and quality request parameters, and switch response parsing from URL fetching to b64_json decoding. Any integration that forwards these parameters unchanged will break on the first call after midnight.",
           "action": "Audit all /v1/images/generations calls before May 12. Update model string, strip deprecated params, and rewrite response handling to decode b64_json. Test on a staging API key before cutover.",
           "tools": [
             "OpenAI API",
@@ -5688,6 +5689,166 @@
           ]
         }
       ]
+    },
+    "2026-05-15": {
+      "dateKey": "2026-05-15",
+      "date": "May 15, 2026",
+      "summary": "Anthropic separates programmatic Claude usage into monthly credit pools from June 15 in a structural billing change, xAI retires eight Grok legacy model slugs that silently redirect to grok-4.3 pricing, and Claude for Small Business launches with 15 agentic workflows.",
+      "items": [
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Infrastructure",
+          "headline": "Anthropic separates programmatic Claude usage into monthly credit pools starting June 15",
+          "description": "Starting June 15, all programmatic Claude usage via subscriptions moves to a separate monthly credit pool: $20 for Pro, $100 for Max 5x and Team Premium seats, $200 for Max 20x. The pool covers Claude Agent SDK calls, claude -p, Claude Code GitHub Actions, and third-party agents including OpenClaw. Credits expire monthly and do not roll over; once exhausted, programmatic usage stops unless extra billing is enabled at standard pay-as-you-go API rates. Interactive Claude Code in the terminal and web or desktop chat remain on standard subscription limits.",
+          "action": "Audit all programmatic Claude usage before June 15. Identify workflows using claude -p, GitHub Actions runners, or third-party Claude agents. Estimate monthly token consumption against the credit budget for your plan tier. High-volume programmatic workflows should migrate to direct API keys to avoid credit exhaustion.",
+          "clientPitch": "",
+          "useCase": "",
+          "tools": [
+            "Claude Agent SDK",
+            "Claude Code",
+            "Claude API",
+            "OpenClaw"
+          ],
+          "timeline": "June 15, 2026",
+          "confidence": "confirmed",
+          "sourceTier": 1,
+          "sourceUrl": "https://venturebeat.com/technology/anthropic-reinstates-openclaw-and-third-party-agent-usage-on-claude-subscriptions-with-a-catch",
+          "sourceName": "VentureBeat",
+          "sources": [
+            {
+              "url": "https://venturebeat.com/technology/anthropic-reinstates-openclaw-and-third-party-agent-usage-on-claude-subscriptions-with-a-catch",
+              "name": "VentureBeat"
+            },
+            {
+              "url": "https://siliconangle.com/2026/05/14/anthropic-announces-programmatic-credit-pool-agentic-tool-use-rises/",
+              "name": "SiliconANGLE"
+            },
+            {
+              "url": "https://thenewstack.io/anthropic-agent-sdk-credits/",
+              "name": "The New Stack"
+            }
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Infrastructure",
+          "headline": "xAI Grok 8 legacy model slugs retired today with silent redirect to grok-4.3 pricing",
+          "description": "As of noon PT May 15, xAI retired grok-3, grok-code-fast-1, grok-4-0709, grok-4-1-fast-reasoning, grok-4-1-fast-non-reasoning, grok-4-fast-reasoning, grok-4-fast-non-reasoning, and grok-imagine-image-pro. Unlike most model retirements where calls return errors, the deprecated slugs remain active but silently redirect to grok-4.3. Calls will succeed but are billed at grok-4.3 rates ($1.25 input and $2.50 output per million tokens) regardless of what the original model cost.",
+          "action": "Update all integrations explicitly referencing retired model slugs. Silent redirection means no immediate errors to alert you to the billing change. Migrate to grok-4.3 for code and reasoning workloads, grok-4.20-non-reasoning for fast non-reasoning, and grok-imagine-image for image generation.",
+          "clientPitch": "",
+          "useCase": "",
+          "tools": [
+            "xAI API",
+            "Grok"
+          ],
+          "timeline": "May 15, 2026",
+          "confidence": "confirmed",
+          "sourceTier": 1,
+          "sourceUrl": "https://docs.x.ai/developers/migration/may-15-retirement",
+          "sourceName": "xAI Docs",
+          "sources": [
+            {
+              "url": "https://docs.x.ai/developers/migration/may-15-retirement",
+              "name": "xAI Docs"
+            }
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Anthropic launches Claude for Small Business with 15 agentic workflows and 8 app connectors",
+          "description": "Claude for Small Business ships 15 ready-to-run agentic workflows spanning payroll planning, invoice chasing, lead triage, month-end close, campaign management, and cash-flow monitoring. Eight named connectors integrate with QuickBooks, PayPal, HubSpot, Canva, DocuSign, Google Workspace, Microsoft 365, and Slack. The package continues the vertical bundle pattern alongside Claude for Financial Services (May 5) and Claude for Legal (May 12), and every workflow requires explicit user approval before executing an action.",
+          "action": "Evaluate as a rapid-deployment layer for SMB clients already on these eight platforms. The approval-required model makes it viable for clients with limited AI experience. Compare included connectors against existing Make.com or n8n workflows for the same clients to identify overlap or consolidation opportunities.",
+          "clientPitch": "",
+          "useCase": "",
+          "tools": [
+            "Claude Cowork",
+            "QuickBooks",
+            "PayPal",
+            "HubSpot",
+            "Canva",
+            "DocuSign",
+            "Google Workspace",
+            "Microsoft 365",
+            "Slack"
+          ],
+          "timeline": "May 13, 2026",
+          "confidence": "confirmed",
+          "sourceTier": 1,
+          "sourceUrl": "https://techcrunch.com/2026/05/13/anthropic-courts-a-new-kind-of-customer-small-business-owners/",
+          "sourceName": "TechCrunch",
+          "sources": [
+            {
+              "url": "https://techcrunch.com/2026/05/13/anthropic-courts-a-new-kind-of-customer-small-business-owners/",
+              "name": "TechCrunch"
+            },
+            {
+              "url": "https://www.axios.com/2026/05/13/anthropic-claude-small-business-smb",
+              "name": "Axios"
+            },
+            {
+              "url": "https://www.anthropic.com/news/claude-for-small-business",
+              "name": "Anthropic"
+            }
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Claude Code 2.1.142 adds dispatched agent configuration flags and defaults fast mode to Opus 4.7",
+          "description": "The claude agents subcommand now accepts --add-dir, --settings, --mcp-config, --plugin-dir, --permission-mode, --model, --effort, and --dangerously-skip-permissions so background sessions can be fully configured at dispatch time without shared config files. Fast mode in Claude Code now defaults to Opus 4.7 instead of Opus 4.6 (revert with CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1). Also fixes MCP_TOOL_TIMEOUT not applying to remote HTTP/SSE MCP servers (was capped at 60 seconds) and macOS daemon reconnect failures after sleep or wake.",
+          "action": "Teams dispatching background Claude Code sessions can now pass full environment configuration per call, enabling better isolation for multi-project CI pipelines. Verify fast mode behavior in existing pipelines after the Opus 4.7 default change. Set the override env var if Opus 4.6 behavior is required.",
+          "clientPitch": "",
+          "useCase": "",
+          "tools": [
+            "Claude Code"
+          ],
+          "timeline": "May 14, 2026",
+          "confidence": "confirmed",
+          "sourceTier": 1,
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases",
+          "sourceName": "GitHub",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases",
+              "name": "GitHub"
+            }
+          ]
+        },
+        {
+          "score": 5,
+          "tag": "LOW",
+          "category": "Tools",
+          "headline": "GitHub Copilot CLI 1.0.48 shows token prices in model picker",
+          "description": "The model picker now displays actual token costs alongside model names, enabling cost-aware model selection without leaving the CLI. The release also fixes glob patterns in .github/copilot-instructions.md instruction files with applyTo frontmatter and corrects rendering of CJK characters and emoji in terminal output.",
+          "action": "Upgrade if your team switches between Copilot models frequently or uses language-specific instruction files with glob patterns.",
+          "clientPitch": "",
+          "useCase": "",
+          "tools": [
+            "GitHub Copilot CLI"
+          ],
+          "timeline": "May 14, 2026",
+          "confidence": "confirmed",
+          "sourceTier": 1,
+          "sourceUrl": "https://github.com/github/copilot-cli/releases",
+          "sourceName": "GitHub",
+          "sources": [
+            {
+              "url": "https://github.com/github/copilot-cli/releases",
+              "name": "GitHub"
+            }
+          ]
+        }
+      ],
+      "totalScanned": 5,
+      "relevant": 4,
+      "critical": 1,
+      "watch": 3,
+      "low": 1
     }
   },
   "items": [],
