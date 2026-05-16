@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-05-16",
     "2026-05-15",
     "2026-05-14",
     "2026-05-13",
@@ -5849,6 +5850,100 @@
       "critical": 1,
       "watch": 3,
       "low": 1
+    },
+    "2026-05-16": {
+      "dateKey": "2026-05-16",
+      "date": "May 16, 2026",
+      "summary": "GitHub launches Copilot App as a standalone agentic coding environment with git worktree isolation and auto-merge; Claude Code 2.1.143 adds plugin dependency enforcement and per-turn cost projections; PraisonAI zero-day exploited within four hours of disclosure drains API quotas.",
+      "items": [
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Tools",
+          "headline": "GitHub Copilot App enters technical preview as standalone agentic coding environment",
+          "description": "Microsoft released the GitHub Copilot App on May 14 as a standalone desktop experience for agentic development across Windows, macOS, and Linux. Each session gets its own git worktree, branch, and task state, allowing multiple agents to work the same repo in parallel without conflict. An Agent Merge mode lets the agent address review comments, fix failing CI checks, and merge once user-defined conditions are met; an Inbox interface surfaces issues, pull requests, CI events, and tasks across repositories in a single pane.",
+          "action": "Sign up for early access if on Copilot Pro or Pro+; Business and Enterprise access is rolling out this week. Evaluate where this fits versus Claude Code and Codex for agentic coding workflows, particularly for teams already on GitHub Enterprise.",
+          "clientPitch": "",
+          "useCase": "",
+          "tools": [
+            "GitHub Copilot",
+            "Claude Code",
+            "OpenAI Codex"
+          ],
+          "timeline": "Available now in technical preview",
+          "confidence": "confirmed",
+          "sourceTier": 1,
+          "sourceUrl": "https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview/",
+          "sourceName": "GitHub Changelog",
+          "sources": [
+            {
+              "url": "https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview/",
+              "name": "GitHub Changelog"
+            },
+            {
+              "url": "https://www.neowin.net/news/microsoft-launches-github-copilot-app-to-supercharge-agentic-development/",
+              "name": "Neowin"
+            },
+            {
+              "url": "https://windowsreport.com/microsoft-launches-github-copilot-desktop-app-for-agentic-coding/",
+              "name": "Windows Report"
+            }
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Claude Code 2.1.143 adds plugin dependency enforcement and per-turn token cost projections",
+          "description": "Released May 15, v2.1.143 refuses to disable a plugin when another enabled plugin depends on it and auto-enables transitive dependencies on install, preventing silent capability breakage. The /plugin marketplace browse pane now shows per-turn and per-invocation token cost estimates before committing to a session. Background sessions preserve model and effort level after waking from idle; a new worktree.bgIsolation: none setting lets background sessions edit the working copy directly without a worktree checkout for repos where worktrees are impractical.",
+          "action": "Upgrade to v2.1.143. Audit plugin dependency chains before disabling anything. Use the projected context cost view in the /plugin pane to identify expensive per-session token patterns before they hit your bill.",
+          "clientPitch": "",
+          "useCase": "",
+          "tools": [
+            "Claude Code"
+          ],
+          "timeline": "Available now",
+          "confidence": "confirmed",
+          "sourceTier": 1,
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases",
+          "sourceName": "GitHub Releases",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases",
+              "name": "GitHub Releases"
+            }
+          ]
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Infrastructure",
+          "headline": "PraisonAI zero-day exploited within four hours exposes multi-agent frameworks to quota drain",
+          "description": "CVE-2026-44338 (CVSS 7.3), a missing-authentication flaw in PraisonAI's open-source multi-agent orchestration framework, was disclosed May 14 and exploited within four hours. The exposed endpoints allow any network-reachable attacker to hijack automated agent operations, execute tasks, and drain expensive API quotas without credentials. The attack pattern mirrors the MCP STDIO and LMDeploy SSRF vulnerabilities covered in prior digests, confirming a repeating pattern of unauthenticated access in open-source agent frameworks.",
+          "action": "Audit any PraisonAI deployments for network exposure immediately. Apply authentication at the reverse-proxy layer if patching is not yet possible. Check API provider usage dashboards for unexpected quota consumption across all agent frameworks, not just PraisonAI.",
+          "clientPitch": "",
+          "useCase": "",
+          "tools": [
+            "PraisonAI"
+          ],
+          "timeline": "Patch status unclear; mitigate now",
+          "confidence": "confirmed",
+          "sourceTier": 2,
+          "sourceUrl": "https://cybersecuritynews.com/praisonai-vulnerability-exploited/",
+          "sourceName": "Cybersecurity News",
+          "sources": [
+            {
+              "url": "https://cybersecuritynews.com/praisonai-vulnerability-exploited/",
+              "name": "Cybersecurity News"
+            }
+          ]
+        }
+      ],
+      "totalScanned": 3,
+      "relevant": 3,
+      "critical": 1,
+      "watch": 2,
+      "low": 0
     }
   },
   "items": [],

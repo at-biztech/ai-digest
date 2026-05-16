@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-13T09:00+06:00",
+  "lastUpdated": "2026-05-16T09:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://platform.claude.com/docs/en/release-notes/overview is fetchable via WebFetch as of 2026-04-09. Best primary source for Anthropic API changes.",
@@ -497,7 +497,25 @@
     "2026-05-15: OpenAI Codex CLI still on 0.131.0-alpha.18 (May 14). All pre-release. Skipped per established precedent.",
     "2026-05-15: No new Zapier, Make.com, or Airtable product updates found for May 14-15.",
     "2026-05-15: No detached HEAD issue this session. Repo was on main branch.",
-    "2026-05-15: NOTE for May 19 run: Google I/O 2026 keynote starts May 19. Expect Gemini 4 (2M context, 84.6% ARC-AGI2 per prior signals), Android 17, Veo update, agentic coding tools. Pre-fetch io.google/2026. This will be a major news day."
-  ],
-  "lastUpdated": "2026-05-15T09:00+06:00"
+    "2026-05-15: NOTE for May 19 run: Google I/O 2026 keynote starts May 19. Expect Gemini 4 (2M context, 84.6% ARC-AGI2 per prior signals), Android 17, Veo update, agentic coding tools. Pre-fetch io.google/2026. This will be a major news day.",
+    "2026-05-16: 3 items (1 CRITICAL, 2 WATCH, 0 LOW). GitHub Copilot App technical preview (CRITICAL 8, May 14 GitHub Changelog, standalone agentic coding environment with parallel git worktrees, Agent Merge, and cross-repo Inbox), Claude Code 2.1.143 plugin dependency enforcement and per-turn cost projections (WATCH 7, May 15 22:28 UTC GitHub releases), PraisonAI CVE-2026-44338 missing auth exploited within 4 hours (WATCH 7, May 14 Cybersecurity News).",
+    "2026-05-16: platform.claude.com/docs/en/release-notes/overview still fetchable via WebFetch. Latest entry remains May 12 (fast mode for Opus 4.7). No new API entries May 13-16.",
+    "2026-05-16: github.com/anthropics/claude-code/releases fetchable. v2.1.143 (May 15 22:28 UTC) is the substantive release beyond 2.1.142 which was covered May 15.",
+    "2026-05-16: github.com/anthropics/claude-code/releases fetchable. v2.1.142 (May 14 22:55 UTC) was covered in May 15 digest. Do not re-include.",
+    "2026-05-16: github.com/n8n-io/n8n/releases shows 2.20.8 and 2.20.9 (May 15) as bug fixes only. 2.21.x still pre-release series. All skipped per established minor bugfix and pre-release precedent.",
+    "2026-05-16: github.com/openai/codex/releases shows only 0.131.0-alpha.21 and alpha.22 (May 15). All pre-release alphas, skipped per established precedent.",
+    "2026-05-16: github.com/github/copilot-cli/releases shows v1.0.49-0 and v1.0.49-1 (May 15) as pre-releases (note the -N suffix). Skipped per established pre-release exclusion precedent. v1.0.48 was covered May 15.",
+    "2026-05-16: GitHub Copilot App (github.com/github/app) is a new product separate from Copilot CLI. It has its own releases at github.com/github/app/releases. Add to source monitoring for future runs.",
+    "2026-05-16: OpenAI Realtime API GA + GPT-Realtime-2/Translate/Whisper confirmed as May 7, 2026. 9 days old. Not in any prior digest but outside window. Skip.",
+    "2026-05-16: GitHub Copilot usage-based billing (announced April 28 in The Register) not covered in any digest. 18 days old. Too old to include even with CRITICAL exception.",
+    "2026-05-16: Grok Code Fast 1 deprecated in GitHub Copilot (May 15) is derivative of xAI model retirement already covered in May 14 and May 15 digests. Skipped.",
+    "2026-05-16: Azure AI Foundry CVE-2026-35435 (CVSS 8.6, EoP, exploited in wild) disclosed May 7 per primary source; Microsoft Patch Tuesday analysis published May 12. Both dates outside 48h window. Skipped.",
+    "2026-05-16: PraisonAI CVE-2026-44338 follows the repeating pattern of unauthenticated access in open-source agent frameworks (MCP STDIO April 21, LMDeploy April 26, LangChain April 27, Flowise April 21). This is becoming a structural vulnerability class worth a standing alert.",
+    "2026-05-16: OpenAI ChatGPT Personal Finance (May 15, Plaid integration) is a consumer product, not an API capability. Skipped per rules.",
+    "2026-05-16: OpenAI Deployment Company ($4B, May 15) is a business/investment event. Skipped per rules.",
+    "2026-05-16: No new Zapier, Make.com, or Airtable product updates found for May 14-16.",
+    "2026-05-16: Google I/O 2026 is May 19 (3 days away). Pre-announcement speculation about new Gemini model. Skip until confirmed launch.",
+    "2026-05-16: Quiet weekend day. 3 items appropriate for the news volume.",
+    "2026-05-16: No detached HEAD issue this session. Started on main branch, up to date with origin/main."
+  ]
 }
