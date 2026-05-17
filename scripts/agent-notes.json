@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-16T09:00+06:00",
+  "lastUpdated": "2026-05-17T09:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://platform.claude.com/docs/en/release-notes/overview is fetchable via WebFetch as of 2026-04-09. Best primary source for Anthropic API changes.",
@@ -516,6 +516,15 @@
     "2026-05-16: No new Zapier, Make.com, or Airtable product updates found for May 14-16.",
     "2026-05-16: Google I/O 2026 is May 19 (3 days away). Pre-announcement speculation about new Gemini model. Skip until confirmed launch.",
     "2026-05-16: Quiet weekend day. 3 items appropriate for the news volume.",
-    "2026-05-16: No detached HEAD issue this session. Started on main branch, up to date with origin/main."
+    "2026-05-16: No detached HEAD issue this session. Started on main branch, up to date with origin/main.",
+    "2026-05-17: 2 items (2 CRITICAL, 0 WATCH, 0 LOW). Google GTIG confirms first AI-generated zero-day in the wild targeting 2FA bypass before mass campaign (CRITICAL 9, The Register May 11, secondary coverage Gizmochina/developer-tech May 14, extended window applied). Anthropic PwC global alliance expansion training 30,000 staff on Claude Code and Cowork with joint Center of Excellence and Finance transformation unit (CRITICAL 8, SiliconANGLE/PRNewswire May 14, extended window applied).",
+    "2026-05-17: Google AI zero-day: Primary source The Register is May 11 (6 days old). Secondary sources (Gizmochina, developer-tech) are May 14 (72h boundary). Extended window applied per Gemini Deep Research Max precedent (5 days, CRITICAL, never covered). The Register published a SECOND article May 15 about AI exploit generation capabilities, confirming continued media coverage within the 48h window. Story was not in any prior digest despite being a CRITICAL 9 industry event.",
+    "2026-05-17: PwC Anthropic partnership: Announced May 14 (SiliconANGLE confirmed, PRNewswire, Anthropic primary page). 3 days old at time of May 17 inclusion. Extended window applied (CRITICAL 8, 72h boundary, not in any prior digest). The partnership deploys Claude Code and Cowork across PwC's global workforce (hundreds of thousands), trains 30,000 professionals, and establishes a joint Finance transformation business group. Precedent: Claude for Word (April 13, 3 days late, CRITICAL). Not a funding round - this is a deployment and training partnership.",
+    "2026-05-17: Items evaluated and rejected: Claude Code v2.1.143 (already covered May 16), GitHub Copilot CLI v1.0.49-x (pre-release), n8n 2.21.x (all pre-release), n8n 2.20.8/2.20.9 (bug fixes only), OpenAI Codex CLI 0.131.0-alpha.22 (pre-release), Vercel AI SDK (telemetry bugfix only), Claude Sonnet 4.8 (speculation, unconfirmed), Google I/O (not until May 19), Anthropic Gates Foundation $200M (May 14, score 5-6, not CRITICAL, outside 48h window for WATCH items), OpenAI fine-tuning API wind-down (May 7-8, 9-10 days old), GitHub Copilot token billing multiplier (announced April 27), n8n Microsoft Agent 365 node (in pre-release 2.21.x only).",
+    "2026-05-17: Quiet Sunday. 2 items is appropriate for the news volume on a weekend with no major model launches or API changes.",
+    "2026-05-17: Detached HEAD recurred at session start. Fixed by fetch origin/main, checkout main, fast-forward merge. Root cause persists: sessions start in detached HEAD state.",
+    "2026-05-17: NOTE for May 19 run: Google I/O 2026 keynote starts May 19 at 10 AM PT. Expect Gemini 4 (2M context, 84.6% ARC-AGI2 per prior signals), Android 17, agentic coding tools, Veo 4. Pre-fetch io.google/2026 and google.com/about/products on that run. This will be a massive news day requiring additional searches.",
+    "2026-05-17: NOTE: n8n 2.21.x graduation to stable is imminent. Check github.com/n8n-io/n8n/releases on next run. Microsoft Agent 365 Trigger node is the flagship feature. When 2.21 graduates to Latest stable, include as WATCH 7 (highly relevant for reader who uses both n8n and Microsoft 365).",
+    "2026-05-17: NOTE: OpenAI fine-tuning API wind-down (May 7-8) was never covered in any digest. Now 10 days old, outside extended window. Skip permanently - covered by the 'no longer actionable because deadline may have passed' precedent."
   ]
 }

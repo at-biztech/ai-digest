@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-05-17",
     "2026-05-16",
     "2026-05-15",
     "2026-05-14",
@@ -5943,6 +5944,85 @@
       "relevant": 3,
       "critical": 1,
       "watch": 2,
+      "low": 0
+    },
+    "2026-05-17": {
+      "dateKey": "2026-05-17",
+      "date": "May 17, 2026",
+      "summary": "Google intercepts first confirmed AI-generated zero-day before mass exploitation campaign launches; Anthropic and PwC expand alliance to deploy Claude Code across hundreds of thousands of staff worldwide.",
+      "items": [
+        {
+          "score": 9,
+          "tag": "CRITICAL",
+          "category": "Research",
+          "headline": "Google intercepts first confirmed AI-generated zero-day before mass 2FA bypass campaign launches",
+          "description": "Google's Threat Intelligence Group detected a functional Python exploit developed by cybercrime group TeamPCP using AI assistance to discover and weaponize a logic flaw in a widely deployed open-source web administration tool, allowing 2FA bypass after credential theft. The exploit carried telltale AI fingerprints including fabricated CVSS scores, structured help menus, and clean ANSI color classes. Google patched the vendor before the mass campaign launched, but the incident confirms AI is now being used to autonomously identify novel vulnerabilities and build working exploits rather than merely writing scripts.",
+          "action": "Audit any AI agent with code execution or file system access for exploit development potential; review authentication logic in any web admin tool used in automation pipelines; treat AI-powered threat actors as capable of discovering logic flaws without known CVEs and update threat models accordingly",
+          "tools": [
+            "Google GTIG",
+            "open-source web admin tooling"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://www.theregister.com/ai-ml/2026/05/11/google-says-criminals-used-ai-built-zero-day-in-planned-mass-hack-spree/",
+              "name": "The Register"
+            },
+            {
+              "url": "https://www.gizmochina.com/2026/05/14/google-detects-first-known-ai-assisted-zero-day-exploit-in-the-wild/",
+              "name": "Gizmochina"
+            },
+            {
+              "url": "https://thehackernews.com/2026/05/hackers-used-ai-to-develop-first-known.html",
+              "name": "The Hacker News"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Tools",
+          "headline": "PwC certifies 30,000 staff on Claude in global Anthropic alliance expansion with joint finance transformation unit",
+          "description": "PwC will deploy Claude Code and Claude Cowork across its global workforce of hundreds of thousands, beginning with US teams, and will train 30,000 professionals through a joint Center of Excellence with Anthropic. The alliance adds a new Finance business group pairing PwC finance expertise with Claude, Cowork, and Claude Code for enterprise finance transformation engagements. PwC becomes effectively the largest single professional services channel for Claude Code, signaling that enterprise AI implementation services are consolidating around the Big Four.",
+          "action": "Monitor PwC's Center of Excellence output for Claude Code plugin and Cowork connector reference architectures in professional services; prepare Claude Code integration documentation for enterprise deals where PwC is a delivery partner; position bespoke Claude implementations relative to the new PwC standard offering",
+          "tools": [
+            "Claude Code",
+            "Claude Cowork",
+            "Claude"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://siliconangle.com/2026/05/14/pwc-expands-anthropic-alliance-will-train-30000-staff-claude/",
+              "name": "SiliconANGLE"
+            },
+            {
+              "url": "https://www.anthropic.com/news/pwc-expanded-partnership",
+              "name": "Anthropic"
+            },
+            {
+              "url": "https://www.prnewswire.com/news-releases/anthropic-and-pwc-expand-alliance-driving-impact-across-client-work-and-the-firm-302772321.html",
+              "name": "PR Newswire"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        }
+      ],
+      "totalScanned": 2,
+      "relevant": 2,
+      "critical": 2,
+      "watch": 0,
       "low": 0
     }
   },
