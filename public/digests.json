@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-05-18",
     "2026-05-17",
     "2026-05-16",
     "2026-05-15",
@@ -5366,7 +5367,7 @@
           "tag": "CRITICAL",
           "category": "Infrastructure",
           "headline": "DALL-E 2 and DALL-E 3 shut down tomorrow with migration that requires code changes beyond a model swap",
-          "description": "OpenAI shuts down dall-e-2 and dall-e-3 from the API on May 12 with no auto-upgrade fallback \u2014 calls will return errors immediately. Migration to gpt-image-1 or gpt-image-1.5 is not a drop-in rename: builders must remove the response_format, style, and quality request parameters, and switch response parsing from URL fetching to b64_json decoding. Any integration that forwards these parameters unchanged will break on the first call after midnight.",
+          "description": "OpenAI shuts down dall-e-2 and dall-e-3 from the API on May 12 with no auto-upgrade fallback — calls will return errors immediately. Migration to gpt-image-1 or gpt-image-1.5 is not a drop-in rename: builders must remove the response_format, style, and quality request parameters, and switch response parsing from URL fetching to b64_json decoding. Any integration that forwards these parameters unchanged will break on the first call after midnight.",
           "action": "Audit all /v1/images/generations calls before May 12. Update model string, strip deprecated params, and rewrite response handling to decode b64_json. Test on a staging API key before cutover.",
           "tools": [
             "OpenAI API",
@@ -6022,6 +6023,120 @@
       "totalScanned": 2,
       "relevant": 2,
       "critical": 2,
+      "watch": 0,
+      "low": 0
+    },
+    "2026-05-18": {
+      "dateKey": "2026-05-18",
+      "date": "May 18, 2026",
+      "summary": "NGINX Rift reaches active exploitation stage with no ASLR systems vulnerable to unauthenticated RCE, xAI launches Grok Build CLI to challenge Claude Code, and GitHub restructures Copilot into token-based tiers ahead of June 1 billing switch.",
+      "items": [
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Infrastructure",
+          "headline": "NGINX Rift CVE-2026-42945 confirmed actively exploited with unauthenticated worker crashes and RCE attempts",
+          "description": "VulnCheck confirmed on May 18 that threat actors are actively weaponizing the NGINX Rift heap buffer overflow, triggering worker crashes against honeypot networks and targeting servers without ASLR for remote code execution. The flaw (CVSS 9.2) lives in the ngx_http_rewrite_module and affects every NGINX version from 0.6.27 through 1.30.0, covering the vast majority of deployed reverse proxies worldwide including those fronting AI API gateways, n8n, and webhook endpoints. AI-native security firm depthfirst discovered the 18-year-old bug in roughly six hours; patched versions 1.31.0 and 1.30.1 are available now.",
+          "action": "Patch NGINX to 1.31.0 or 1.30.1 immediately on any server running rewrite directives; verify ASLR is enabled on all remaining unpatched instances as a temporary mitigation; audit any AI pipeline reverse proxy or webhook receiver that terminates at NGINX",
+          "tools": [
+            "NGINX",
+            "NGINX Plus",
+            "n8n",
+            "webhook receivers",
+            "AI API gateways"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html",
+              "name": "The Hacker News"
+            },
+            {
+              "url": "https://thehackernews.com/2026/05/18-year-old-nginx-rewrite-module-flaw.html",
+              "name": "The Hacker News"
+            },
+            {
+              "url": "https://depthfirst.com/nginx-rift",
+              "name": "depthfirst (discoverer)"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Tools",
+          "headline": "xAI launches Grok Build early beta as CLI coding agent with eight parallel subagents to challenge Claude Code",
+          "description": "xAI launched Grok Build on May 14, an agentic command-line coding tool running on grok-code-fast-1 with a 256K context window and 70.8 percent on SWE-Bench Verified, entering direct competition with Claude Code and OpenAI Codex. The tool spawns up to eight concurrent subagents working in parallel on separate branches, supports plan mode with step-by-step user approval before file changes, and integrates MCP servers and Skills extensions for domain-specific tooling. Access is gated to SuperGrok Heavy at 299 dollars per month (discounted to 99 dollars for six months), targeting professional developers rather than the prosumer market.",
+          "action": "Evaluate Grok Build as an alternative to Claude Code for teams already in the xAI ecosystem or seeking parallel subagent throughput above Claude Code limits; test SWE-Bench claims against your actual codebase before committing to the SuperGrok Heavy subscription; compare MCP server compatibility with existing Claude Code plugin inventory",
+          "tools": [
+            "xAI Grok Build",
+            "Claude Code",
+            "OpenAI Codex",
+            "MCP servers"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://x.ai/news/grok-build-cli",
+              "name": "xAI"
+            },
+            {
+              "url": "https://www.engadget.com/2173482/xai-coding-agent-grok-build/",
+              "name": "Engadget"
+            },
+            {
+              "url": "https://dataconomy.com/2026/05/15/xai-launches-grok-build-coding-agent-for-developers/",
+              "name": "Dataconomy"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 8,
+          "tag": "CRITICAL",
+          "category": "Tools",
+          "headline": "GitHub Copilot adds Max tier at 100 dollars per month and flex allotments to Pro and Pro Plus ahead of June 1 token billing",
+          "description": "GitHub announced a new Copilot Max plan at 100 dollars per month with 10,000 base AI Credits plus a matching 10,000 flex allotment, bridging the gap between Pro Plus at 39 dollars and custom enterprise contracts. Pro subscribers gain a 5-dollar flex allotment on top of their base 10-dollar value; Pro Plus gains a 31-dollar flex allotment on top of their 39-dollar base, effectively doubling usable capacity. The changes take effect June 1, when all Copilot plans switch from premium request units to token-based billing, with code completions remaining unlimited and all agentic features including Copilot Chat, Copilot CLI, cloud agent, and Spaces consuming AI Credits.",
+          "action": "Model your team's token consumption before June 1 using the preview bill in the GitHub Billing Overview page; assess whether Pro Plus with flex allotments or the new Max plan is more cost-effective for agentic workflows such as Copilot cloud agent sessions and Copilot CLI usage; compare Max at 100 dollars per month against Claude Max and OpenAI Pro for the same agentic coding use cases",
+          "tools": [
+            "GitHub Copilot",
+            "GitHub Copilot CLI",
+            "GitHub Copilot cloud agent",
+            "Copilot Spaces"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/",
+              "name": "GitHub Blog"
+            },
+            {
+              "url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
+              "name": "GitHub Blog"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        }
+      ],
+      "totalScanned": 3,
+      "relevant": 3,
+      "critical": 3,
       "watch": 0,
       "low": 0
     }

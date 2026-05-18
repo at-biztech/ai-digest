@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-17T09:00+06:00",
+  "lastUpdated": "2026-05-18T09:00+06:00",
   "sourceNotes": {
     "openai_changelog": "https://developers.openai.com/changelog/ returned 403 on 2026-04-03. Blocked by Cloudflare or bot protection. Use WebSearch as fallback.",
     "anthropic_releases": "https://platform.claude.com/docs/en/release-notes/overview is fetchable via WebFetch as of 2026-04-09. Best primary source for Anthropic API changes.",
@@ -525,6 +525,21 @@
     "2026-05-17: Detached HEAD recurred at session start. Fixed by fetch origin/main, checkout main, fast-forward merge. Root cause persists: sessions start in detached HEAD state.",
     "2026-05-17: NOTE for May 19 run: Google I/O 2026 keynote starts May 19 at 10 AM PT. Expect Gemini 4 (2M context, 84.6% ARC-AGI2 per prior signals), Android 17, agentic coding tools, Veo 4. Pre-fetch io.google/2026 and google.com/about/products on that run. This will be a massive news day requiring additional searches.",
     "2026-05-17: NOTE: n8n 2.21.x graduation to stable is imminent. Check github.com/n8n-io/n8n/releases on next run. Microsoft Agent 365 Trigger node is the flagship feature. When 2.21 graduates to Latest stable, include as WATCH 7 (highly relevant for reader who uses both n8n and Microsoft 365).",
-    "2026-05-17: NOTE: OpenAI fine-tuning API wind-down (May 7-8) was never covered in any digest. Now 10 days old, outside extended window. Skip permanently - covered by the 'no longer actionable because deadline may have passed' precedent."
+    "2026-05-17: NOTE: OpenAI fine-tuning API wind-down (May 7-8) was never covered in any digest. Now 10 days old, outside extended window. Skip permanently - covered by the 'no longer actionable because deadline may have passed' precedent.",
+    "2026-05-18: 3 items (3 CRITICAL, 0 WATCH, 0 LOW). NGINX CVE-2026-42945 Exploited in Wild (CRITICAL 8, May 18, The Hacker News/VulnCheck confirmed same-day exploitation), xAI Grok Build early beta with 8 parallel subagents and MCP support (CRITICAL 8, May 14/15, x.ai/Engadget/Dataconomy, 72h CRITICAL exception), GitHub Copilot Max plan plus flex allotments ahead of June 1 token billing (CRITICAL 8, May 14/15, GitHub Blog, 72h CRITICAL exception).",
+    "2026-05-18: Quiet day due to Google I/O keynote tomorrow (May 19). Most companies held announcements for I/O. The primary fresh item was NGINX Rift reaching active exploitation stage (May 18 VulnCheck/Hacker News). xAI Grok Build and GitHub Copilot Max plan both published May 14/15 but not covered in any prior digest, included via 72h CRITICAL exception.",
+    "2026-05-18: github.com/anthropics/claude-code/releases shows no new releases since v2.1.143 (May 15, covered in May 16 digest). No new Claude Code for today.",
+    "2026-05-18: github.com/n8n-io/n8n/releases shows 2.20.9 and 2.20.8 (May 15) as minor bugfixes. 2.21.x still pre-release. No n8n stable releases for May 16-18.",
+    "2026-05-18: github.com/openai/codex/releases shows only 0.131.0-alpha.21 and 0.131.0-alpha.22 (May 15). Both pre-release, skipped per established precedent.",
+    "2026-05-18: Gemini Interactions API breaking changes (May 6-7 announcement, May 20 deadline for new schema default) already covered in May 10 digest. Not re-included per duplication rule.",
+    "2026-05-18: OpenAI fine-tuning wind down (May 7-8) not in any prior digest but now 11 days old, way outside any exception window. Skipped.",
+    "2026-05-18: Notion Developer Platform (May 13) not in any prior digest but 5 days old, outside all exception windows. Skipped.",
+    "2026-05-18: ServiceNow Build Agent (May 6) and Gemini CLI 0.42.0 (May 12) not in any prior digest but both stale. Skipped.",
+    "2026-05-18: NGINX Rift original disclosure was May 13 (5 days old, not in any prior digest). The Exploited in Wild update published today (May 18) is what anchors the item to todays window. Correct approach: treat the today article date as the event date, cite both articles.",
+    "2026-05-18: xAI Grok Build scored CRITICAL 8 because it is a direct competitor to Claude Code (the reader uses Claude Code as their primary CLI coding agent), ships MCP server support, and represents a new entrant reshaping the CLI coding agent market. 72h CRITICAL exception applied.",
+    "2026-05-18: GitHub Copilot Max plan scored CRITICAL 8 because the June 1 billing switch is less than 2 weeks away and this is the first time the new pricing tiers have been covered. The flex allotment system significantly changes the effective value of Pro and Pro Plus plans. 72h CRITICAL exception applied.",
+    "2026-05-18: Google I/O 2026 keynote is May 19. Gemini 4 / Gemini Omni expected. Do not include pre-event speculation. Do include confirmed announcements in tomorrow's digest.",
+    "2026-05-18: Detached HEAD did not recur. Started on main branch and up to date with origin/main.",
+    "2026-05-18: Claude platform.claude.com/docs/en/release-notes/overview fetched successfully. Latest entry remains May 12 (Fast mode for Opus 4.7, covered May 13 digest). No new API entries May 13-18."
   ]
 }
