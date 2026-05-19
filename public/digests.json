@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-05-19",
     "2026-05-18",
     "2026-05-17",
     "2026-05-16",
@@ -6139,6 +6140,92 @@
       "critical": 3,
       "watch": 0,
       "low": 0
+    },
+    "2026-05-19": {
+      "dateKey": "2026-05-19",
+      "date": "May 19, 2026",
+      "summary": "GitHub Copilot CLI gains persistent session memory and chronicle search, Anthropic upgrades the API web search tool with richer SEC filing data for financial agents, and OpenAI ships Codex CLI 0.131.0 with unified file references and self-diagnostics.",
+      "totalScanned": 3,
+      "relevant": 3,
+      "critical": 0,
+      "watch": 3,
+      "low": 0,
+      "items": [
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "GitHub Copilot CLI v1.0.49 adds persistent memory storage and chronicle search across sessions",
+          "description": "Version 1.0.49 introduces /memory, a persistent storage layer that retains information across CLI sessions for the first time, closing a long-standing gap with Claude Code. The new /chronicle command enables full-text search through conversation history, making long agentic sessions navigable. Auto-linking of GitHub issue and PR references by owner, repository, and number brings cross-repository context into assistant responses without manual copy-paste.",
+          "action": "Update to v1.0.49 and use /memory to store project-specific context that should persist across sessions. Configure /chronicle for searching long multi-day agent threads. Test auto-link behavior in repos with cross-team PR dependencies.",
+          "tools": [
+            "GitHub Copilot CLI"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.49",
+              "name": "GitHub Releases"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 7,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "Anthropic web search tool returns richer SEC filing data for financial research agents",
+          "description": "The Claude API web search tool now returns enriched SEC filing data with citations, enabling financial research agents to ground earnings analysis, due-diligence workflows, and regulatory tracking in primary sources from EDGAR automatically. No integration changes are required, as the richer data surfaces through existing web search tool calls. This extends the tool's utility for any agent pipeline targeting finance, legal, or compliance use cases.",
+          "action": "Test existing financial research agent flows that previously required external SEC data scrapers or manual source linking. The tool now surfaces EDGAR filing citations automatically in web search responses.",
+          "tools": [
+            "Claude API",
+            "Claude web search tool"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://platform.claude.com/docs/en/release-notes/overview",
+              "name": "Anthropic Platform Release Notes"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        },
+        {
+          "score": 6,
+          "tag": "WATCH",
+          "category": "Tools",
+          "headline": "OpenAI Codex CLI 0.131.0 stable ships unified file references plugin sharing and codex doctor",
+          "description": "The first stable release after weeks of alpha builds unifies the @ mention syntax for files, directories, plugins, and skills into a single input flow, replacing four separate reference patterns. Plugin workflows gained marketplace CLI commands for version-aware sharing and registry-backed remote environments. The new codex doctor command runs a self-diagnostic check for configuration, credentials, and connectivity, reducing onboarding friction in team deployments. The Python SDK is now published as the openai-codex package on PyPI.",
+          "action": "Update to 0.131.0 and run codex doctor to verify credentials and connectivity. Install the openai-codex Python package if you manage Codex sessions programmatically. Use codex marketplace to publish shared plugin configurations across a team.",
+          "tools": [
+            "OpenAI Codex CLI",
+            "openai-codex Python SDK"
+          ],
+          "confidence": "confirmed",
+          "sources": [
+            {
+              "url": "https://github.com/openai/codex/releases/tag/v0.131.0",
+              "name": "GitHub Releases"
+            }
+          ],
+          "clientPitch": "",
+          "useCase": "",
+          "timeline": "",
+          "sourceTier": 0,
+          "sourceUrl": "",
+          "sourceName": ""
+        }
+      ]
     }
   },
   "items": [],

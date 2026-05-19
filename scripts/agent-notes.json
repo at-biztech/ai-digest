@@ -540,6 +540,22 @@
     "2026-05-18: GitHub Copilot Max plan scored CRITICAL 8 because the June 1 billing switch is less than 2 weeks away and this is the first time the new pricing tiers have been covered. The flex allotment system significantly changes the effective value of Pro and Pro Plus plans. 72h CRITICAL exception applied.",
     "2026-05-18: Google I/O 2026 keynote is May 19. Gemini 4 / Gemini Omni expected. Do not include pre-event speculation. Do include confirmed announcements in tomorrow's digest.",
     "2026-05-18: Detached HEAD did not recur. Started on main branch and up to date with origin/main.",
-    "2026-05-18: Claude platform.claude.com/docs/en/release-notes/overview fetched successfully. Latest entry remains May 12 (Fast mode for Opus 4.7, covered May 13 digest). No new API entries May 13-18."
+    "2026-05-18: Claude platform.claude.com/docs/en/release-notes/overview fetched successfully. Latest entry remains May 12 (Fast mode for Opus 4.7, covered May 13 digest). No new API entries May 13-18.",
+    "2026-05-19: 3 items (0 CRITICAL, 3 WATCH, 0 LOW). GitHub Copilot CLI v1.0.49 with /memory persistent storage, /chronicle search, and auto-link GitHub issue/PR references (WATCH 7, May 19, GitHub releases). Anthropic web search tool richer SEC filing data for financial research agents (WATCH 7, May 18, platform.claude.com primary source). OpenAI Codex CLI 0.131.0 stable with unified @ mentions, plugin marketplace sharing, and codex doctor (WATCH 6, May 18, GitHub releases).",
+    "2026-05-19: Google I/O 2026 keynote starts at 10 AM PT = 11 PM Almaty on May 19. The digest runs in early morning Almaty before the keynote. All I/O coverage is pre-event speculation and excluded. Cover actual I/O announcements in the May 20 digest.",
+    "2026-05-19: platform.claude.com/docs/en/release-notes/overview fetchable. New May 18 entry: web search tool returns richer SEC filing data. Previous latest entry was May 12. Gap entries May 13 (cache diagnostics public beta) is 6 days old, outside any exception window.",
+    "2026-05-19: github.com/anthropics/claude-code/releases shows no releases after v2.1.143 (May 15, covered May 16). No Claude Code releases in window.",
+    "2026-05-19: github.com/github/copilot-cli/releases shows v1.0.49 stable (May 19) as the newest stable. v1.0.49-6 through -0 were pre-releases on May 15-18. v1.0.48 was covered in May 15 digest.",
+    "2026-05-19: github.com/openai/codex/releases shows v0.131.0 stable (May 18 17:39 UTC) as first stable after weeks of 0.131.0-alpha series. v0.132.0-alpha.1 (May 18 21:26) is pre-release, skipped. v0.130.0 was covered in May 9 digest.",
+    "2026-05-19: github.com/google-gemini/gemini-cli/releases shows only nightly pre-releases (v0.44.0-nightly.*) from May 15-18. Latest stable is v0.42.0 (May 12, 7 days old, outside window). Skipped per pre-release and date rules.",
+    "2026-05-19: github.com/n8n-io/n8n/releases shows n8n@2.20.11 (May 18) as latest stable with VM expression engine fix only. n8n@1.123.44 (May 18) fixes vm2, protobufjs, langsmith security dependencies but for the legacy 1.x branch with no CVE number confirmed. n8n@2.21.x still pre-release. All skipped per established minor bugfix and pre-release precedent.",
+    "2026-05-19: Gemma 4 (Apache 2.0, multimodal, Apache 2.0) confirmed as April 2, 2026. Already covered in April 4 digest. Skip.",
+    "2026-05-19: OpenAI Codex mobile preview (May 14) is 5 days old. WATCH level (not CRITICAL), outside 48h window. Skip per date rules.",
+    "2026-05-19: OpenAI Neptune acquisition (May 18) is business/M&A event. Skipped per rules excluding M&A without API capability change.",
+    "2026-05-19: Gemini Interactions API June 8 legacy schema removal date is new info vs the May 26 default change. However, the source is from the May 6-7 original changelog, not a new May 17-19 article. Not within window. Skipped.",
+    "2026-05-19: Veo 3.1 Lite Preview (March 31, 2026) and Firebase AI Logic hybrid inference (April 2026) are both outside the 48h window. Skipped.",
+    "2026-05-19: No new Zapier, Make.com, or Airtable product updates found for May 17-19.",
+    "2026-05-19: No detached HEAD issue this session. Repo was on main branch and up to date with origin/main.",
+    "2026-05-19: NOTE for May 20 run: Google I/O 2026 keynote happened at 10 AM PT on May 19. Cover all actual announcements: Gemini 3.2 Flash (confirmed pre-positioned at $0.25/$2.00 per 1M tokens), Firebase AI Logic GA, Gemma 4 updates, Android 17, Android XR glasses, Veo upgrade. Check developers.googleblog.com, ai.google.dev/gemini-api/docs/changelog, and firebase.google.com/docs for exact launch details."
   ]
 }
